@@ -20,7 +20,7 @@ export default function HomePage() {
                 </h1>
 
                 <p className="jq-subtitle">
-                  Suivi diététique personnalisé pour perdre du gras et mieux se sentir — avec une approche durable.
+                  Suivi diététique personnalisé pour perdre du gras et mieux te sentir avec une approche durable.
                 </p>
 
                 <div className="jq-actions">
