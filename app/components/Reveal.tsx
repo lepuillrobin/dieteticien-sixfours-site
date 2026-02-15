@@ -46,8 +46,14 @@ export default function Reveal<T extends React.ElementType = "div">({
   return (
     <Comp
       ref={ref as any}
-      className={`jq-reveal ${visible ? "is-visible" : ""} ${className || ""}`.trim()}
-      style={{ transitionDelay: `${delayMs}ms`, ...style }}
+      className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0px)" : "translateY(16px)",
+        transition: `opacity 600ms ease ${delayMs}ms, transform 600ms ease ${delayMs}ms`,
+        willChange: "opacity, transform",
+        ...style,
+      }}
     >
       {children}
     </Comp>
