@@ -43,16 +43,6 @@ export default function HomePage() {
     </div>
   </Reveal>
 </div>
-
-                {/*
-                  Quand tu as ta photo : remplace le bloc au-dessus par:
-                  <img
-                    className="jq-hero__portrait"
-                    src="/robin-hero.jpg"
-                    alt="Robin"
-                  />
-                  {/* et mets l'image dans /public/robin-hero.jpg */}
-                */}
               </Reveal>
             </div>
           </div>
