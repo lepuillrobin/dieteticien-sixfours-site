@@ -34,7 +34,7 @@ export default function HomePage() {
             {/* VISUEL À DROITE (ta photo) */}
             <div className="jq-hero__right">
               <Reveal as="div">
-                <img
+              <img
   className="jq-hero__portrait"
   src="/robin-hero.png"
   alt="Robin"
