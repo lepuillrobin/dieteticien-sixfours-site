@@ -1,3 +1,4 @@
+// app/page.tsx
 import Reveal from "./components/Reveal";
 
 export default function HomePage() {
@@ -22,7 +23,6 @@ export default function HomePage() {
                   Suivi diététique personnalisé pour perdre du gras et mieux se sentir — avec une approche durable.
                 </p>
 
-                {/* ✅ un seul bouton */}
                 <div className="jq-actions">
                   <a className="jq-btn jq-btn--primary" href="/accompagnement">
                     Voir l&apos;accompagnement →
@@ -31,21 +31,15 @@ export default function HomePage() {
               </Reveal>
             </div>
 
-            {/* VISUEL À DROITE (ta photo) */}
+            {/* VISUEL À DROITE */}
             <div className="jq-hero__right">
               <Reveal as="div">
-                {/* 1) Pour l’instant placeholder */}
-                <div className="jq-hero__portrait jq-hero__portrait--ph">
-                  TA PHOTO
-                </div>
+                <div className="jq-hero__portrait jq-hero__portrait--ph">TA PHOTO</div>
 
-                {/* 2) Quand tu as ta photo : remplace le bloc au-dessus par:
-                    <img
-                      className="jq-hero__portrait"
-                      src="/robin-hero.jpg"
-                      alt="Robin"
-                    />
-                    et mets l’image dans /public/robin-hero.jpg
+                {/*
+                  Quand tu as ton image:
+                  <img className="jq-hero__portrait" src="/robin-hero.jpg" alt="Robin" />
+                  et tu mets /public/robin-hero.jpg
                 */}
               </Reveal>
             </div>
@@ -86,9 +80,7 @@ export default function HomePage() {
                 <div className="jq-card__stripes" />
                 <div className="jq-card__icon">✅</div>
                 <h3 className="jq-card__title">Résultats durables</h3>
-                <p className="jq-card__text">
-                  On vise de nouvelles habitudes tenables, pas « extrême » donc efficaces.
-                </p>
+                <p className="jq-card__text">On vise de nouvelles habitudes tenables, pas « extrême » donc efficaces.</p>
               </div>
             </div>
           </Reveal>
@@ -101,7 +93,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* GRAND VISUEL + CTA */}
+      {/* GRAND VISUEL + CTA (SANS "VOIR LE DÉTAIL") */}
       <section
         className="jq-hero"
         style={{
@@ -120,74 +112,73 @@ export default function HomePage() {
               <span className="jq-title--accent">ACCOMPAGNEMENT</span>
             </h2>
 
+            {/* Phrase "propre" (celle d'avant) */}
             <p className="jq-subtitle">
               Un suivi clair, humain, et piloté — pour avancer sans te perdre dans le “tout ou rien”.
             </p>
 
+            {/* ✅ un seul bouton */}
             <div className="jq-actions">
               <a className="jq-btn jq-btn--primary" href="/contact">
                 Me contacter →
-              </a>
-              <a className="jq-btn jq-btn--ghost" href="/accompagnement">
-                Voir le détail →
               </a>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* RÉSULTATS (2 ou 3 transformations) */}
+      {/* RÉSULTATS (3 transformations, centrées, sans scroll horizontal) */}
       <section className="jq-results">
         <div className="jq-container">
-          <Reveal as="div">
+          <Reveal as="div" className="jq-results__head">
             <h2 className="jq-h2 jq-h2--white">
               <span className="jq-outline">RÉSULTATS</span>
               <br />
               Transformations réelles
             </h2>
-            <p className="jq-p" style={{ color: "rgba(255,255,255,.70)" }}>
+            <p className="jq-p" style={{ color: "rgba(255,255,255,.70)", marginLeft: "auto", marginRight: "auto" }}>
               (Tu remplaceras les placeholders par tes photos avant / après.)
             </p>
           </Reveal>
 
-          <Reveal as="div" className="jq-carousel">
-            {/* Transformation 1 (toi) */}
-            <div className="jq-slide">
-              <div className="jq-beforeafter">
-                <div className="jq-photo jq-photo--ph">AVANT</div>
-                <div className="jq-photo jq-photo--ph">APRÈS</div>
+          <Reveal as="div">
+            <div className="jq-resultsGrid">
+              {/* 1 */}
+              <div className="jq-slide">
+                <div className="jq-beforeafter">
+                  <div className="jq-photo jq-photo--ph">AVANT</div>
+                  <div className="jq-photo jq-photo--ph">APRÈS</div>
+                </div>
+                <div className="jq-quote">
+                  “Prise de masse / sèche — suivi structuré, sans yoyo.”
+                  <span className="jq-quote__name">— Robin</span>
+                </div>
               </div>
-              <div className="jq-quote">
-                “Prise de masse / sèche — suivi structuré, sans yoyo.”
-                <span className="jq-quote__name">— Robin</span>
-              </div>
-            </div>
 
-            {/* Transformation 2 (toi ou pote) */}
-            <div className="jq-slide">
-              <div className="jq-beforeafter">
-                <div className="jq-photo jq-photo--ph">AVANT</div>
-                <div className="jq-photo jq-photo--ph">APRÈS</div>
+              {/* 2 */}
+              <div className="jq-slide">
+                <div className="jq-beforeafter">
+                  <div className="jq-photo jq-photo--ph">AVANT</div>
+                  <div className="jq-photo jq-photo--ph">APRÈS</div>
+                </div>
+                <div className="jq-quote">
+                  “Progression nette, habitudes qui tiennent.”
+                  <span className="jq-quote__name">— Prénom</span>
+                </div>
               </div>
-              <div className="jq-quote">
-                “Progression nette, habitudes qui tiennent.”
-                <span className="jq-quote__name">— Prénom</span>
-              </div>
-            </div>
 
-            {/* ✅ si tu veux 3 transformations, décommente ce bloc */}
-            {/*
-            <div className="jq-slide">
-              <div className="jq-beforeafter">
-                <div className="jq-photo jq-photo--ph">AVANT</div>
-                <div className="jq-photo jq-photo--ph">APRÈS</div>
-              </div>
-              <div className="jq-quote">
-                “Résultat propre, sans extrême.”
-                <span className="jq-quote__name">— Prénom</span>
+              {/* 3 */}
+              <div className="jq-slide">
+                <div className="jq-beforeafter">
+                  <div className="jq-photo jq-photo--ph">AVANT</div>
+                  <div className="jq-photo jq-photo--ph">APRÈS</div>
+                </div>
+                <div className="jq-quote">
+                  “Résultat propre, sans extrême.”
+                  <span className="jq-quote__name">— Prénom</span>
+                </div>
               </div>
             </div>
-            */}
           </Reveal>
         </div>
       </section>
