@@ -10,94 +10,21 @@
   --shadow: 0 18px 60px rgba(0,0,0,.55);
 }
 
-/* =========================
-   ETAPE 2 — Base / Reset
-   (ajouté juste après :root)
-   ========================= */
-*{ box-sizing:border-box; }
-html,body{ height:100%; }
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+/* Base */
+html, body{
   background: var(--bg);
   color: var(--text);
 }
 
 a{ color: inherit; }
-img{ max-width:100%; display:block; }
-button, input, textarea, select{ font: inherit; }
-main{ display:block; }
 
-.site-header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(11,11,12,.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-
-.site-nav{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 14px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.site-brand{
-  text-decoration:none;
-  font-weight: 800;
-  letter-spacing:.02em;
-}
-
-.site-links{
-  display:flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.site-links a{
-  text-decoration:none;
-  color: rgba(255,255,255,.85);
-  font-weight: 700;
-  font-size: 14px;
-  opacity: .9;
-}
-
-.site-links a:hover{ opacity: 1; }
-
-.site-main{
-  /* important : on enlève le maxWidth/padding inline du layout.tsx */
-  padding: 0;
-}
-
-.site-footer{
-  border-top: 1px solid var(--border);
-  background: #09090a;
-}
-
-.site-footer__inner{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 18px 20px;
-  font-size: 14px;
-  color: rgba(255,255,255,.70);
-}
-
-/* =========================
-   Ton CSS (inchangé)
-   ========================= */
 .jq-container{
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+/* HERO */
 .jq-hero{
   position: relative;
   min-height: 640px;
@@ -176,6 +103,7 @@ main{ display:block; }
   color: var(--text);
 }
 
+/* SECTIONS */
 .jq-section{
   background: #0b0b0c;
   padding: 70px 0;
@@ -195,6 +123,7 @@ main{ display:block; }
   max-width: 760px;
 }
 
+/* CARDS */
 .jq-cards{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -248,6 +177,7 @@ main{ display:block; }
 
 .jq-center{ display:flex; justify-content:center; }
 
+/* RESULTS */
 .jq-results{
   background:
     radial-gradient(70% 70% at 50% 0%, rgba(255,122,0,.10), transparent 60%),
@@ -261,6 +191,7 @@ main{ display:block; }
   -webkit-text-stroke: 1px rgba(255,122,0,.75);
 }
 
+/* Horizontal row (on garde, mais tu peux avoir 2-3 slides sans souci) */
 .jq-carousel{
   display:flex;
   gap: 16px;
@@ -318,7 +249,57 @@ main{ display:block; }
 
 .jq-hint{ color: rgba(255,255,255,.45); margin: 10px 0 0; }
 
+/* =========================================
+   ✅ NOUVEAUX BLOCS (Hero texte à gauche + portrait à droite)
+   ========================================= */
+
+.jq-hero__grid{
+  position: relative;
+  z-index: 1;
+  padding: 70px 0;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 26px;
+  align-items: center;
+}
+
+.jq-hero__left{
+  max-width: 720px;
+}
+
+.jq-hero__right{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.jq-hero__portrait{
+  width: min(420px, 100%);
+  aspect-ratio: 3 / 4;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.35);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.jq-hero__portrait--ph{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color: rgba(255,255,255,.55);
+  font-weight: 800;
+  letter-spacing:.12em;
+}
+
+/* Responsive */
 @media (max-width: 900px){
   .jq-title{ font-size: 44px; }
   .jq-cards{ grid-template-columns: 1fr; }
+
+  .jq-hero__grid{ grid-template-columns: 1fr; }
+  .jq-hero__right{ justify-content:flex-start; }
+  .jq-hero__portrait{
+    width: min(520px, 100%);
+    aspect-ratio: 16 / 9;
+  }
 }
