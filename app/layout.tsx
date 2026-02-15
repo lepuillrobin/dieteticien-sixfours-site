@@ -1,5 +1,4 @@
 // app/layout.tsx
-
 import "./globals.css";
 
 export const metadata = {
@@ -11,34 +10,40 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-      <body>
-        <header className="site-header">
-          <nav className="site-nav">
-            <a href="/" className="site-brand">
+      <body className="jq-body">
+        <header className="jq-header">
+          <div className="jq-container jq-header__inner">
+            <a href="/" className="jq-brand">
               Robin LE PUILL • Diététicien
             </a>
 
-            <div className="site-links">
-              <a href="/accompagnement">Accompagnement</a>
-              <a href="/methode">Méthode</a>
-              <a href="/a-propos">À propos</a>
-              <a href="/contact">Contact</a>
-            </div>
-          </nav>
+            <nav className="jq-nav">
+              <a className="jq-nav__link" href="/accompagnement">
+                Accompagnement
+              </a>
+              <a className="jq-nav__link" href="/methode">
+                Méthode
+              </a>
+              <a className="jq-nav__link" href="/a-propos">
+                À propos
+              </a>
+              <a className="jq-nav__link" href="/contact">
+                Contact
+              </a>
+            </nav>
+          </div>
         </header>
 
-        <main className="site-main">{children}</main>
+        <main className="jq-main">{children}</main>
 
-        <footer className="site-footer">
-          <div className="site-footer__inner">
+        <footer className="jq-footer">
+          <div className="jq-container jq-footer__inner">
             © {new Date().getFullYear()} Robin LE PUILL — Diététicien • Six-Fours-les-Plages & alentours • Visio + à
             domicile
-            <span style={{ marginLeft: 10 }}>
-              •{" "}
-              <a href="https://www.instagram.com/robindiet/" target="_blank" rel="noreferrer">
-                Instagram
-              </a>
-            </span>
+            <span className="jq-footer__sep">•</span>
+            <a className="jq-footer__link" href="https://www.instagram.com/robindiet/" target="_blank" rel="noreferrer">
+              Instagram
+            </a>
           </div>
         </footer>
       </body>
