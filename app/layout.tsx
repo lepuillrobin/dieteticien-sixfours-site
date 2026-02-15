@@ -1,3 +1,5 @@
+// app/layout.tsx
+
 import "./globals.css";
 
 export const metadata = {
@@ -9,11 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-      <body className="site-body">
+      <body>
         <header className="site-header">
           <nav className="site-nav">
-            <a className="site-brand" href="/">
-              Robin LE PUILL · Diététicien
+            <a href="/" className="site-brand">
+              Robin LE PUILL • Diététicien
             </a>
 
             <div className="site-links">
@@ -28,10 +30,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="site-main">{children}</main>
 
         <footer className="site-footer">
-          © {new Date().getFullYear()} Robin LE PUILL — Diététicien · Six-Fours-les-Plages & alentours · Visio + à domicile ·{" "}
-          <a href="https://www.instagram.com/robindiet/" target="_blank" rel="noreferrer">
-            Instagram
-          </a>
+          <div className="site-footer__inner">
+            © {new Date().getFullYear()} Robin LE PUILL — Diététicien • Six-Fours-les-Plages & alentours • Visio + à
+            domicile
+            <span style={{ marginLeft: 10 }}>
+              •{" "}
+              <a href="https://www.instagram.com/robindiet/" target="_blank" rel="noreferrer">
+                Instagram
+              </a>
+            </span>
+          </div>
         </footer>
       </body>
     </html>
