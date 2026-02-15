@@ -372,3 +372,22 @@ a:hover{ opacity: .92; }
   .jq-cards{ grid-template-columns: 1fr; }
   .jq-resultsGrid{ grid-template-columns: 1fr; }
 }
+/* ✅ RÉSULTATS : 3 cartes sur une ligne (desktop), 1 colonne (mobile) */
+.jq-carousel{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  overflow: visible;      /* plus besoin de scroll */
+  scroll-snap-type: none; /* neutralise l'ancien comportement */
+  padding: 18px 4px 6px;
+}
+
+.jq-slide{
+  min-width: 0; /* important en grid */
+}
+
+@media (max-width: 900px){
+  .jq-carousel{
+    grid-template-columns: 1fr;
+  }
+}
