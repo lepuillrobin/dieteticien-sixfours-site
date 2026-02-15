@@ -169,7 +169,15 @@ a:hover{ opacity: .92; }
   color: var(--text);
   text-transform: uppercase;
 }
+/* Force "PLUS QU'UNE DIÈTE" sur une seule ligne (desktop) */
+.jq-title__line1{
+  white-space: nowrap;
+}
 
+/* Sur mobile, on autorise le retour à la ligne sinon ça déborde */
+@media (max-width: 900px){
+  .jq-title__line1{ white-space: normal; }
+}
 .jq-title--accent{
   display:inline-block;
   background: var(--orange);
