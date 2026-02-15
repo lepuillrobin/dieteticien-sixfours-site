@@ -1,4 +1,4 @@
-import Reveal from "./components/Reveal.tsx";
+import Reveal from "./components/Reveal";
 
 export default function HomePage() {
   return (
