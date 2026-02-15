@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type RevealProps<T extends React.ElementType> = {
   as?: T;
@@ -46,14 +46,8 @@ export default function Reveal<T extends React.ElementType = "div">({
   return (
     <Comp
       ref={ref as any}
-      className={className}
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0px)" : "translateY(16px)",
-        transition: `opacity 600ms ease ${delayMs}ms, transform 600ms ease ${delayMs}ms`,
-        willChange: "opacity, transform",
-        ...style,
-      }}
+      className={`jq-reveal ${visible ? "is-visible" : ""} ${className || ""}`}
+      style={{ transitionDelay: `${delayMs}ms`, ...style }}
     >
       {children}
     </Comp>
