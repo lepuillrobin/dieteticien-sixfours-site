@@ -4,7 +4,8 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 
 type RevealProps = {
   children: React.ReactNode;
-  as?: keyof JSX.IntrinsicElements;
+  /** tag HTML (div/section/h2/...) */
+  as?: React.ElementType;
   className?: string;
   /** délai en ms (optionnel) */
   delay?: number;
@@ -16,20 +17,18 @@ type RevealProps = {
 
 export default function Reveal({
   children,
-  as = "div",
+  as: Tag = "div",
   className = "",
   delay = 0,
   once = true,
   y = 14,
 }: RevealProps) {
-  const Tag = as as any;
   const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   const style = useMemo(
     () =>
       ({
-        // utilisé par le CSS
         ["--reveal-delay" as any]: `${delay}ms`,
         ["--reveal-y" as any]: `${y}px`,
       }) as React.CSSProperties,
@@ -40,7 +39,6 @@ export default function Reveal({
     const el = ref.current;
     if (!el) return;
 
-    // Respect "prefers-reduced-motion"
     const reduce =
       typeof window !== "undefined" &&
       window.matchMedia &&
@@ -61,7 +59,6 @@ export default function Reveal({
         }
       },
       {
-        root: null,
         threshold: 0.15,
         rootMargin: "0px 0px -10% 0px",
       }
