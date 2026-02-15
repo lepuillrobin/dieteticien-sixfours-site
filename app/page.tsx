@@ -1,4 +1,3 @@
-// app/page.tsx
 import Reveal from "./components/Reveal";
 
 export default function HomePage() {
@@ -15,7 +14,8 @@ export default function HomePage() {
                 <div className="jq-kicker">ACCOMPAGNEMENT</div>
 
                 <h1 className="jq-title">
-                  PLUS QU&apos;UNE DIÈTE <br />
+                  <span className="jq-title__line1">PLUS QU&apos;UNE DIÈTE</span>
+                  <br />
                   <span className="jq-title--accent">UN MODE DE VIE</span>
                 </h1>
 
@@ -31,15 +31,19 @@ export default function HomePage() {
               </Reveal>
             </div>
 
-            {/* VISUEL À DROITE */}
+            {/* VISUEL À DROITE (ta photo) */}
             <div className="jq-hero__right">
               <Reveal as="div">
                 <div className="jq-hero__portrait jq-hero__portrait--ph">TA PHOTO</div>
 
                 {/*
-                  Quand tu as ton image:
-                  <img className="jq-hero__portrait" src="/robin-hero.jpg" alt="Robin" />
-                  et tu mets /public/robin-hero.jpg
+                  Quand tu as ta photo : remplace le bloc au-dessus par:
+                  <img
+                    className="jq-hero__portrait"
+                    src="/robin-hero.jpg"
+                    alt="Robin"
+                  />
+                  et mets l’image dans /public/robin-hero.jpg
                 */}
               </Reveal>
             </div>
@@ -93,7 +97,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* GRAND VISUEL + CTA (SANS "VOIR LE DÉTAIL") */}
+      {/* GRAND VISUEL + CTA */}
       <section
         className="jq-hero"
         style={{
@@ -112,12 +116,10 @@ export default function HomePage() {
               <span className="jq-title--accent">ACCOMPAGNEMENT</span>
             </h2>
 
-            {/* Phrase "propre" (celle d'avant) */}
             <p className="jq-subtitle">
-              Un suivi clair, humain, et piloté — pour avancer sans te perdre dans le “tout ou rien”.
+              Un suivi clair, humain et personnalisé pour des résultats visibles et durables.
             </p>
 
-            {/* ✅ un seul bouton */}
             <div className="jq-actions">
               <a className="jq-btn jq-btn--primary" href="/contact">
                 Me contacter →
@@ -127,56 +129,52 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* RÉSULTATS (3 transformations, centrées, sans scroll horizontal) */}
+      {/* RÉSULTATS */}
       <section className="jq-results">
         <div className="jq-container">
-          <Reveal as="div" className="jq-results__head">
+          <Reveal as="div">
             <h2 className="jq-h2 jq-h2--white">
               <span className="jq-outline">RÉSULTATS</span>
               <br />
-              Transformations réelles
+              Transformations physiques
             </h2>
-            <p className="jq-p" style={{ color: "rgba(255,255,255,.70)", marginLeft: "auto", marginRight: "auto" }}>
-              (Tu remplaceras les placeholders par tes photos avant / après.)
-            </p>
           </Reveal>
 
-          <Reveal as="div">
-            <div className="jq-resultsGrid">
-              {/* 1 */}
-              <div className="jq-slide">
-                <div className="jq-beforeafter">
-                  <div className="jq-photo jq-photo--ph">AVANT</div>
-                  <div className="jq-photo jq-photo--ph">APRÈS</div>
-                </div>
-                <div className="jq-quote">
-                  “Prise de masse / sèche — suivi structuré, sans yoyo.”
-                  <span className="jq-quote__name">— Robin</span>
-                </div>
+          {/* ✅ 3 transformations */}
+          <Reveal as="div" className="jq-carousel">
+            {/* Transformation 1 */}
+            <div className="jq-slide">
+              <div className="jq-beforeafter">
+                <div className="jq-photo jq-photo--ph">AVANT</div>
+                <div className="jq-photo jq-photo--ph">APRÈS</div>
               </div>
-
-              {/* 2 */}
-              <div className="jq-slide">
-                <div className="jq-beforeafter">
-                  <div className="jq-photo jq-photo--ph">AVANT</div>
-                  <div className="jq-photo jq-photo--ph">APRÈS</div>
-                </div>
-                <div className="jq-quote">
-                  “Progression nette, habitudes qui tiennent.”
-                  <span className="jq-quote__name">— Prénom</span>
-                </div>
+              <div className="jq-quote">
+                “+20kg secs en 3 ans”
+                <span className="jq-quote__name">— Robin</span>
               </div>
+            </div>
 
-              {/* 3 */}
-              <div className="jq-slide">
-                <div className="jq-beforeafter">
-                  <div className="jq-photo jq-photo--ph">AVANT</div>
-                  <div className="jq-photo jq-photo--ph">APRÈS</div>
-                </div>
-                <div className="jq-quote">
-                  “Résultat propre, sans extrême.”
-                  <span className="jq-quote__name">— Prénom</span>
-                </div>
+            {/* Transformation 2 */}
+            <div className="jq-slide">
+              <div className="jq-beforeafter">
+                <div className="jq-photo jq-photo--ph">AVANT</div>
+                <div className="jq-photo jq-photo--ph">APRÈS</div>
+              </div>
+              <div className="jq-quote">
+                “+10kg secs en 1 an”
+                <span className="jq-quote__name">— Pierre</span>
+              </div>
+            </div>
+
+            {/* Transformation 3 */}
+            <div className="jq-slide">
+              <div className="jq-beforeafter">
+                <div className="jq-photo jq-photo--ph">AVANT</div>
+                <div className="jq-photo jq-photo--ph">APRÈS</div>
+              </div>
+              <div className="jq-quote">
+                “-10kg en 3 mois”
+                <span className="jq-quote__name">— Robin</span>
               </div>
             </div>
           </Reveal>
