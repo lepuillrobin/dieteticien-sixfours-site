@@ -450,3 +450,62 @@ a:hover{ opacity: .92; }
       linear-gradient(180deg, #000 0%, #000 88%, transparent 100%);
   }
 }
+/* =========================
+   ANIMATIONS (HOME)
+   ========================= */
+
+/* Reveal (fade + slide) */
+.jq-reveal{
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 14px));
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.jq-reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger : on applique des délais aux enfants directs */
+.jq-stagger > *:nth-child(1){ transition-delay: 80ms; }
+.jq-stagger > *:nth-child(2){ transition-delay: 160ms; }
+.jq-stagger > *:nth-child(3){ transition-delay: 240ms; }
+.jq-stagger > *:nth-child(4){ transition-delay: 320ms; }
+
+/* Petit lift au hover (cards + slide results) */
+.jq-card,
+.jq-slide{
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.jq-card:hover,
+.jq-slide:hover{
+  transform: translateY(-4px);
+  border-color: rgba(255,122,0,.35);
+}
+
+/* Boutons : micro “pop” */
+.jq-btn{
+  transition: transform 160ms ease, opacity 160ms ease, box-shadow 220ms ease;
+}
+
+.jq-btn:hover{
+  transform: translateY(-1px);
+}
+
+/* Respect du mode "reduce motion" */
+@media (prefers-reduced-motion: reduce){
+  .jq-reveal,
+  .jq-card,
+  .jq-slide,
+  .jq-btn{
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .jq-reveal{ opacity: 1 !important; }
+}
