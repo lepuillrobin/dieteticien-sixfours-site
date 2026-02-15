@@ -34,7 +34,11 @@ export default function HomePage() {
             {/* VISUEL À DROITE (ta photo) */}
             <div className="jq-hero__right">
               <Reveal as="div">
-                <div className="jq-hero__portrait jq-hero__portrait--ph">TA PHOTO</div>
+                <img
+  className="jq-hero__portrait"
+  src="/robin-hero.png"
+  alt="Robin"
+/>
 
                 {/*
                   Quand tu as ta photo : remplace le bloc au-dessus par:
