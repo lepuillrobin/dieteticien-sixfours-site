@@ -125,57 +125,78 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* RÉSULTATS */}
-      <section className="jq-results">
-        <div className="jq-container">
-          <Reveal as="div">
-            <h2 className="jq-h2 jq-h2--white">
-              <span className="jq-outline">RÉSULTATS</span>
-              <br />
-              Transformations physiques
-            </h2>
-          </Reveal>
+     {/* RÉSULTATS */}
+<section className="jq-results">
+  <div className="jq-container">
+    <Reveal as="div">
+      <h2 className="jq-h2 jq-h2--white">
+        <span className="jq-outline">RÉSULTATS</span>
+        <br />
+        Transformations physiques
+      </h2>
+    </Reveal>
 
-          {/* ✅ 3 transformations */}
-          <Reveal as="div" className="jq-carousel">
-            {/* Transformation 1 */}
-            <div className="jq-slide">
-              <div className="jq-beforeafter">
-                <div className="jq-photo jq-photo--ph">AVANT</div>
-                <div className="jq-photo jq-photo--ph">APRÈS</div>
-              </div>
-              <div className="jq-quote">
-                “+20kg secs en 3 ans”
-                <span className="jq-quote__name">— Robin</span>
-              </div>
-            </div>
-
-            {/* Transformation 2 */}
-            <div className="jq-slide">
-              <div className="jq-beforeafter">
-                <div className="jq-photo jq-photo--ph">AVANT</div>
-                <div className="jq-photo jq-photo--ph">APRÈS</div>
-              </div>
-              <div className="jq-quote">
-                “+10kg secs en 1 an”
-                <span className="jq-quote__name">— Pierre</span>
-              </div>
-            </div>
-
-            {/* Transformation 3 */}
-            <div className="jq-slide">
-              <div className="jq-beforeafter">
-                <div className="jq-photo jq-photo--ph">AVANT</div>
-                <div className="jq-photo jq-photo--ph">APRÈS</div>
-              </div>
-              <div className="jq-quote">
-                “-10kg en 3 mois”
-                <span className="jq-quote__name">— Robin</span>
-              </div>
-            </div>
-          </Reveal>
+    {/* ✅ 3 transformations */}
+    <Reveal as="div" className="jq-carousel">
+      {/* Transformation 1 */}
+      <div className="jq-slide">
+        <div className="jq-beforeafter">
+          <img
+            className="jq-photo"
+            src="/robin-20kg-avant.jpg"
+            alt="Robin - avant (+20kg)"
+          />
+          <img
+            className="jq-photo"
+            src="/robin-20kg-apres.jpg"
+            alt="Robin - après (+20kg)"
+          />
         </div>
-      </section>
-    </>
-  );
-}
+        <div className="jq-quote">
+          “+20kg secs en 3 ans”
+          <span className="jq-quote__name">— Robin</span>
+        </div>
+      </div>
+
+      {/* Transformation 2 */}
+      <div className="jq-slide">
+        <div className="jq-beforeafter">
+          <img
+            className="jq-photo"
+            src="/pierre-10kg-avant.jng.png"
+            alt="Pierre - avant (+10kg)"
+          />
+          <img
+            className="jq-photo"
+            src="/pierre-10kg-apres.jng.png"
+            alt="Pierre - après (+10kg)"
+          />
+        </div>
+        <div className="jq-quote">
+          “+10kg secs en 1 an”
+          <span className="jq-quote__name">— Pierre</span>
+        </div>
+      </div>
+
+      {/* Transformation 3 */}
+      <div className="jq-slide">
+        <div className="jq-beforeafter">
+          <img
+            className="jq-photo"
+            src="/robin-10kg-avant.jpg"
+            alt="Robin - avant (-10kg)"
+          />
+          <img
+            className="jq-photo"
+            src="/robin-10kg-apres.jpg"
+            alt="Robin - après (-10kg)"
+          />
+        </div>
+        <div className="jq-quote">
+          “-10kg en 3 mois”
+          <span className="jq-quote__name">— Robin</span>
+        </div>
+      </div>
+    </Reveal>
+  </div>
+</section>
