@@ -31,18 +31,16 @@ export default function HomePage() {
               </Reveal>
             </div>
 
-            {/* VISUEL À DROITE (ta photo) */}
-           <div className="jq-hero__right">
-  <Reveal as="div">
-    <div className="jq-hero__photoWrap">
-      <img
-        className="jq-hero__portrait"
-        src="/robin-hero.png"
-        alt="Robin"
-      />
-    </div>
-  </Reveal>
-</div>
+                       {/* VISUEL À DROITE (ta photo) */}
+            <div className="jq-hero__right">
+              <Reveal as="div">
+                <div className="jq-hero__photoWrap">
+                  <img
+                    className="jq-hero__portrait"
+                    src="/robin-hero.png"
+                    alt="Robin"
+                  />
+                </div>
               </Reveal>
             </div>
           </div>
