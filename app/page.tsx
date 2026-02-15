@@ -51,7 +51,7 @@ export default function HomePage() {
                     src="/robin-hero.jpg"
                     alt="Robin"
                   />
-                  et mets l’image dans /public/robin-hero.jpg
+                  {/* et mets l'image dans /public/robin-hero.jpg */}
                 */}
               </Reveal>
             </div>
