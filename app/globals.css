@@ -391,3 +391,47 @@ a:hover{ opacity: .92; }
     grid-template-columns: 1fr;
   }
 }
+.jq-hero__grid{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.jq-hero__right{
+  display:flex;
+  justify-content: flex-end;
+}
+
+/* Image hero style “cutout + fade” */
+.jq-hero__portrait{
+  height: 520px;
+  width: auto;
+  max-width: 520px;
+  object-fit: cover;
+  border-radius: 22px;
+
+  /* effet “fondu” vers la gauche (comme Julien) */
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to left, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
+
+  /* relief */
+  filter: drop-shadow(0 18px 60px rgba(0,0,0,.55));
+  opacity: .95;
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .jq-hero__grid{
+    grid-template-columns: 1fr;
+  }
+  .jq-hero__right{
+    justify-content: center;
+  }
+  .jq-hero__portrait{
+    height: 420px;
+    max-width: 100%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
