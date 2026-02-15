@@ -303,3 +303,20 @@ a{ color: inherit; }
     aspect-ratio: 16 / 9;
   }
 }
+/* Reveal animations */
+.jq-reveal{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .65s ease, transform .65s ease;
+  will-change: opacity, transform;
+}
+
+.jq-reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* (optionnel) si tu veux un léger effet de stagger plus tard */
+.jq-stagger > *{
+  transition-delay: 0ms;
+}
