@@ -116,7 +116,7 @@ export default function Page() {
                 <div className="jq-card__corner" />
                 <div className="jq-card__stripes" />
                 <div className="jq-card__icon">🥗</div>
-                <h3 className="jq-card__title">Plan alimentaire personnalisé</h3>
+                <h3 className="jq-card__title">Plan alimentaire/entraînements personnalisés</h3>
                 <p className="jq-card__text">
                   Un plan qui colle à ta vraie vie (contraintes, goûts,
                   horaires) + ajustements.
