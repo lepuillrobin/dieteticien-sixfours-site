@@ -158,7 +158,7 @@ export default function Page() {
                 <h3 className="jq-card__title">Déclic</h3>
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
                   Le confinement a été mon point de bascule : j’en avais marre de me sentir nul dans mon corps.
-                  J’ai voulu “reprendre en main” — et j’ai fait comme tout le monde : à fond… trop vite.
+                  J’ai voulu me “reprendre en main” — et j’ai fait comme tout le monde : à fond… trop vite, trop fort, trop extrême.
                 </p>
               </div>
 
