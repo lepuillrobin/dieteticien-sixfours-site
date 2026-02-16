@@ -27,7 +27,7 @@ export default function Page() {
             <p className="jq-subtitle" style={{ maxWidth: 820 }}>
               Je m’appelle <strong>Robin LE PUILL</strong>, diététicien. J’accompagne surtout les{" "}
               <strong>hommes de 28 à 40 ans</strong> (souvent occupés) qui veulent{" "}
-              <strong>perdre du poids</strong> ou faire une <strong>recomposition</strong> — sans retomber dans le
+              <strong>perdre du poids</strong> ou faire une <strong>recomposition corporelle</strong> — sans retomber dans le
               schéma “parfait 2 semaines puis abandon”.
             </p>
 
@@ -62,7 +62,7 @@ export default function Page() {
                 <h3 className="jq-card__title">Objectif</h3>
                 <p className="jq-card__text">
                   Typiquement <strong>-5 à -10 kg en ~3 mois</strong> (selon ton point de départ), puis on continue sur
-                  une recomposition stable.
+                  une recomposition corporelle stable.
                 </p>
               </div>
 
@@ -93,7 +93,7 @@ export default function Page() {
             <div className="jq-card" style={{ padding: 18, marginTop: 18 }}>
               <div className="jq-card__corner" />
               <div className="jq-card__stripes" />
-              <h3 className="jq-card__title">Ce que je ne fais pas</h3>
+              <h3 className="jq-card__title">❌ Ce que je ne fais pas</h3>
               <ul style={{ margin: "10px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
                 <li>Le “-5 kg en 10 jours”.</li>
                 <li>Les plans extrêmes (zéro gras / zéro glucides / 2 entraînements par jour…).</li>
@@ -104,45 +104,86 @@ export default function Page() {
         </div>
       </section>
 
-      {/* STORY */}
+            {/* STORY */}
       <section className="jq-section" style={{ background: "var(--panel2)" }}>
         <div className="jq-container">
           <Reveal as="div">
             <h2 className="jq-h2">Pourquoi je fais ça</h2>
             <p className="jq-p">
-              Parce que j’ai été l’exemple parfait de ce qu’il ne faut pas faire… puis j’ai appris à construire un
-              système qui tient.
+              Parce que j’ai changé ma vie avec des choses très simples : <strong>un cadre</strong>, des{" "}
+              <strong>repères</strong>, et de la <strong>progressivité</strong>. Et surtout… parce que j’ai commencé
+              exactement comme beaucoup : mal.
             </p>
           </Reveal>
 
           <Reveal as="div">
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 18 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1.2fr .8fr", gap: 18 }}>
               <div className="jq-card" style={{ padding: 18 }}>
                 <div className="jq-card__corner" />
                 <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">Avant</h3>
-                <p className="jq-card__text" style={{ marginTop: 8 }}>
-                  Lycée : tabac + mauvaises habitudes, peu d’eau, malbouffe, sommeil n’importe comment. Et malgré le
-                  sport… <strong>zéro cardio</strong> et pas bien dans mon corps.
+                <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
+                <p className="jq-card__text" style={{ marginTop: 10 }}>
+                  Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau, et mon alimentation c’était
+                  souvent le combo “macro 1x/semaine + kebab 1x/semaine + le reste au feeling”.
+                  <br />
+                  <br />
+                  Le détail qui résume bien : à la place de l’eau, j’étais plutôt{" "}
+                  <strong>Oasis / Ice Tea</strong>. Et niveau sommeil : horaires éclatés, parfois nuit blanche à jouer.
+                  Résultat : <strong>je me sentais mal</strong>, j’étais complexé, et j’avais{" "}
+                  <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport toute ma vie.
                 </p>
               </div>
 
+              <div className="jq-card" style={{ padding: 18 }}>
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <h3 className="jq-card__title">Ce que ça m’a appris</h3>
+                <p className="jq-card__text" style={{ marginTop: 10 }}>
+                  Quand tu n’as <strong>pas de cadre</strong>, tu compenses avec de la motivation. Et la motivation,
+                  elle ne vient jamais tous les jours.
+                  <br />
+                  <br />
+                  Donc ce n’est pas “plus de volonté” qu’il faut : c’est{" "}
+                  <strong>un système simple</strong> qui tient dans une semaine réelle.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal as="div">
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 18, marginTop: 18 }}>
               <div className="jq-card" style={{ padding: 18 }}>
                 <div className="jq-card__corner" />
                 <div className="jq-card__stripes" />
                 <h3 className="jq-card__title">Déclic</h3>
-                <p className="jq-card__text" style={{ marginTop: 8 }}>
-                  Confinement : j’ai pris ça comme une opportunité. J’ai fait toutes les erreurs classiques (régimes
-                  extrêmes, suppression totale d’un macro, entraînement sans récup…). Ça m’a servi de leçon.
+                <p className="jq-card__text" style={{ marginTop: 10 }}>
+                  Le confinement a été mon point de bascule : j’en avais marre de me sentir nul dans mon corps.
+                  J’ai voulu “reprendre en main” — et j’ai fait comme tout le monde : à fond… trop vite.
                 </p>
               </div>
 
               <div className="jq-card" style={{ padding: 18 }}>
                 <div className="jq-card__corner" />
                 <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">Aujourd’hui</h3>
-                <p className="jq-card__text" style={{ marginTop: 8 }}>
-                  Je fais simple : <strong>personnalisation</strong>, <strong>progressivité</strong>,{" "}
+                <h3 className="jq-card__title">Mes erreurs (classiques)</h3>
+                <ul style={{ margin: "10px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
+                  <li>Régimes extrêmes, “tout propre” du jour au lendemain.</li>
+                  <li>Suppression totale d’un macro (gras, puis glucides…).</li>
+                  <li>Obsession des protéines comme si ça réglait tout.</li>
+                  <li>Entraînements trop fréquents, pas assez de récupération.</li>
+                  <li>“Si je lâche 1 jour, j’ai tout foutu en l’air.”</li>
+                </ul>
+              </div>
+
+              <div className="jq-card" style={{ padding: 18 }}>
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <h3 className="jq-card__title">La leçon</h3>
+                <p className="jq-card__text" style={{ marginTop: 10 }}>
+                  L’extrême, ça marche 2 semaines. Le durable, ça marche 2 ans.
+                  <br />
+                  <br />
+                  Aujourd’hui, je fais simple : <strong>personnalisation</strong>, <strong>progressivité</strong>,{" "}
                   <strong>cadre</strong>, <strong>durabilité</strong>. Le but : que tu n’aies plus besoin de “forcer”.
                 </p>
               </div>
