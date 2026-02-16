@@ -235,38 +235,74 @@ export default function Page() {
               <div className="jq-card__stripes" />
               <h3 className="jq-card__title">Sport : pourquoi j’en parle (et pourquoi ça compte)</h3>
 
-              <p className="jq-card__text" style={{ marginTop: 10 }}>
-                Parce que je sais ce que c’est de construire un corps et des performances dans le monde réel : emploi du
-                temps chargé, fatigue, imprévus. Le but ici n’est pas de faire de toi un athlète pro — mais d’être{" "}
-                <strong>en forme</strong>, <strong>solide</strong>, et <strong>constant</strong>.
-              </p>
+              <>
+  <div style={{ display: "grid", gridTemplateColumns: "1.2fr .8fr", gap: 16, alignItems: "start", marginTop: 10 }}>
+    <div>
+      <p className="jq-card__text" style={{ margin: 0 }}>
+        Parce que je sais ce que c’est de construire un corps et des performances dans le monde réel : emploi du temps
+        chargé, fatigue, imprévus. Le but ici n’est pas de faire de toi un athlète pro — mais d’être{" "}
+        <strong>en forme</strong>, <strong>solide</strong>, et <strong>constant</strong>.
+      </p>
 
-              <div
-                style={{
-                  marginTop: 14,
-                  display: "grid",
-                  gap: 8,
-                  color: "rgba(255,255,255,.82)",
-                  fontSize: 14,
-                }}
-              >
-                <div>✅ <strong>8e Français aviron indoor</strong> (2026) — senior poids léger (-75 kg)</div>
-                <div>
-                  ✅ Streetlifting : <strong>175 kg squat</strong> • <strong>100 kg dips</strong> •{" "}
-                  <strong>65 kg tractions</strong> • <strong>+10 kg muscle up</strong>
-                </div>
-                <div>
-                  ✅ Streetworkout : <strong>straddle planche</strong> • <strong>front lever</strong> •{" "}
-                  <strong>handstand</strong>
-                </div>
-                <div>✅ Endurance : <strong>100 km vélo</strong> • <strong>semi-marathon</strong> (~5’44/km)</div>
-                <div>✅ Passif multi-sports : foot (+10 ans), natation, MMA, tennis… (et oui, j’ai touché à tout)</div>
-              </div>
+      <div
+        style={{
+          marginTop: 14,
+          display: "grid",
+          gap: 8,
+          color: "rgba(255,255,255,.82)",
+          fontSize: 14,
+        }}
+      >
+        <div>✅ <strong>8e Français aviron indoor</strong> (2026) — senior poids léger (-75 kg)</div>
+        <div>
+          ✅ Streetlifting : <strong>175 kg squat</strong> • <strong>100 kg dips</strong> •{" "}
+          <strong>65 kg tractions</strong> • <strong>+10 kg muscle up</strong>
+        </div>
+        <div>
+          ✅ Streetworkout : <strong>straddle planche</strong> • <strong>front lever</strong> • <strong>handstand</strong>
+        </div>
+        <div>✅ Endurance : <strong>100 km vélo</strong> • <strong>semi-marathon</strong> (~5’44/km)</div>
+        <div>✅ Passif multi-sports : foot (+10 ans), natation, MMA, tennis…</div>
+      </div>
 
-              <p className="jq-card__text" style={{ marginTop: 12 }}>
-                Tout ça pour dire : je connais le terrain. Et je sais surtout que ce qui fait la différence, ce n’est
-                pas une semaine parfaite — c’est un cadre que tu répètes.
-              </p>
+      <p className="jq-card__text" style={{ marginTop: 12 }}>
+        Tout ça pour dire : je connais le terrain. Et je sais surtout que ce qui fait la différence, ce n’est pas une
+        semaine parfaite — c’est un cadre que tu répètes.
+      </p>
+    </div>
+
+    <div
+      style={{
+        borderRadius: 16,
+        overflow: "hidden",
+        border: "1px solid rgba(255,255,255,.10)",
+        background: "rgba(0,0,0,.25)",
+      }}
+    >
+      <img
+        src="/robin-physique-actuel.png"
+        alt="Robin - physique actuel"
+        style={{ width: "100%", height: 420, objectFit: "cover", display: "block" }}
+      />
+    </div>
+  </div>
+
+  <div
+    style={{
+      marginTop: 14,
+      borderRadius: 16,
+      overflow: "hidden",
+      border: "1px solid rgba(255,255,255,.10)",
+      background: "rgba(0,0,0,.25)",
+    }}
+  >
+    <img
+      src="/robin-vietnam-plage.jpg"
+      alt="Robin - discipline et progression"
+      style={{ width: "100%", height: 260, objectFit: "cover", display: "block" }}
+    />
+  </div>
+</>
             </div>
           </Reveal>
 
