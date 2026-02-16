@@ -195,7 +195,7 @@ export default function Page() {
 
           <div className="jq-center" style={{ marginTop: 22 }}>
             <a className="jq-btn jq-btn--primary" href="/accompagnement">
-              Voir l’offre →
+              Voir l’accompagnement →
             </a>
           </div>
         </div>
