@@ -200,42 +200,44 @@ export default function Page() {
             <p className="jq-p">Des faits. Pas des “promesses”.</p>
           </Reveal>
 
-          <Reveal as="div">
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
-              <div className="jq-card">
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">Formations</h3>
-                <ul style={{ margin: "10px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
-                  <li>
-                    <strong style={{ color: "var(--text)" }}>BTS Diététique</strong> (2023)
-                  </li>
-                  <li>
-                    <strong style={{ color: "var(--text)" }}>Praticien en phytothérapie</strong> (2024)
-                  </li>
-                  <li>
-                    <strong style={{ color: "var(--text)" }}>Formation SuperPhysique (Rudy Coia)</strong> (2025)
-                  </li>
-                </ul>
+                    <Reveal as="div">
+            <div className="jq-card" style={{ padding: 18, marginTop: 18 }}>
+              <div className="jq-card__corner" />
+              <div className="jq-card__stripes" />
+              <h3 className="jq-card__title">Sport : pourquoi j’en parle (et pourquoi ça compte)</h3>
+
+              <p className="jq-card__text" style={{ marginTop: 10 }}>
+                Parce que je sais ce que c’est de construire un corps et des performances dans le monde réel : emploi du
+                temps chargé, fatigue, imprévus. Le but ici n’est pas de faire de toi un athlète pro — mais d’être{" "}
+                <strong>en forme</strong>, <strong>solide</strong>, et <strong>constant</strong>.
+              </p>
+
+              <div
+                style={{
+                  marginTop: 14,
+                  display: "grid",
+                  gap: 8,
+                  color: "rgba(255,255,255,.82)",
+                  fontSize: 14,
+                }}
+              >
+                <div>✅ <strong>8e Français aviron indoor</strong> (2026) — senior poids léger (-75 kg)</div>
+                <div>
+                  ✅ Streetlifting : <strong>175 kg squat</strong> • <strong>100 kg dips</strong> •{" "}
+                  <strong>65 kg tractions</strong> • <strong>+10 kg muscle up</strong>
+                </div>
+                <div>
+                  ✅ Streetworkout : <strong>straddle planche</strong> • <strong>front lever</strong> •{" "}
+                  <strong>handstand</strong>
+                </div>
+                <div>✅ Endurance : <strong>100 km vélo</strong> • <strong>semi-marathon</strong> (~5’44/km)</div>
+                <div>✅ Passif multi-sports : foot (+10 ans), natation, MMA, tennis… (et oui, j’ai touché à tout)</div>
               </div>
 
-              <div className="jq-card">
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">Expérience & preuves</h3>
-                <ul style={{ margin: "10px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
-                  <li>Coaching “terrain” depuis mes 16 ans, officiellement depuis 2023.</li>
-                  <li>Environ <strong style={{ color: "var(--text)" }}>30+ transformations</strong>.</li>
-                  <li>
-                    Transformation perso : <strong style={{ color: "var(--text)" }}>+20 kg secs en 3 ans</strong> et{" "}
-                    <strong style={{ color: "var(--text)" }}>-10 kg en 3 mois</strong>.
-                  </li>
-                  <li>
-                    <strong style={{ color: "var(--text)" }}>8e Français aviron indoor</strong> (2026) — senior poids
-                    léger (-75 kg).
-                  </li>
-                </ul>
-              </div>
+              <p className="jq-card__text" style={{ marginTop: 12 }}>
+                Tout ça pour dire : je connais le terrain. Et je sais surtout que ce qui fait la différence, ce n’est
+                pas une semaine parfaite — c’est un cadre que tu répètes.
+              </p>
             </div>
           </Reveal>
 
