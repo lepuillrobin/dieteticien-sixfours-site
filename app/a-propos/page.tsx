@@ -122,15 +122,40 @@ export default function Page() {
     <div className="jq-card__corner" />
     <div className="jq-card__stripes" />
     <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
-    <p className="jq-card__text" style={{ marginTop: 10 }}>
-      Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau, et mon alimentation c’était souvent le
-      combo “macro 1x/semaine + kebab 1x/semaine + le reste au feeling”.
-      <br />
-      <br />
-      Le détail qui résume bien : à la place de l’eau, j’étais plutôt <strong>Oasis / Ice Tea</strong>. Et niveau
-      sommeil : horaires éclatés, parfois nuit blanche à jouer. Résultat : <strong>je me sentais mal</strong>, j’étais
-      complexé, et j’avais <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport toute ma vie.
-    </p>
+    <div
+  style={{
+    marginTop: 10,
+    display: "grid",
+    gridTemplateColumns: "1.25fr .75fr",
+    gap: 16,
+    alignItems: "start",
+  }}
+>
+  <p className="jq-card__text" style={{ margin: 0 }}>
+    Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau, et mon alimentation c’était souvent le
+    combo “macro 1x/semaine + kebab 1x/semaine + le reste au feeling”.
+    <br />
+    <br />
+    Le détail qui résume bien : à la place de l’eau, j’étais plutôt <strong>Oasis / Ice Tea</strong>. Et niveau
+    sommeil : horaires éclatés, parfois nuit blanche à jouer. Résultat : <strong>je me sentais mal</strong>, j’étais
+    complexé, et j’avais <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport toute ma vie.
+  </p>
+
+  <div
+    style={{
+      borderRadius: 16,
+      overflow: "hidden",
+      border: "1px solid rgba(255,255,255,.10)",
+      background: "rgba(0,0,0,.25)",
+    }}
+  >
+    <img
+      src="/robin-avant-alcool.png"
+      alt="Robin - avant : mauvaises habitudes"
+      style={{ width: "100%", height: 280, objectFit: "cover", display: "block" }}
+    />
+  </div>
+</div>
   </div>
 </Reveal>
 
