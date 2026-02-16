@@ -87,7 +87,7 @@ export default function Page() {
                       fontSize: 14,
                     }}
                   >
-                    <div>✅ Plan personnalisé + ajustements</div>
+                    <div>✅ Plan personnalisé (diète/entraînement) + ajustements</div>
                     <div>✅ Tracker d’habitudes</div>
                     <div>✅ Visio toutes les 2 semaines</div>
                     <div>✅ WhatsApp 7j/7</div>
