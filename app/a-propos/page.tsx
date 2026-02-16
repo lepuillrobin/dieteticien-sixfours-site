@@ -1,49 +1,314 @@
+import Reveal from "../components/Reveal";
+
 export const metadata = {
   title: "À propos | Robin LE PUILL",
   description:
     "À propos de Robin LE PUILL, diététicien à Six-Fours-les-Plages : approche durable, personnalisation, suivi en visio et déplacements à domicile.",
 };
 
+const WHATSAPP = "https://wa.me/33751013960";
+const INSTAGRAM = "https://www.instagram.com/robindiet/";
+
 export default function Page() {
   return (
-    <main style={{ maxWidth: 900, margin: "0 auto", padding: "48px 20px" }}>
-      <h1>À propos</h1>
+    <>
+      {/* HERO */}
+      <section className="jq-hero" style={{ minHeight: 520 }}>
+        <div className="jq-hero__overlay" />
+        <div className="jq-container jq-hero__content">
+          <Reveal as="div">
+            <div className="jq-kicker">À PROPOS</div>
 
-      <p>
-        Je m’appelle <strong>Robin LE PUILL</strong>, diététicien. J’accompagne
-        principalement les personnes qui veulent <strong>perdre du gras</strong>{" "}
-        et <strong>mieux se sentir</strong>, avec une approche{" "}
-        <strong>durable</strong> (pas “parfait 2 semaines puis abandon”).
-      </p>
+            <h1 className="jq-title" style={{ fontSize: 56 }}>
+              UN CADRE <br />
+              <span className="jq-title--accent">QUI TIENT</span>
+            </h1>
 
-      <h2>Mon approche</h2>
-      <ul>
-        <li>
-          <strong>Personnalisation</strong> : on construit un plan qui colle à ta
-          vraie vie (contraintes, goûts, horaires, sorties).
-        </li>
-        <li>
-          <strong>Durabilité</strong> : simple, tenable, et ajusté au fil du
-          temps.
-        </li>
-        <li>
-          <strong>Tracker d’habitudes</strong> : pas, sommeil, poids, ressentis.
-        </li>
-      </ul>
+            <p className="jq-subtitle" style={{ maxWidth: 820 }}>
+              Je m’appelle <strong>Robin LE PUILL</strong>, diététicien. J’accompagne surtout les{" "}
+              <strong>hommes de 28 à 40 ans</strong> (souvent occupés) qui veulent{" "}
+              <strong>perdre du poids</strong> ou faire une <strong>recomposition</strong> — sans retomber dans le
+              schéma “parfait 2 semaines puis abandon”.
+            </p>
 
-      <h2>Où je consulte</h2>
-      <ul>
-        <li>En visio</li>
-        <li>Et je peux aussi me déplacer à domicile</li>
-      </ul>
+            <div className="jq-actions">
+              <a className="jq-btn jq-btn--primary" href="/accompagnement">
+                Voir l’accompagnement →
+              </a>
+              <a className="jq-btn jq-btn--ghost" href={WHATSAPP} target="_blank" rel="noreferrer">
+                M’écrire sur WhatsApp →
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
-      <p>
-        Tu peux aussi retrouver mon contenu sur{" "}
-        <a href="https://www.instagram.com/robindiet/" target="_blank" rel="noreferrer">
-          Instagram
-        </a>
-        .
-      </p>
-    </main>
+      {/* POUR QUI / OBJECTIF */}
+      <section className="jq-section">
+        <div className="jq-container">
+          <Reveal as="div">
+            <h2 className="jq-h2">Ce que je fais (concrètement)</h2>
+            <p className="jq-p">
+              Tu veux un résultat visible, mais tu n’as pas le temps (ni l’envie) de vivre comme un moine. Normal.
+            </p>
+          </Reveal>
+
+          <Reveal as="div" className="jq-stagger">
+            <div className="jq-cards">
+              <div className="jq-card">
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <div className="jq-card__icon">🎯</div>
+                <h3 className="jq-card__title">Objectif</h3>
+                <p className="jq-card__text">
+                  Typiquement <strong>-5 à -10 kg en ~3 mois</strong> (selon ton point de départ), puis on continue sur
+                  une recomposition stable.
+                </p>
+              </div>
+
+              <div className="jq-card">
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <div className="jq-card__icon">🧱</div>
+                <h3 className="jq-card__title">Cadre & repères</h3>
+                <p className="jq-card__text">
+                  Un plan qui colle à ta vraie vie + des repères simples. Pas une liste d’aliments “parce que c’est
+                  healthy”.
+                </p>
+              </div>
+
+              <div className="jq-card">
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <div className="jq-card__icon">🔁</div>
+                <h3 className="jq-card__title">Ajustements</h3>
+                <p className="jq-card__text">
+                  On ajuste régulièrement : c’est ça qui fait tenir. Le “plan parfait” figé, ça ne marche pas.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal as="div">
+            <div className="jq-card" style={{ padding: 18, marginTop: 18 }}>
+              <div className="jq-card__corner" />
+              <div className="jq-card__stripes" />
+              <h3 className="jq-card__title">Ce que je ne fais pas</h3>
+              <ul style={{ margin: "10px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
+                <li>Le “-5 kg en 10 jours”.</li>
+                <li>Les plans extrêmes (zéro gras / zéro glucides / 2 entraînements par jour…).</li>
+                <li>Le tout-ou-rien qui finit en effet yoyo.</li>
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* STORY */}
+      <section className="jq-section" style={{ background: "var(--panel2)" }}>
+        <div className="jq-container">
+          <Reveal as="div">
+            <h2 className="jq-h2">Pourquoi je fais ça</h2>
+            <p className="jq-p">
+              Parce que j’ai été l’exemple parfait de ce qu’il ne faut pas faire… puis j’ai appris à construire un
+              système qui tient.
+            </p>
+          </Reveal>
+
+          <Reveal as="div">
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 18 }}>
+              <div className="jq-card" style={{ padding: 18 }}>
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <h3 className="jq-card__title">Avant</h3>
+                <p className="jq-card__text" style={{ marginTop: 8 }}>
+                  Lycée : tabac + mauvaises habitudes, peu d’eau, malbouffe, sommeil n’importe comment. Et malgré le
+                  sport… <strong>zéro cardio</strong> et pas bien dans mon corps.
+                </p>
+              </div>
+
+              <div className="jq-card" style={{ padding: 18 }}>
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <h3 className="jq-card__title">Déclic</h3>
+                <p className="jq-card__text" style={{ marginTop: 8 }}>
+                  Confinement : j’ai pris ça comme une opportunité. J’ai fait toutes les erreurs classiques (régimes
+                  extrêmes, suppression totale d’un macro, entraînement sans récup…). Ça m’a servi de leçon.
+                </p>
+              </div>
+
+              <div className="jq-card" style={{ padding: 18 }}>
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <h3 className="jq-card__title">Aujourd’hui</h3>
+                <p className="jq-card__text" style={{ marginTop: 8 }}>
+                  Je fais simple : <strong>personnalisation</strong>, <strong>progressivité</strong>,{" "}
+                  <strong>cadre</strong>, <strong>durabilité</strong>. Le but : que tu n’aies plus besoin de “forcer”.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* PREUVES */}
+      <section className="jq-section">
+        <div className="jq-container">
+          <Reveal as="div">
+            <h2 className="jq-h2">Crédibilité</h2>
+            <p className="jq-p">Des faits. Pas des “promesses”.</p>
+          </Reveal>
+
+          <Reveal as="div">
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
+              <div className="jq-card">
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <h3 className="jq-card__title">Formations</h3>
+                <ul style={{ margin: "10px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
+                  <li>
+                    <strong style={{ color: "var(--text)" }}>BTS Diététique</strong> (2023)
+                  </li>
+                  <li>
+                    <strong style={{ color: "var(--text)" }}>Praticien en phytothérapie</strong> (2024)
+                  </li>
+                  <li>
+                    <strong style={{ color: "var(--text)" }}>Formation SuperPhysique (Rudy Coia)</strong> (2025)
+                  </li>
+                </ul>
+              </div>
+
+              <div className="jq-card">
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <h3 className="jq-card__title">Expérience & preuves</h3>
+                <ul style={{ margin: "10px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
+                  <li>Coaching “terrain” depuis mes 16 ans, officiellement depuis 2023.</li>
+                  <li>Environ <strong style={{ color: "var(--text)" }}>30+ transformations</strong>.</li>
+                  <li>
+                    Transformation perso : <strong style={{ color: "var(--text)" }}>+20 kg secs en 3 ans</strong> et{" "}
+                    <strong style={{ color: "var(--text)" }}>-10 kg en 3 mois</strong>.
+                  </li>
+                  <li>
+                    <strong style={{ color: "var(--text)" }}>8e Français aviron indoor</strong> (2026) — senior poids
+                    léger (-75 kg).
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal as="div">
+            <div className="jq-card" style={{ padding: 18, marginTop: 18 }}>
+              <div className="jq-card__corner" />
+              <div className="jq-card__stripes" />
+              <h3 className="jq-card__title">Pourquoi je parle de sport</h3>
+              <p className="jq-card__text" style={{ marginTop: 10 }}>
+                Parce que je sais ce que c’est de construire un physique et des performances dans le monde réel (boulot,
+                fatigue, imprévus). Mais l’objectif ici n’est pas d’être “un athlète” : c’est d’être{" "}
+                <strong>en forme</strong>, <strong>solide</strong>, et <strong>constant</strong>.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* COMMENT DÉMARRER */}
+      <section className="jq-section" style={{ background: "var(--panel2)" }}>
+        <div className="jq-container">
+          <Reveal as="div">
+            <h2 className="jq-h2">Comment on démarre</h2>
+            <p className="jq-p">Simple. Actionnable. Et on avance.</p>
+          </Reveal>
+
+          <Reveal as="div">
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(4, 1fr)",
+                gap: 14,
+              }}
+            >
+              {[
+                {
+                  n: "1",
+                  t: "Message WhatsApp",
+                  d: "Tu m’écris avec ton objectif + tes contraintes + ton rythme de vie.",
+                },
+                {
+                  n: "2",
+                  t: "Premier échange (bilan)",
+                  d: "On clarifie le vrai problème : habitudes, blocages, emploi du temps, priorités.",
+                },
+                {
+                  n: "3",
+                  t: "Plan + tracker",
+                  d: "Je construis ton plan + ton tracker d’habitudes (sommeil, pas, etc.).",
+                },
+                {
+                  n: "4",
+                  t: "Ajustements réguliers",
+                  d: "On ajuste toutes les 2 à 4 semaines : décisions simples, progression visible.",
+                },
+              ].map((s) => (
+                <div key={s.n} className="jq-card" style={{ padding: 18 }}>
+                  <div
+                    style={{
+                      width: 38,
+                      height: 38,
+                      borderRadius: 999,
+                      display: "grid",
+                      placeItems: "center",
+                      background: "rgba(255,122,0,.16)",
+                      color: "white",
+                      fontWeight: 900,
+                      marginBottom: 10,
+                    }}
+                  >
+                    {s.n}
+                  </div>
+                  <h3 className="jq-card__title" style={{ marginBottom: 6 }}>
+                    {s.t}
+                  </h3>
+                  <p className="jq-card__text">{s.d}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <div className="jq-center" style={{ marginTop: 22 }}>
+            <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
+              Envoyer mon objectif →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA FINAL */}
+      <section className="jq-hero" style={{ minHeight: 420 }}>
+        <div className="jq-hero__overlay" />
+        <div className="jq-container jq-hero__content">
+          <Reveal as="div">
+            <h2 className="jq-title" style={{ fontSize: 52 }}>
+              TU VEUX UN <br />
+              <span className="jq-title--accent">PLAN QUI TIENT ?</span>
+            </h2>
+
+            <p className="jq-subtitle" style={{ maxWidth: 760 }}>
+              Tu m’écris ton objectif + tes contraintes, et on part sur quelque chose de simple et actionnable.
+            </p>
+
+            <div className="jq-actions">
+              <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
+                M’écrire sur WhatsApp →
+              </a>
+              <a className="jq-btn jq-btn--ghost" href={INSTAGRAM} target="_blank" rel="noreferrer">
+                Voir Instagram →
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </>
   );
 }
