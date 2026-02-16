@@ -195,7 +195,7 @@ export default function Page() {
       <section className="jq-section">
         <div className="jq-container">
           <Reveal as="div">
-            <h2 className="jq-h2">Pour qui (et pas pour qui)</h2>
+            <h2 className="jq-h2">Pour qui ?</h2>
             <p className="jq-p">
               On gagne du temps : si tu veux un truc extrême “rapide”, ce n’est
               pas le bon endroit.
