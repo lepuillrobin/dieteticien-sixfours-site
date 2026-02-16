@@ -1,3 +1,5 @@
+import Reveal from "../components/Reveal";
+
 export const metadata = {
   title: "Contact | Robin LE PUILL",
   description:
@@ -9,39 +11,118 @@ const EMAIL = "mailto:lepuillrobin@gmail.com";
 
 export default function Page() {
   return (
-    <main style={{ maxWidth: 900, margin: "0 auto", padding: "48px 20px" }}>
-      <h1>Contact</h1>
+    <>
+      {/* HERO */}
+      <section className="jq-hero" style={{ minHeight: 520 }}>
+        <div className="jq-hero__overlay" />
+        <div className="jq-container jq-hero__content">
+          <Reveal as="div">
+            <div className="jq-kicker">CONTACT</div>
 
-      <p>
-        Le plus simple : tu m’écris sur <strong>WhatsApp</strong> avec ton objectif
-        + tes contraintes. Je te réponds et on cale un premier échange.
-      </p>
+            <h1 className="jq-title" style={{ fontSize: 56 }}>
+              ON FAIT <br />
+              <span className="jq-title--accent">SIMPLE</span>
+            </h1>
 
-      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 16 }}>
-        <a href={WHATSAPP} style={{ padding: "10px 14px", border: "1px solid #ddd", borderRadius: 8 }}>
-          Me contacter sur WhatsApp
-        </a>
-        <a href={EMAIL} style={{ padding: "10px 14px", border: "1px solid #ddd", borderRadius: 8 }}>
-          Envoyer un email
-        </a>
-      </div>
+            <p className="jq-subtitle" style={{ maxWidth: 760 }}>
+              Le plus efficace : tu m’écris sur <strong>WhatsApp</strong> avec ton objectif + tes contraintes.
+              Je te réponds et on cale un premier échange.
+            </p>
 
-      <h2 style={{ marginTop: 28 }}>Infos pratiques</h2>
-      <ul>
-        <li>
-          <strong>WhatsApp :</strong> 07 51 01 39 60 (7j/7)
-        </li>
-        <li>
-          <strong>Email :</strong> lepuillrobin@gmail.com
-        </li>
-        <li>
-          <strong>Zone :</strong> Six-Fours-les-Plages & alentours (La Seyne-sur-Mer,
-          Sanary-sur-Mer, Ollioules, Toulon, Bandol, Saint-Mandrier-sur-Mer…)
-        </li>
-        <li>
-          <strong>Format :</strong> visio + déplacements à domicile possibles
-        </li>
-      </ul>
-    </main>
+            <div className="jq-actions">
+              <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
+                Me contacter sur WhatsApp →
+              </a>
+              <a className="jq-btn jq-btn--ghost" href={EMAIL}>
+                Envoyer un email →
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* INFOS */}
+      <section className="jq-section">
+        <div className="jq-container">
+          <Reveal as="div">
+            <h2 className="jq-h2">Infos pratiques</h2>
+            <p className="jq-p">Zone, format, et moyens de contact.</p>
+          </Reveal>
+
+          <Reveal as="div">
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: 18,
+              }}
+            >
+              <div className="jq-card">
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <h3 className="jq-card__title">Coordonnées</h3>
+
+                <div style={{ marginTop: 10, display: "grid", gap: 10, color: "var(--muted)" }}>
+                  <div>
+                    <strong style={{ color: "var(--text)" }}>WhatsApp :</strong> 07 51 01 39 60 (7j/7)
+                  </div>
+                  <div>
+                    <strong style={{ color: "var(--text)" }}>Email :</strong> lepuillrobin@gmail.com
+                  </div>
+                </div>
+
+                <div className="jq-actions" style={{ marginTop: 16 }}>
+                  <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
+                    WhatsApp →
+                  </a>
+                  <a className="jq-btn jq-btn--ghost" href={EMAIL}>
+                    Email →
+                  </a>
+                </div>
+              </div>
+
+              <div className="jq-card">
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <h3 className="jq-card__title">Zone & format</h3>
+
+                <div style={{ marginTop: 10, display: "grid", gap: 10, color: "var(--muted)" }}>
+                  <div>
+                    <strong style={{ color: "var(--text)" }}>Zone :</strong> Six-Fours-les-Plages & alentours
+                    (La Seyne-sur-Mer, Sanary-sur-Mer, Ollioules, Toulon, Bandol, Saint-Mandrier-sur-Mer…)
+                  </div>
+                  <div>
+                    <strong style={{ color: "var(--text)" }}>Format :</strong> visio + déplacements à domicile possibles
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CTA FINAL */}
+      <section className="jq-hero" style={{ minHeight: 420 }}>
+        <div className="jq-hero__overlay" />
+        <div className="jq-container jq-hero__content">
+          <Reveal as="div">
+            <h2 className="jq-title" style={{ fontSize: 52 }}>
+              ENVOIE TON <br />
+              <span className="jq-title--accent">OBJECTIF</span>
+            </h2>
+
+            <p className="jq-subtitle" style={{ maxWidth: 720 }}>
+              Objectif + contraintes + emploi du temps. Je te réponds avec une stratégie simple.
+            </p>
+
+            <div className="jq-actions">
+              <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
+                WhatsApp →
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </>
   );
 }
