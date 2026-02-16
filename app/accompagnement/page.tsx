@@ -227,7 +227,7 @@ export default function Page() {
                 <div className="jq-card__stripes" />
                 <h3 className="jq-card__title">❌ Pas pour toi si…</h3>
                 <ul style={{ margin: "12px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
-                  <li>Tu veux une “diète parfaite” à suivre au gramme près.</li>
+                  <li>Tu veux faire un "régime" qui va finir en effet yoyo.</li>
                   <li>Tu veux du “-5 kg en 10 jours”.</li>
                   <li>Tu ne veux pas suivre un minimum de structure.</li>
                   <li>Tu veux juste une liste d’aliments sans accompagnement.</li>
