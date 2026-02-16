@@ -241,18 +241,7 @@ export default function Page() {
             </div>
           </Reveal>
 
-          <Reveal as="div">
-            <div className="jq-card" style={{ padding: 18, marginTop: 18 }}>
-              <div className="jq-card__corner" />
-              <div className="jq-card__stripes" />
-              <h3 className="jq-card__title">Pourquoi je parle de sport</h3>
-              <p className="jq-card__text" style={{ marginTop: 10 }}>
-                Parce que je sais ce que c’est de construire un physique et des performances dans le monde réel (boulot,
-                fatigue, imprévus). Mais l’objectif ici n’est pas d’être “un athlète” : c’est d’être{" "}
-                <strong>en forme</strong>, <strong>solide</strong>, et <strong>constant</strong>.
-              </p>
-            </div>
-          </Reveal>
+          
         </div>
       </section>
 
