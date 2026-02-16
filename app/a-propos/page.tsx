@@ -124,7 +124,7 @@ export default function Page() {
                 <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
                   Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau, et mon alimentation c’était
-                  souvent le combo “macro 1x/semaine + kebab 1x/semaine + le reste au feeling”.
+                  souvent le combo “Macdo 1x/semaine + kebab 1x/semaine + le reste pas beaucoup mieux...”.
                   <br />
                   <br />
                   Le détail qui résume bien : à la place de l’eau, j’étais plutôt{" "}
