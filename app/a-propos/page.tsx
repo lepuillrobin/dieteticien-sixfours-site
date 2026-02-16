@@ -117,78 +117,82 @@ export default function Page() {
           </Reveal>
 
           <Reveal as="div">
-            <div style={{ display: "grid", gridTemplateColumns: "1.2fr .8fr", gap: 18 }}>
-              <div className="jq-card" style={{ padding: 18 }}>
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
-                <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau, et mon alimentation c’était
-                  souvent le combo “Macdo 1x/semaine + kebab 1x/semaine + le reste pas beaucoup mieux...”.
-                  <br />
-                  <br />
-                  Le détail qui résume bien : à la place de l’eau, j’étais plutôt{" "}
-                  <strong>Oasis / Ice Tea</strong>. Et niveau sommeil : horaires éclatés, parfois nuit blanche à jouer.
-                  Résultat : <strong>je me sentais mal</strong>, j’étais complexé, et j’avais{" "}
-                  <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport toute ma vie.
-                </p>
-              </div>
+  {/* 1) AVANT : grand bloc pleine largeur */}
+  <div className="jq-card" style={{ padding: 18 }}>
+    <div className="jq-card__corner" />
+    <div className="jq-card__stripes" />
+    <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
+    <p className="jq-card__text" style={{ marginTop: 10 }}>
+      Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau, et mon alimentation c’était souvent le
+      combo “macro 1x/semaine + kebab 1x/semaine + le reste au feeling”.
+      <br />
+      <br />
+      Le détail qui résume bien : à la place de l’eau, j’étais plutôt <strong>Oasis / Ice Tea</strong>. Et niveau
+      sommeil : horaires éclatés, parfois nuit blanche à jouer. Résultat : <strong>je me sentais mal</strong>, j’étais
+      complexé, et j’avais <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport toute ma vie.
+    </p>
+  </div>
+</Reveal>
 
-              <div className="jq-card" style={{ padding: 18 }}>
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">Ce que ça m’a appris</h3>
-                <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Quand tu n’as <strong>pas de cadre</strong>, tu compenses avec de la motivation. Et la motivation,
-                  elle ne vient jamais tous les jours.
-                  <br />
-                  <br />
-                  Donc ce n’est pas “plus de volonté” qu’il faut : c’est{" "}
-                  <strong>un système simple</strong> qui tient dans une semaine réelle.
-                </p>
-              </div>
-            </div>
-          </Reveal>
+<Reveal as="div">
+  {/* 2) DÉCLIC + ERREURS */}
+  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginTop: 18 }}>
+    <div className="jq-card" style={{ padding: 18 }}>
+      <div className="jq-card__corner" />
+      <div className="jq-card__stripes" />
+      <h3 className="jq-card__title">Déclic</h3>
+      <p className="jq-card__text" style={{ marginTop: 10 }}>
+        Le confinement a été mon point de bascule : j’en avais marre de me sentir nul dans mon corps. J’ai voulu
+        “reprendre en main” — et j’ai fait comme tout le monde : à fond… trop vite.
+      </p>
+    </div>
 
-          <Reveal as="div">
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 18, marginTop: 18 }}>
-              <div className="jq-card" style={{ padding: 18 }}>
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">Déclic</h3>
-                <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Le confinement a été mon point de bascule : j’en avais marre de me sentir nul dans mon corps.
-                  J’ai voulu me “reprendre en main” — et j’ai fait comme tout le monde : à fond… trop vite, trop fort, trop extrême.
-                </p>
-              </div>
+    <div className="jq-card" style={{ padding: 18 }}>
+      <div className="jq-card__corner" />
+      <div className="jq-card__stripes" />
+      <h3 className="jq-card__title">Mes erreurs (classiques)</h3>
+      <ul style={{ margin: "10px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
+        <li>Régimes extrêmes, “tout propre” du jour au lendemain.</li>
+        <li>Suppression totale d’un macro (gras, puis glucides…).</li>
+        <li>Obsession des protéines comme si ça réglait tout.</li>
+        <li>Entraînements trop fréquents, pas assez de récupération.</li>
+        <li>“Si je lâche 1 jour, j’ai tout foutu en l’air.”</li>
+      </ul>
+    </div>
+  </div>
+</Reveal>
 
-              <div className="jq-card" style={{ padding: 18 }}>
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">Mes erreurs (classiques)</h3>
-                <ul style={{ margin: "10px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
-                  <li>Régimes extrêmes, “tout propre” du jour au lendemain.</li>
-                  <li>Suppression totale d’un macro (gras, puis glucides…).</li>
-                  <li>Obsession des protéines comme si ça réglait tout.</li>
-                  <li>Entraînements trop fréquents, pas assez de récupération.</li>
-                  <li>“Si je lâche 1 jour, j’ai tout foutu en l’air.”</li>
-                </ul>
-              </div>
+<Reveal as="div">
+  {/* 3) CE QUE ÇA M'A APPRIS + LA LEÇON */}
+  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginTop: 18 }}>
+    <div className="jq-card" style={{ padding: 18 }}>
+      <div className="jq-card__corner" />
+      <div className="jq-card__stripes" />
+      <h3 className="jq-card__title">Ce que ça m’a appris</h3>
+      <p className="jq-card__text" style={{ marginTop: 10 }}>
+        Quand tu n’as <strong>pas de cadre</strong>, tu compenses avec de la motivation. Et la motivation, elle ne vient
+        jamais tous les jours.
+        <br />
+        <br />
+        Donc ce n’est pas “plus de volonté” qu’il faut : c’est <strong>un système simple</strong> qui tient dans une
+        semaine réelle.
+      </p>
+    </div>
 
-              <div className="jq-card" style={{ padding: 18 }}>
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">La leçon</h3>
-                <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  L’extrême, ça marche 2 semaines. Le durable, ça marche 2 ans.
-                  <br />
-                  <br />
-                  Aujourd’hui, je fais simple : <strong>personnalisation</strong>, <strong>progressivité</strong>,{" "}
-                  <strong>cadre</strong>, <strong>durabilité</strong>. Le but : que tu n’aies plus besoin de “forcer”.
-                </p>
-              </div>
-            </div>
-          </Reveal>
+    <div className="jq-card" style={{ padding: 18 }}>
+      <div className="jq-card__corner" />
+      <div className="jq-card__stripes" />
+      <h3 className="jq-card__title">La leçon</h3>
+      <p className="jq-card__text" style={{ marginTop: 10 }}>
+        L’extrême, ça marche 2 semaines. Le durable, ça marche 2 ans.
+        <br />
+        <br />
+        Aujourd’hui, je fais simple : <strong>personnalisation</strong>, <strong>progressivité</strong>,{" "}
+        <strong>cadre</strong>, <strong>durabilité</strong>. Le but : que tu n’aies plus besoin de “forcer”.
+      </p>
+    </div>
+  </div>
+</Reveal>
         </div>
       </section>
 
