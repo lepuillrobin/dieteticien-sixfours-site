@@ -9,28 +9,24 @@ export const metadata = {
 const WHATSAPP = "https://wa.me/33751013960";
 const INSTAGRAM = "https://www.instagram.com/robindiet/";
 
-/**
- * ✅ “Photo fondue DANS la card” (pas de cadre)
- * - l'image est en arrière-plan de la card
- * - fondu via opacité + gradient + léger blur
- */
-function CardBackground({
+function FadedCardBackground({
   src,
   alt,
-  height = 320,
-  position = "right center",
+  objectPosition = "right center",
+  opacity = 0.5,
 }: {
   src: string;
   alt: string;
-  height?: number;
-  position?: string;
+  objectPosition?: string;
+  opacity?: number;
 }) {
   return (
     <div
-      aria-label={alt}
+      aria-hidden="true"
       style={{
         position: "absolute",
         inset: 0,
+        zIndex: 1, // ✅ le fond est au milieu
         pointerEvents: "none",
         overflow: "hidden",
         borderRadius: 18,
@@ -43,32 +39,29 @@ function CardBackground({
           position: "absolute",
           inset: 0,
           width: "100%",
-          height,
-          minHeight: "100%",
+          height: "100%",
           objectFit: "cover",
-          objectPosition: position,
-          opacity: 0.35,
+          objectPosition,
+          opacity,
           filter: "blur(1px) saturate(1.05) contrast(1.05)",
           transform: "scale(1.03)",
         }}
       />
-      {/* Fondu dark + lisibilité texte */}
+
+      {/* ✅ Fondu pour lisibilité du texte */}
       <div
-        aria-hidden="true"
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.66) 45%, rgba(0,0,0,.40) 100%)",
+            "linear-gradient(90deg, rgba(0,0,0,.90) 0%, rgba(0,0,0,.70) 48%, rgba(0,0,0,.35) 100%)",
         }}
       />
       <div
-        aria-hidden="true"
         style={{
           position: "absolute",
           inset: 0,
-          background:
-            "linear-gradient(180deg, rgba(0,0,0,.20) 0%, rgba(0,0,0,.58) 100%)",
+          background: "linear-gradient(180deg, rgba(0,0,0,.20) 0%, rgba(0,0,0,.65) 100%)",
         }}
       />
     </div>
@@ -93,8 +86,8 @@ export default function Page() {
             <p className="jq-subtitle" style={{ maxWidth: 820 }}>
               Je m’appelle <strong>Robin LE PUILL</strong>, diététicien. J’accompagne surtout les{" "}
               <strong>hommes de 28 à 40 ans</strong> (souvent occupés) qui veulent{" "}
-              <strong>perdre du poids</strong> ou faire une{" "}
-              <strong>recomposition corporelle</strong> — sans retomber dans le schéma “parfait 2 semaines puis abandon”.
+              <strong>perdre du poids</strong> ou faire une <strong>recomposition corporelle</strong> — sans retomber dans le
+              schéma “parfait 2 semaines puis abandon”.
             </p>
 
             <div className="jq-actions">
@@ -138,7 +131,8 @@ export default function Page() {
                 <div className="jq-card__icon">🧱</div>
                 <h3 className="jq-card__title">Cadre & repères</h3>
                 <p className="jq-card__text">
-                  Un plan qui colle à ta vraie vie + des repères simples. Pas une liste d’aliments “parce que c’est healthy”.
+                  Un plan qui colle à ta vraie vie + des repères simples. Pas une liste d’aliments “parce que c’est
+                  healthy”.
                 </p>
               </div>
 
@@ -181,40 +175,49 @@ export default function Page() {
             </p>
           </Reveal>
 
+          {/* 1) AVANT (photo fondue DANS la card) */}
           <Reveal as="div">
-            {/* 1) AVANT : grand bloc + photo fondue DANS la card */}
-            <div className="jq-card" style={{ padding: 18, position: "relative", overflow: "hidden" }}>
-              {/* décor card */}
-              <div className="jq-card__corner" />
-              <div className="jq-card__stripes" />
+            <div
+              className="jq-card"
+              style={{
+                padding: 18,
+                position: "relative",
+                overflow: "hidden",
+                minHeight: 280,
+              }}
+            >
+              {/* ✅ décor derrière tout */}
+              <div className="jq-card__corner" style={{ zIndex: 0, opacity: 0.75 }} />
+              <div className="jq-card__stripes" style={{ zIndex: 0, opacity: 0.75 }} />
 
-              {/* background image (fondue) */}
-              <CardBackground
+              {/* ✅ photo fondue */}
+              <FadedCardBackground
                 src="/robin-avant-alcool.png"
                 alt="Robin - avant : mauvaises habitudes"
-                height={360}
-                position="right center"
+                objectPosition="right center"
+                opacity={0.55}
               />
 
-              {/* contenu au-dessus */}
-              <div style={{ position: "relative", zIndex: 1, maxWidth: 820 }}>
+              {/* ✅ contenu devant */}
+              <div style={{ position: "relative", zIndex: 2, maxWidth: 860 }}>
                 <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
+
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
                   Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau, et mon alimentation c’était
                   souvent le combo “macro 1x/semaine + kebab 1x/semaine + le reste au feeling”.
                   <br />
                   <br />
-                  Le détail qui résume bien : à la place de l’eau, j’étais plutôt <strong>Oasis / Ice Tea</strong>. Et
-                  niveau sommeil : horaires éclatés, parfois nuit blanche à jouer. Résultat :{" "}
-                  <strong>je me sentais mal</strong>, j’étais complexé, et j’avais{" "}
-                  <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport toute ma vie.
+                  Le détail qui résume bien : à la place de l’eau, j’étais plutôt <strong>Oasis / Ice Tea</strong>. Et niveau
+                  sommeil : horaires éclatés, parfois nuit blanche à jouer. Résultat : <strong>je me sentais mal</strong>,
+                  j’étais complexé, et j’avais <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport
+                  toute ma vie.
                 </p>
               </div>
             </div>
           </Reveal>
 
+          {/* 2) DÉCLIC + ERREURS */}
           <Reveal as="div">
-            {/* 2) DÉCLIC + ERREURS */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginTop: 18 }}>
               <div className="jq-card" style={{ padding: 18 }}>
                 <div className="jq-card__corner" />
@@ -241,20 +244,20 @@ export default function Page() {
             </div>
           </Reveal>
 
+          {/* 3) CE QUE ÇA M'A APPRIS + LA LEÇON */}
           <Reveal as="div">
-            {/* 3) CE QUE ÇA M'A APPRIS + LA LEÇON */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginTop: 18 }}>
               <div className="jq-card" style={{ padding: 18 }}>
                 <div className="jq-card__corner" />
                 <div className="jq-card__stripes" />
                 <h3 className="jq-card__title">Ce que ça m’a appris</h3>
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Quand tu n’as <strong>pas de cadre</strong>, tu compenses avec de la motivation. Et la motivation, elle
-                  ne vient jamais tous les jours.
+                  Quand tu n’as <strong>pas de cadre</strong>, tu compenses avec de la motivation. Et la motivation, elle ne vient
+                  jamais tous les jours.
                   <br />
                   <br />
-                  Donc ce n’est pas “plus de volonté” qu’il faut : c’est <strong>un système simple</strong> qui tient dans
-                  une semaine réelle.
+                  Donc ce n’est pas “plus de volonté” qu’il faut : c’est <strong>un système simple</strong> qui tient dans une
+                  semaine réelle.
                 </p>
               </div>
 
@@ -266,8 +269,8 @@ export default function Page() {
                   L’extrême, ça marche 2 semaines. Le durable, ça marche 2 ans.
                   <br />
                   <br />
-                  Aujourd’hui, je fais simple : <strong>personnalisation</strong>, <strong>progressivité</strong>,{" "}
-                  <strong>cadre</strong>, <strong>durabilité</strong>. Le but : que tu n’aies plus besoin de “forcer”.
+                  Aujourd’hui, je fais simple : <strong>personnalisation</strong>, <strong>progressivité</strong>, <strong>cadre</strong>,
+                  <strong>durabilité</strong>. Le but : que tu n’aies plus besoin de “forcer”.
                 </p>
               </div>
             </div>
@@ -283,7 +286,7 @@ export default function Page() {
             <p className="jq-p">Des faits. Pas des “promesses”.</p>
           </Reveal>
 
-          {/* EXPÉRIENCE & PREUVES (sans images) */}
+          {/* EXPÉRIENCE & PREUVES */}
           <Reveal as="div">
             <div className="jq-card" style={{ padding: 18, marginTop: 18 }}>
               <div className="jq-card__corner" />
@@ -306,26 +309,37 @@ export default function Page() {
             </div>
           </Reveal>
 
-          {/* SPORT + Vietnam (PNG) */}
+          {/* SPORT (photo Vietnam fondue) */}
           <Reveal as="div">
-            <div className="jq-card" style={{ padding: 18, marginTop: 18, position: "relative", overflow: "hidden" }}>
-              <div className="jq-card__corner" />
-              <div className="jq-card__stripes" />
+            <div
+              className="jq-card"
+              style={{
+                padding: 18,
+                marginTop: 18,
+                position: "relative",
+                overflow: "hidden",
+                minHeight: 280,
+              }}
+            >
+              {/* ✅ décor derrière */}
+              <div className="jq-card__corner" style={{ zIndex: 0, opacity: 0.75 }} />
+              <div className="jq-card__stripes" style={{ zIndex: 0, opacity: 0.75 }} />
 
-              {/* photo Vietnam fondue en fond (PNG que tu vas mettre) */}
-              <CardBackground
+              {/* ✅ photo Vietnam fondue */}
+              <FadedCardBackground
                 src="/robin-vietnam-plage.png"
                 alt="Robin - Vietnam : discipline et progression"
-                height={360}
-                position="center"
+                objectPosition="center"
+                opacity={0.45}
               />
 
-              <div style={{ position: "relative", zIndex: 1, maxWidth: 860 }}>
+              {/* ✅ texte devant */}
+              <div style={{ position: "relative", zIndex: 2, maxWidth: 900 }}>
                 <h3 className="jq-card__title">Sport : pourquoi j’en parle (et pourquoi ça compte)</h3>
 
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Parce que je sais ce que c’est de construire un corps et des performances dans le monde réel : emploi du
-                  temps chargé, fatigue, imprévus. Le but ici n’est pas de faire de toi un athlète pro — mais d’être{" "}
+                  Parce que je sais ce que c’est de construire un corps et des performances dans le monde réel : emploi du temps
+                  chargé, fatigue, imprévus. Le but ici n’est pas de faire de toi un athlète pro — mais d’être{" "}
                   <strong>en forme</strong>, <strong>solide</strong>, et <strong>constant</strong>.
                 </p>
 
@@ -351,8 +365,8 @@ export default function Page() {
                 </div>
 
                 <p className="jq-card__text" style={{ marginTop: 12 }}>
-                  Tout ça pour dire : je connais le terrain. Et je sais surtout que ce qui fait la différence, ce n’est pas
-                  une semaine parfaite — c’est un cadre que tu répètes.
+                  Tout ça pour dire : je connais le terrain. Et je sais surtout que ce qui fait la différence, ce n’est pas une
+                  semaine parfaite — c’est un cadre que tu répètes.
                 </p>
               </div>
             </div>
@@ -369,13 +383,7 @@ export default function Page() {
           </Reveal>
 
           <Reveal as="div">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(4, 1fr)",
-                gap: 14,
-              }}
-            >
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}>
               {[
                 { n: "1", t: "Message WhatsApp", d: "Tu m’écris avec ton objectif + tes contraintes + ton rythme de vie." },
                 { n: "2", t: "Premier échange (bilan)", d: "On clarifie le vrai problème : habitudes, blocages, emploi du temps, priorités." },
