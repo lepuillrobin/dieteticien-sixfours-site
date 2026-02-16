@@ -332,7 +332,8 @@ export default function Page() {
                 </summary>
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
                   Au début, oui. On utilise la balance comme un outil pour créer des repères simples et on adapte selon ton niveau
-                  et ton contexte. L’objectif : que ça tienne dans le temps et que tu n'ai plus besoin de la balance ensuite.
+                  et ton contexte. 
+                  L’objectif : que ça tienne dans le temps et que tu n'ai plus besoin de la balance ensuite.
                 </p>
               </details>
 
@@ -342,7 +343,8 @@ export default function Page() {
                 </summary>
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
                   Justement : le plan est construit pour ça. On prévoit, on ajuste,
-                  et on évite le mode “tout ou rien”. C'est pourquoi la balance est un super outil pour créer des repères afin de mieux gérer les sorties.
+                  et on évite le mode “tout ou rien”. 
+                  C'est pourquoi la balance est un super outil pour créer des repères afin de mieux gérer les sorties.
                 </p>
               </details>
 
@@ -352,7 +354,8 @@ export default function Page() {
                 </summary>
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
                   Parce que le vrai résultat, c’est l’habitude. En dessous, tu peux
-                  “faire attention”, mais pas forcément consolider de bonnes habitudes et une nouvelle hygiène de vie.
+                  “faire attention”, mais pas forcément 
+                  consolider de bonnes habitudes et une nouvelle hygiène de vie.
                 </p>
               </details>
             </div>
