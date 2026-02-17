@@ -175,105 +175,108 @@ export default function Page() {
             </p>
           </Reveal>
 
-          {/* 1) AVANT : texte à gauche + photo en cadre à droite */}
-<Reveal as="div">
-  <div
-    className="jq-card"
-    style={{
-      padding: 18,
-      position: "relative",
-      overflow: "hidden",
-    }}
-  >
-    {/* décor derrière */}
-    <div className="jq-card__corner" style={{ zIndex: 0, opacity: 0.75 }} />
-    <div className="jq-card__stripes" style={{ zIndex: 0, opacity: 0.75 }} />
+          <Reveal as="div">
+  {/* BLOC UNIQUE : AVANT + DÉCLIC + ERREURS */}
+  <div className="jq-card" style={{ padding: 18 }}>
+    <div className="jq-card__corner" />
+    <div className="jq-card__stripes" />
 
-    {/* contenu */}
     <div
       style={{
-        position: "relative",
-        zIndex: 2,
+        marginTop: 6,
         display: "grid",
-        gridTemplateColumns: "1.5fr 1fr", // ✅ ~60% texte / 40% photo (ajuste à 1.8fr 1fr si tu veux 3/4)
-        gap: 18,
+        gridTemplateColumns: "1.25fr .75fr",
+        gap: 16,
         alignItems: "start",
       }}
     >
-      {/* TEXTE */}
+      {/* TEXTE (gauche) */}
       <div>
-        <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
+        <h3 className="jq-card__title" style={{ marginBottom: 8 }}>
+          Le “avant” (le vrai)
+        </h3>
 
-        <p className="jq-card__text" style={{ marginTop: 10 }}>
+        <p className="jq-card__text" style={{ marginTop: 0 }}>
           Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau, et mon alimentation c’était souvent
           le combo “macro 1x/semaine + kebab 1x/semaine + le reste au feeling”.
           <br />
           <br />
           Le détail qui résume bien : à la place de l’eau, j’étais plutôt <strong>Oasis / Ice Tea</strong>. Et niveau
           sommeil : horaires éclatés, parfois nuit blanche à jouer. Résultat : <strong>je me sentais mal</strong>,
-          j’étais complexé, et j’avais <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport toute
-          ma vie.
+          j’étais complexé, et j’avais <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport toute ma
+          vie.
         </p>
+
+        {/* Sous-blocs intégrés */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 14 }}>
+          {/* DÉCLIC */}
+          <div
+            style={{
+              borderRadius: 14,
+              border: "1px solid rgba(255,255,255,.08)",
+              background: "rgba(0,0,0,.18)",
+              padding: 12,
+            }}
+          >
+            <div style={{ fontWeight: 900, color: "white", marginBottom: 6 }}>Déclic</div>
+            <p className="jq-card__text" style={{ margin: 0 }}>
+              Le confinement a été mon point de bascule : j’en avais marre de me sentir nul dans mon corps. J’ai voulu
+              “reprendre en main” — et j’ai fait comme tout le monde : à fond… trop vite.
+            </p>
+          </div>
+
+          {/* ERREURS */}
+          <div
+            style={{
+              borderRadius: 14,
+              border: "1px solid rgba(255,255,255,.08)",
+              background: "rgba(0,0,0,.18)",
+              padding: 12,
+            }}
+          >
+            <div style={{ fontWeight: 900, color: "white", marginBottom: 6 }}>Mes erreurs (classiques)</div>
+            <ul style={{ margin: 0, paddingLeft: 18, color: "var(--muted)" }}>
+              <li>Régimes extrêmes, “tout propre” du jour au lendemain.</li>
+              <li>Suppression totale d’un macro (gras, puis glucides…).</li>
+              <li>Obsession des protéines comme si ça réglait tout.</li>
+              <li>Entraînements trop fréquents, pas assez de récupération.</li>
+              <li>“Si je lâche 1 jour, j’ai tout foutu en l’air.”</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      {/* PHOTO (cadre dans le cadre) */}
-<div
-  style={{
-    justifySelf: "end",
-    width: "100%",
-    maxWidth: 320,          // ✅ réduit la largeur
-    aspectRatio: "4 / 5",   // ✅ augmente la hauteur (portrait)
-    borderRadius: 16,
-    overflow: "hidden",
-    border: "1px solid rgba(255,255,255,.10)",
-    background: "rgba(0,0,0,.25)",
-  }}
->
-  <img
-    src="/robin-avant-alcool.png"
-    alt="Robin - avant : mauvaises habitudes"
-    style={{
-      width: "100%",
-      height: "100%",
-      display: "block",
-      objectFit: "cover",          // ✅ pas de déformation
-      objectPosition: "55% 18%",   // ✅ montre plus le haut
-      transform: "scale(1.05)",    // ✅ garde le crop anti-icônes
-      opacity: 0.92,
-    }}
-  />
-</div>
+      {/* IMAGE (droite) */}
+      <div
+        style={{
+          justifySelf: "end",
+          width: "100%",
+          maxWidth: 290,
+          aspectRatio: "3 / 4",
+          borderRadius: 16,
+          overflow: "hidden",
+          border: "1px solid rgba(255,255,255,.10)",
+          background: "rgba(0,0,0,.25)",
+        }}
+      >
+        <img
+          src="/robin-avant-alcool.png"
+          alt="Robin - avant : mauvaises habitudes"
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "block",
+            objectFit: "cover",
+            objectPosition: "55% 12%",
+            transform: "scale(1.02)",
+            opacity: 0.92,
+            filter: "contrast(1.03) brightness(0.98)",
+          }}
+        />
+      </div>
     </div>
   </div>
 </Reveal>
-
-          {/* 2) DÉCLIC + ERREURS */}
-          <Reveal as="div">
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginTop: 18 }}>
-              <div className="jq-card" style={{ padding: 18 }}>
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">Déclic</h3>
-                <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Le confinement a été mon point de bascule : j’en avais marre de me sentir nul dans mon corps. J’ai voulu
-                  “reprendre en main” — et j’ai fait comme tout le monde : à fond… trop vite.
-                </p>
-              </div>
-
-              <div className="jq-card" style={{ padding: 18 }}>
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">Mes erreurs (classiques)</h3>
-                <ul style={{ margin: "10px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
-                  <li>Régimes extrêmes, “tout propre” du jour au lendemain.</li>
-                  <li>Suppression totale d’un macro (gras, puis glucides…).</li>
-                  <li>Obsession des protéines comme si ça réglait tout.</li>
-                  <li>Entraînements trop fréquents, pas assez de récupération.</li>
-                  <li>“Si je lâche 1 jour, j’ai tout foutu en l’air.”</li>
-                </ul>
-              </div>
-            </div>
-          </Reveal>
 
           {/* 3) CE QUE ÇA M'A APPRIS + LA LEÇON */}
           <Reveal as="div">
