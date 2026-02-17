@@ -1,5 +1,4 @@
 import Reveal from "../components/Reveal";
-import type { CSSProperties } from "react";
 
 export const metadata = {
   title: "Contact | Robin LE PUILL",
@@ -11,77 +10,24 @@ const WHATSAPP = "https://wa.me/33751013960";
 const EMAIL = "mailto:lepuillrobin@gmail.com";
 
 export default function Page() {
-  // ✅ Responsive sans media queries
-  const heroGrid: CSSProperties = {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-    gap: 28,
-    alignItems: "center",
-  };
-
-  // ✅ Cadre image façon home
-  const photoWrap: CSSProperties = {
-    position: "relative",
-    width: "100%",
-    maxWidth: 440,
-    marginLeft: "auto",
-    borderRadius: 18,
-    overflow: "hidden",
-    border: "1px solid rgba(255,255,255,.10)",
-    background: "rgba(0,0,0,.25)",
-    boxShadow: "0 10px 40px rgba(0,0,0,.35)",
-  };
-
-  const photoImg: CSSProperties = {
-    width: "100%",
-    height: 520,
-    objectFit: "cover",
-    objectPosition: "65% 35%",
-    display: "block",
-    transform: "scale(1.02)",
-    filter: "saturate(1.02) contrast(1.02)",
-  };
-
-  // ✅ Overlays (fondu) au-dessus de l’image
-  const vignette: CSSProperties = {
-    position: "absolute",
-    inset: 0,
-    pointerEvents: "none",
-    zIndex: 2,
-    background:
-      "radial-gradient(120% 90% at 55% 40%, rgba(0,0,0,0) 0%, rgba(0,0,0,.15) 45%, rgba(0,0,0,.55) 100%)," +
-      "linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 40%, rgba(0,0,0,.45) 100%)",
-  };
-
-  const fadeBottom: CSSProperties = {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    bottom: 0,
-    height: "28%",
-    pointerEvents: "none",
-    zIndex: 2,
-    background: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.55))",
-  };
-
   return (
     <>
-      {/* HERO */}
-      <section className="jq-hero" style={{ minHeight: 520 }}>
+      {/* HERO (même structure que la Home) */}
+      <section className="jq-hero jq-hero--home" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
-        <div className="jq-container jq-hero__content">
-          <Reveal as="div">
-            <div style={heroGrid}>
-              {/* TEXTE */}
-              <div>
+        <div className="jq-container">
+          <div className="jq-hero__grid">
+            {/* TEXTE À GAUCHE */}
+            <div className="jq-hero__left">
+              <Reveal as="div">
                 <div className="jq-kicker">CONTACT</div>
 
-                <h1 className="jq-title" style={{ fontSize: 56 }}>
+                <h1 className="jq-title">
                   ON FAIT <br />
                   <span className="jq-title--accent">SIMPLE</span>
                 </h1>
 
-                <p className="jq-subtitle" style={{ maxWidth: 760 }}>
+                <p className="jq-subtitle">
                   Le plus efficace : tu m’écris sur <strong>WhatsApp</strong> avec ton objectif + tes contraintes. Je te
                   réponds et on cale un premier échange.
                 </p>
@@ -94,16 +40,18 @@ export default function Page() {
                     Envoyer un email →
                   </a>
                 </div>
-              </div>
-
-              {/* PHOTO (façon home) */}
-              <div style={photoWrap} aria-hidden="true">
-                <img src="/robin-contact.png" alt="Robin - contact" style={photoImg} />
-                <div style={vignette} />
-                <div style={fadeBottom} />
-              </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* VISUEL À DROITE (même rendu que la Home) */}
+            <div className="jq-hero__right">
+              <Reveal as="div">
+                <div className="jq-hero__photoWrap">
+                  <img className="jq-hero__portrait" src="/robin-contact.png" alt="Robin - contact" />
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -119,7 +67,7 @@ export default function Page() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                gridTemplateColumns: "1fr 1fr",
                 gap: 18,
               }}
             >
