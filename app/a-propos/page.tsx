@@ -175,46 +175,86 @@ export default function Page() {
             </p>
           </Reveal>
 
-          {/* 1) AVANT (photo fondue DANS la card) */}
-          <Reveal as="div">
-            <div
-              className="jq-card"
-              style={{
-                padding: 18,
-                position: "relative",
-                overflow: "hidden",
-                minHeight: 280,
-              }}
-            >
-              {/* ✅ décor derrière tout */}
-              <div className="jq-card__corner" style={{ zIndex: 0, opacity: 0.75 }} />
-              <div className="jq-card__stripes" style={{ zIndex: 0, opacity: 0.75 }} />
+          {/* 1) AVANT : texte à gauche + photo en cadre à droite */}
+<Reveal as="div">
+  <div
+    className="jq-card"
+    style={{
+      padding: 18,
+      position: "relative",
+      overflow: "hidden",
+    }}
+  >
+    {/* décor derrière */}
+    <div className="jq-card__corner" style={{ zIndex: 0, opacity: 0.75 }} />
+    <div className="jq-card__stripes" style={{ zIndex: 0, opacity: 0.75 }} />
 
-              {/* ✅ photo fondue */}
-              <FadedCardBackground
-                src="/robin-avant-alcool.png"
-                alt="Robin - avant : mauvaises habitudes"
-                objectPosition="right center"
-                opacity={0.55}
-              />
+    {/* contenu */}
+    <div
+      style={{
+        position: "relative",
+        zIndex: 2,
+        display: "grid",
+        gridTemplateColumns: "1.5fr 1fr", // ✅ ~60% texte / 40% photo (ajuste à 1.8fr 1fr si tu veux 3/4)
+        gap: 18,
+        alignItems: "start",
+      }}
+    >
+      {/* TEXTE */}
+      <div>
+        <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
 
-              {/* ✅ contenu devant */}
-              <div style={{ position: "relative", zIndex: 2, maxWidth: 860 }}>
-                <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
+        <p className="jq-card__text" style={{ marginTop: 10 }}>
+          Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau, et mon alimentation c’était souvent
+          le combo “macro 1x/semaine + kebab 1x/semaine + le reste au feeling”.
+          <br />
+          <br />
+          Le détail qui résume bien : à la place de l’eau, j’étais plutôt <strong>Oasis / Ice Tea</strong>. Et niveau
+          sommeil : horaires éclatés, parfois nuit blanche à jouer. Résultat : <strong>je me sentais mal</strong>,
+          j’étais complexé, et j’avais <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport toute
+          ma vie.
+        </p>
+      </div>
 
-                <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau, et mon alimentation c’était
-                  souvent le combo “macro 1x/semaine + kebab 1x/semaine + le reste au feeling”.
-                  <br />
-                  <br />
-                  Le détail qui résume bien : à la place de l’eau, j’étais plutôt <strong>Oasis / Ice Tea</strong>. Et niveau
-                  sommeil : horaires éclatés, parfois nuit blanche à jouer. Résultat : <strong>je me sentais mal</strong>,
-                  j’étais complexé, et j’avais <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport
-                  toute ma vie.
-                </p>
-              </div>
-            </div>
-          </Reveal>
+      {/* PHOTO (cadre dans le cadre) */}
+      <div
+        style={{
+          borderRadius: 18,
+          overflow: "hidden",
+          border: "1px solid rgba(255,255,255,.12)",
+          background: "rgba(0,0,0,.25)",
+          boxShadow: "0 12px 40px rgba(0,0,0,.35)",
+          position: "relative",
+          minHeight: 240,
+        }}
+      >
+        <img
+          src="/robin-avant-alcool.png"
+          alt="Robin - avant : mauvaises habitudes"
+          style={{
+            width: "100%",
+            height: "100%",
+            minHeight: 240,
+            objectFit: "cover",
+            objectPosition: "center",
+            display: "block",
+            opacity: 0.92,
+          }}
+        />
+
+        {/* fondu léger pour matcher ton style */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.45) 100%)",
+          }}
+        />
+      </div>
+    </div>
+  </div>
+</Reveal>
 
           {/* 2) DÉCLIC + ERREURS */}
           <Reveal as="div">
