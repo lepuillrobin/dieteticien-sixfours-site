@@ -258,6 +258,9 @@ export default function Page() {
     }}
   />
 </div>
+    </div>
+  </div>
+</Reveal>
 
           {/* 2) DÉCLIC + ERREURS */}
           <Reveal as="div">
