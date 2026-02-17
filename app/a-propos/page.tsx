@@ -197,7 +197,7 @@ export default function Page() {
 
         <p className="jq-card__text" style={{ marginTop: 10 }}>
           Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau, et mon alimentation c’était souvent le
-          combo “macro 1x/semaine + kebab 1x/semaine + le reste au feeling”.
+          combo “macdo 1x/semaine + kebab 1x/semaine + le reste au feeling”.
           <br />
           <br />
           Le détail qui résume bien : à la place de l’eau, j’étais plutôt <strong>Oasis / Ice Tea</strong>. Et niveau
@@ -219,8 +219,8 @@ export default function Page() {
               Déclic
             </h4>
             <p className="jq-card__text" style={{ margin: 0 }}>
-              Le confinement a été mon point de bascule : j’en avais marre de me sentir nul dans mon corps. J’ai voulu
-              “reprendre en main” — et j’ai fait comme tout le monde : à fond… trop vite.
+              Le confinement a été mon point de bascule : j’en avais marre de me sentir nul dans mon corps. J’ai voulu me
+              “reprendre en main” — et j’ai fait comme tout le monde : à fond… trop vite, trop fort, trop extrême.
             </p>
           </div>
 
