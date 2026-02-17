@@ -175,7 +175,7 @@ export default function Page() {
             </p>
           </Reveal>
 
-         <Reveal as="div">
+      <Reveal as="div">
   {/* 1) AVANT : grand bloc pleine largeur */}
   <div className="jq-card" style={{ padding: 18, position: "relative", overflow: "hidden" }}>
     <div className="jq-card__corner" style={{ zIndex: 2, pointerEvents: "none" }} />
@@ -186,13 +186,13 @@ export default function Page() {
       style={{
         marginTop: 10,
         display: "grid",
-        gridTemplateColumns: "1.25fr .75fr",
-        gap: 16,
+        gridTemplateColumns: "minmax(0, 1fr) 290px",
+        gap: 12,
         alignItems: "start",
       }}
     >
       {/* TEXTE : au-dessus de tout */}
-      <div style={{ position: "relative", zIndex: 3 }}>
+      <div style={{ position: "relative", zIndex: 3, minWidth: 0 }}>
         <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
 
         <p className="jq-card__text" style={{ marginTop: 10 }}>
@@ -250,8 +250,7 @@ export default function Page() {
       <div
         style={{
           justifySelf: "end",
-          width: "100%",
-          maxWidth: 290,
+          width: 290,
           aspectRatio: "3 / 4",
           borderRadius: 16,
           overflow: "hidden",
@@ -269,7 +268,7 @@ export default function Page() {
             height: "100%",
             objectFit: "cover",
             display: "block",
-            // ajuste si besoin pour montrer plus le haut :
+            // garde ton cadrage actuel
             objectPosition: "50% 25%",
           }}
         />
