@@ -178,7 +178,7 @@ export default function Page() {
          <Reveal as="div">
   {/* 1) AVANT : grand bloc pleine largeur */}
   <div className="jq-card" style={{ padding: 18, position: "relative", overflow: "hidden" }}>
-    <div className="jq-card__corner" />
+    <div className="jq-card__corner" style={{ zIndex: 2, pointerEvents: "none" }} />
     {/* IMPORTANT : stripes au-dessus de la photo, MAIS sous le texte */}
     <div className="jq-card__stripes" style={{ zIndex: 2, pointerEvents: "none" }} />
 
