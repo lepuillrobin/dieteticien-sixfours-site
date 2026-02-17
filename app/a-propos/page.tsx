@@ -380,7 +380,7 @@ export default function Page() {
         />
 
         <img
-          src="/robin-physique-actuel.png"
+          src="/robin-physique-actuel.jpg"
           alt="Robin - physique actuel"
           style={{
             position: "relative",
