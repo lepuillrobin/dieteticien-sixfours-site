@@ -10,98 +10,67 @@ const WHATSAPP = "https://wa.me/33751013960";
 const EMAIL = "mailto:lepuillrobin@gmail.com";
 
 export default function Page() {
+  // ✅ Responsive sans CSS: s’empile tout seul quand l’écran est trop étroit
+  const heroGrid = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+    gap: 28,
+    alignItems: "center",
+  };
+
+  // ✅ Cadre image façon home
+  const photoWrap = {
+    position: "relative",
+    width: "100%",
+    maxWidth: 440,
+    marginLeft: "auto",
+    borderRadius: 18,
+    overflow: "hidden",
+    border: "1px solid rgba(255,255,255,.10)",
+    background: "rgba(0,0,0,.25)",
+    boxShadow: "0 10px 40px rgba(0,0,0,.35)",
+  };
+
+  const photoImg = {
+    width: "100%",
+    height: 520,
+    objectFit: "cover",
+    objectPosition: "65% 35%",
+    display: "block",
+    transform: "scale(1.02)",
+    filter: "saturate(1.02) contrast(1.02)",
+  };
+
+  // ✅ Vignette / fondu (au-dessus de l’image)
+  const vignette = {
+    position: "absolute",
+    inset: 0,
+    pointerEvents: "none",
+    zIndex: 2,
+    background:
+      "radial-gradient(120% 90% at 55% 40%, rgba(0,0,0,0) 0%, rgba(0,0,0,.15) 45%, rgba(0,0,0,.55) 100%)," +
+      "linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 40%, rgba(0,0,0,.45) 100%)",
+  };
+
+  const fadeBottom = {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    bottom: 0,
+    height: "28%",
+    pointerEvents: "none",
+    zIndex: 2,
+    background: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.55))",
+  };
+
   return (
     <>
-      {/* Styles locaux (pour garder la page propre + responsive) */}
-      <style jsx>{`
-        .contact-hero-grid {
-          display: grid;
-          grid-template-columns: 1.2fr 0.8fr;
-          gap: 28px;
-          align-items: center;
-        }
-
-        .contact-photo {
-          position: relative;
-          width: 100%;
-          max-width: 420px;
-          margin-left: auto;
-          border-radius: 18px;
-          overflow: hidden;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          background: rgba(0, 0, 0, 0.25);
-          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-        }
-
-        /* Vignette / fondu comme sur la home */
-        .contact-photo::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          pointer-events: none;
-          /* double couche: vignette + léger voile */
-          background:
-            radial-gradient(
-              120% 90% at 55% 40%,
-              rgba(0, 0, 0, 0) 0%,
-              rgba(0, 0, 0, 0.15) 45%,
-              rgba(0, 0, 0, 0.55) 100%
-            ),
-            linear-gradient(
-              90deg,
-              rgba(0, 0, 0, 0.55) 0%,
-              rgba(0, 0, 0, 0.15) 40%,
-              rgba(0, 0, 0, 0.45) 100%
-            );
-          z-index: 2;
-        }
-
-        /* léger fondu bas (comme la home) */
-        .contact-photo::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          height: 28%;
-          pointer-events: none;
-          background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.55));
-          z-index: 2;
-        }
-
-        .contact-photo img {
-          width: 100%;
-          height: 520px;
-          object-fit: cover;
-          object-position: 65% 35%;
-          display: block;
-          transform: scale(1.02); /* micro “présence” comme sur la home */
-          filter: saturate(1.02) contrast(1.02);
-        }
-
-        /* Mobile: stack */
-        @media (max-width: 900px) {
-          .contact-hero-grid {
-            grid-template-columns: 1fr;
-            gap: 18px;
-          }
-          .contact-photo {
-            max-width: 520px;
-            margin: 10px 0 0;
-          }
-          .contact-photo img {
-            height: 420px;
-            object-position: 60% 30%;
-          }
-        }
-      `}</style>
-
       {/* HERO */}
       <section className="jq-hero" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
         <div className="jq-container jq-hero__content">
           <Reveal as="div">
-            <div className="contact-hero-grid">
+            <div style={heroGrid}>
               {/* TEXTE */}
               <div>
                 <div className="jq-kicker">CONTACT</div>
@@ -127,8 +96,10 @@ export default function Page() {
               </div>
 
               {/* PHOTO (façon home) */}
-              <div className="contact-photo" aria-hidden="true">
-                <img src="/robin-contact.png" alt="Robin - contact" />
+              <div style={photoWrap} aria-hidden="true">
+                <img src="/robin-contact.png" alt="Robin - contact" style={photoImg} />
+                <div style={vignette} />
+                <div style={fadeBottom} />
               </div>
             </div>
           </Reveal>
@@ -147,7 +118,7 @@ export default function Page() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "1fr 1fr",
+                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
                 gap: 18,
               }}
             >
