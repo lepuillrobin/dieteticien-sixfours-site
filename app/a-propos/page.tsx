@@ -310,68 +310,110 @@ export default function Page() {
             </div>
           </Reveal>
 
-          {/* SPORT (photo Vietnam fondue) */}
-          <Reveal as="div">
-            <div
-              className="jq-card"
-              style={{
-                padding: 18,
-                marginTop: 18,
-                position: "relative",
-                overflow: "hidden",
-                minHeight: 280,
-              }}
-            >
-              {/* ✅ décor derrière */}
-              <div className="jq-card__corner" style={{ zIndex: 0, opacity: 0.75 }} />
-              <div className="jq-card__stripes" style={{ zIndex: 0, opacity: 0.75 }} />
+         {/* SPORT */}
+<Reveal as="div">
+  <div className="jq-card" style={{ padding: 18, marginTop: 18, position: "relative", overflow: "hidden" }}>
+    {/* déco au-dessus de la photo, mais sous le texte */}
+    <div className="jq-card__corner" style={{ zIndex: 2, pointerEvents: "none" }} />
+    <div className="jq-card__stripes" style={{ zIndex: 2, pointerEvents: "none" }} />
 
-              {/* ✅ photo Vietnam fondue */}
-              <FadedCardBackground
-                src="/robin-vietnam-plage.png"
-                alt="Robin - Vietnam : discipline et progression"
-                objectPosition="center"
-                opacity={0.45}
-              />
+    <h3 className="jq-card__title" style={{ position: "relative", zIndex: 3 }}>
+      Sport : pourquoi j’en parle (et pourquoi ça compte)
+    </h3>
 
-              {/* ✅ texte devant */}
-              <div style={{ position: "relative", zIndex: 2, maxWidth: 900 }}>
-                <h3 className="jq-card__title">Sport : pourquoi j’en parle (et pourquoi ça compte)</h3>
+    <div
+      style={{
+        marginTop: 10,
+        display: "grid",
+        gridTemplateColumns: "1.35fr .65fr",
+        gap: 16,
+        alignItems: "start",
+      }}
+    >
+      {/* TEXTE */}
+      <div style={{ position: "relative", zIndex: 3 }}>
+        <p className="jq-card__text" style={{ margin: 0 }}>
+          Parce que je sais ce que c’est de construire un corps et des performances dans le monde réel : emploi du temps
+          chargé, fatigue, imprévus. Le but ici n’est pas de faire de toi un athlète pro — mais d’être{" "}
+          <strong>en forme</strong>, <strong>solide</strong>, et <strong>constant</strong>.
+        </p>
 
-                <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Parce que je sais ce que c’est de construire un corps et des performances dans le monde réel : emploi du temps
-                  chargé, fatigue, imprévus. Le but ici n’est pas de faire de toi un athlète pro — mais d’être{" "}
-                  <strong>en forme</strong>, <strong>solide</strong>, et <strong>constant</strong>.
-                </p>
+        <div
+          style={{
+            marginTop: 14,
+            display: "grid",
+            gap: 8,
+            color: "rgba(255,255,255,.82)",
+            fontSize: 14,
+          }}
+        >
+          <div>✅ <strong>8e Français aviron indoor</strong> (2026) — senior poids léger (-75 kg)</div>
+          <div>
+            ✅ Streetlifting : <strong>175 kg squat</strong> • <strong>100 kg dips</strong> •{" "}
+            <strong>65 kg tractions</strong> • <strong>+10 kg muscle up</strong>
+          </div>
+          <div>
+            ✅ Streetworkout : <strong>straddle planche</strong> • <strong>front lever</strong> •{" "}
+            <strong>handstand</strong>
+          </div>
+          <div>✅ Endurance : <strong>100 km vélo</strong> • <strong>semi-marathon</strong> (~5’44/km)</div>
+          <div>✅ Passif multi-sports : foot (+10 ans), natation, MMA, tennis…</div>
+        </div>
 
-                <div
-                  style={{
-                    marginTop: 14,
-                    display: "grid",
-                    gap: 8,
-                    color: "rgba(255,255,255,.82)",
-                    fontSize: 14,
-                  }}
-                >
-                  <div>✅ <strong>8e Français aviron indoor</strong> (2026) — senior poids léger (-75 kg)</div>
-                  <div>
-                    ✅ Streetlifting : <strong>175 kg squat</strong> • <strong>100 kg dips</strong> •{" "}
-                    <strong>65 kg tractions</strong> • <strong>+10 kg muscle up</strong>
-                  </div>
-                  <div>
-                    ✅ Streetworkout : <strong>straddle planche</strong> • <strong>front lever</strong> • <strong>handstand</strong>
-                  </div>
-                  <div>✅ Endurance : <strong>100 km vélo</strong> • <strong>semi-marathon</strong> (~5’44/km)</div>
-                  <div>✅ Passif multi-sports : foot (+10 ans), natation, MMA, tennis…</div>
-                </div>
+        <p className="jq-card__text" style={{ marginTop: 12 }}>
+          Tout ça pour dire : je connais le terrain. Et je sais surtout que ce qui fait la différence, ce n’est pas une
+          semaine parfaite — c’est un cadre que tu répètes.
+        </p>
+      </div>
 
-                <p className="jq-card__text" style={{ marginTop: 12 }}>
-                  Tout ça pour dire : je connais le terrain. Et je sais surtout que ce qui fait la différence, ce n’est pas une
-                  semaine parfaite — c’est un cadre que tu répètes.
-                </p>
-              </div>
-            </div>
-          </Reveal>
+      {/* PHOTO (PNG détouré) */}
+      <div
+        style={{
+          justifySelf: "end",
+          width: "100%",
+          maxWidth: 320,
+          aspectRatio: "3 / 4",
+          borderRadius: 16,
+          overflow: "hidden",
+          border: "1px solid rgba(255,255,255,.10)",
+          background:
+            "radial-gradient(120% 90% at 30% 25%, rgba(255,255,255,.08) 0%, rgba(0,0,0,0) 60%), rgba(0,0,0,.25)",
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
+        {/* fondu / brume */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.35) 100%)",
+            pointerEvents: "none",
+            zIndex: 1,
+          }}
+        />
+
+        <img
+          src="/robin-physique-actuel.png"
+          alt="Robin - physique actuel"
+          style={{
+            position: "relative",
+            zIndex: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            objectPosition: "50% 85%",
+            display: "block",
+            transform: "scale(1.05)",
+            filter: "drop-shadow(0 18px 40px rgba(0,0,0,.55))",
+            opacity: 0.95,
+          }}
+        />
+      </div>
+    </div>
+  </div>
+</Reveal>
         </div>
       </section>
 
