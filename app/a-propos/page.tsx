@@ -177,9 +177,12 @@ export default function Page() {
 
           <Reveal as="div">
   {/* BLOC UNIQUE : AVANT + DÉCLIC + ERREURS */}
-  <div className="jq-card" style={{ padding: 18 }}>
+  <div className="jq-card" style={{ padding: 18, position: "relative", overflow: "hidden" }}>
     <div className="jq-card__corner" />
-    <div className="jq-card__stripes" />
+    <div
+  className="jq-card__stripes"
+  style={{ position: "absolute", inset: 0, zIndex: 4, pointerEvents: "none" }}
+/>
 
     <div
       style={{
@@ -248,17 +251,20 @@ export default function Page() {
 
       {/* IMAGE (droite) */}
       <div
-        style={{
-          justifySelf: "end",
-          width: "100%",
-          maxWidth: 290,
-          aspectRatio: "3 / 4",
-          borderRadius: 16,
-          overflow: "hidden",
-          border: "1px solid rgba(255,255,255,.10)",
-          background: "rgba(0,0,0,.25)",
-        }}
-      >
+  style={{
+    justifySelf: "end",
+    width: "100%",
+    maxWidth: 290,
+    aspectRatio: "3 / 4",
+    borderRadius: 16,
+    overflow: "hidden",
+    border: "1px solid rgba(255,255,255,.10)",
+    background: "rgba(0,0,0,.25)",
+    position: "relative",
+    zIndex: 2,
+    isolation: "isolate",
+  }}
+>
         <img
           src="/robin-avant-alcool.png"
           alt="Robin - avant : mauvaises habitudes"
