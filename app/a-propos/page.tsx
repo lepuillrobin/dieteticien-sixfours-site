@@ -240,8 +240,8 @@ export default function Page() {
 
       // ✅ on recadre/zoom pour virer le cercle + les 3 points
       objectFit: "cover",
-      objectPosition: "55% 35%", // décale vers le bas pour couper le haut (ajuste 30–45%)
-      transform: "scale(1.12)",  // zoom léger pour "manger" les coins/overlays
+      objectPosition: "55% 22%", // décale vers le bas pour couper le haut (ajuste 30–45%)
+      transform: "scale(1.05)",  // zoom léger pour "manger" les coins/overlays
       filter: "contrast(1.02) saturate(1.02)",
       opacity: 0.92,
     }}
