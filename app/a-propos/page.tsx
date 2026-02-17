@@ -310,20 +310,14 @@ export default function Page() {
             </div>
           </Reveal>
 
-         {/* SPORT */}
+        {/* SPORT : pourquoi j’en parle (et pourquoi ça compte) */}
 <Reveal as="div">
   <div className="jq-card" style={{ padding: 18, marginTop: 18, position: "relative", overflow: "hidden" }}>
-    {/* déco au-dessus de la photo, mais sous le texte */}
-    <div className="jq-card__corner" style={{ zIndex: 2, pointerEvents: "none" }} />
-    <div className="jq-card__stripes" style={{ zIndex: 2, pointerEvents: "none" }} />
-
-    <h3 className="jq-card__title" style={{ position: "relative", zIndex: 3 }}>
-      Sport : pourquoi j’en parle (et pourquoi ça compte)
-    </h3>
+    <div className="jq-card__corner" style={{ zIndex: 3, pointerEvents: "none" }} />
+    <div className="jq-card__stripes" style={{ zIndex: 3, pointerEvents: "none" }} />
 
     <div
       style={{
-        marginTop: 10,
         display: "grid",
         gridTemplateColumns: "1.35fr .65fr",
         gap: 16,
@@ -331,30 +325,23 @@ export default function Page() {
       }}
     >
       {/* TEXTE */}
-      <div style={{ position: "relative", zIndex: 3 }}>
-        <p className="jq-card__text" style={{ margin: 0 }}>
+      <div style={{ position: "relative", zIndex: 4 }}>
+        <h3 className="jq-card__title">Sport : pourquoi j’en parle (et pourquoi ça compte)</h3>
+
+        <p className="jq-card__text" style={{ marginTop: 10 }}>
           Parce que je sais ce que c’est de construire un corps et des performances dans le monde réel : emploi du temps
           chargé, fatigue, imprévus. Le but ici n’est pas de faire de toi un athlète pro — mais d’être{" "}
           <strong>en forme</strong>, <strong>solide</strong>, et <strong>constant</strong>.
         </p>
 
-        <div
-          style={{
-            marginTop: 14,
-            display: "grid",
-            gap: 8,
-            color: "rgba(255,255,255,.82)",
-            fontSize: 14,
-          }}
-        >
+        <div style={{ marginTop: 14, display: "grid", gap: 8, color: "rgba(255,255,255,.82)", fontSize: 14 }}>
           <div>✅ <strong>8e Français aviron indoor</strong> (2026) — senior poids léger (-75 kg)</div>
           <div>
             ✅ Streetlifting : <strong>175 kg squat</strong> • <strong>100 kg dips</strong> •{" "}
             <strong>65 kg tractions</strong> • <strong>+10 kg muscle up</strong>
           </div>
           <div>
-            ✅ Streetworkout : <strong>straddle planche</strong> • <strong>front lever</strong> •{" "}
-            <strong>handstand</strong>
+            ✅ Streetworkout : <strong>straddle planche</strong> • <strong>front lever</strong> • <strong>handstand</strong>
           </div>
           <div>✅ Endurance : <strong>100 km vélo</strong> • <strong>semi-marathon</strong> (~5’44/km)</div>
           <div>✅ Passif multi-sports : foot (+10 ans), natation, MMA, tennis…</div>
@@ -366,7 +353,7 @@ export default function Page() {
         </p>
       </div>
 
-      {/* PHOTO (PNG détouré) */}
+      {/* IMAGE */}
       <div
         style={{
           justifySelf: "end",
@@ -376,19 +363,17 @@ export default function Page() {
           borderRadius: 16,
           overflow: "hidden",
           border: "1px solid rgba(255,255,255,.10)",
-          background:
-            "radial-gradient(120% 90% at 30% 25%, rgba(255,255,255,.08) 0%, rgba(0,0,0,0) 60%), rgba(0,0,0,.25)",
+          background: "rgba(0,0,0,.25)",
           position: "relative",
           zIndex: 1,
         }}
       >
-        {/* fondu / brume */}
+        {/* fondu */}
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.35) 100%)",
+            background: "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.40) 100%)",
             pointerEvents: "none",
             zIndex: 1,
           }}
@@ -405,7 +390,7 @@ export default function Page() {
             objectFit: "contain",
             objectPosition: "50% 85%",
             display: "block",
-            transform: "scale(1.05)",
+            transform: "scale(1.08)",
             filter: "drop-shadow(0 18px 40px rgba(0,0,0,.55))",
             opacity: 0.95,
           }}
