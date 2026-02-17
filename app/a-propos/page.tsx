@@ -219,15 +219,14 @@ export default function Page() {
       {/* PHOTO (cadre dans le cadre) */}
 <div
   style={{
-    borderRadius: 18,
+    justifySelf: "end",
+    width: "100%",
+    maxWidth: 320,          // ✅ réduit la largeur
+    aspectRatio: "4 / 5",   // ✅ augmente la hauteur (portrait)
+    borderRadius: 16,
     overflow: "hidden",
-    border: "1px solid rgba(255,255,255,.12)",
+    border: "1px solid rgba(255,255,255,.10)",
     background: "rgba(0,0,0,.25)",
-    boxShadow: "0 12px 40px rgba(0,0,0,.35)",
-    position: "relative",
-
-    // ✅ réduit la hauteur (≈ -25%) pour matcher le texte
-    height: 240, // ajuste 220–260 si besoin
   }}
 >
   <img
@@ -237,24 +236,10 @@ export default function Page() {
       width: "100%",
       height: "100%",
       display: "block",
-
-      // ✅ on recadre/zoom pour virer le cercle + les 3 points
-      objectFit: "cover",
-      objectPosition: "55% 22%", // décale vers le bas pour couper le haut (ajuste 30–45%)
-      transform: "scale(1.05)",  // zoom léger pour "manger" les coins/overlays
-      filter: "contrast(1.02) saturate(1.02)",
+      objectFit: "cover",          // ✅ pas de déformation
+      objectPosition: "55% 18%",   // ✅ montre plus le haut
+      transform: "scale(1.05)",    // ✅ garde le crop anti-icônes
       opacity: 0.92,
-    }}
-  />
-
-  {/* fondu léger pour matcher ton style */}
-  <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      background:
-        "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.45) 100%)",
-      pointerEvents: "none",
     }}
   />
 </div>
