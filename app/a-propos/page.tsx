@@ -217,44 +217,47 @@ export default function Page() {
       </div>
 
       {/* PHOTO (cadre dans le cadre) */}
-      <div
-        style={{
-          borderRadius: 18,
-          overflow: "hidden",
-          border: "1px solid rgba(255,255,255,.12)",
-          background: "rgba(0,0,0,.25)",
-          boxShadow: "0 12px 40px rgba(0,0,0,.35)",
-          position: "relative",
-          minHeight: 240,
-        }}
-      >
-        <img
-          src="/robin-avant-alcool.png"
-          alt="Robin - avant : mauvaises habitudes"
-          style={{
-            width: "100%",
-            height: "100%",
-            minHeight: 240,
-            objectFit: "cover",
-            objectPosition: "center",
-            display: "block",
-            opacity: 0.92,
-          }}
-        />
+<div
+  style={{
+    borderRadius: 18,
+    overflow: "hidden",
+    border: "1px solid rgba(255,255,255,.12)",
+    background: "rgba(0,0,0,.25)",
+    boxShadow: "0 12px 40px rgba(0,0,0,.35)",
+    position: "relative",
 
-        {/* fondu léger pour matcher ton style */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.45) 100%)",
-          }}
-        />
-      </div>
-    </div>
-  </div>
-</Reveal>
+    // ✅ réduit la hauteur (≈ -25%) pour matcher le texte
+    height: 240, // ajuste 220–260 si besoin
+  }}
+>
+  <img
+    src="/robin-avant-alcool.png"
+    alt="Robin - avant : mauvaises habitudes"
+    style={{
+      width: "100%",
+      height: "100%",
+      display: "block",
+
+      // ✅ on recadre/zoom pour virer le cercle + les 3 points
+      objectFit: "cover",
+      objectPosition: "55% 35%", // décale vers le bas pour couper le haut (ajuste 30–45%)
+      transform: "scale(1.12)",  // zoom léger pour "manger" les coins/overlays
+      filter: "contrast(1.02) saturate(1.02)",
+      opacity: 0.92,
+    }}
+  />
+
+  {/* fondu léger pour matcher ton style */}
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background:
+        "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.45) 100%)",
+      pointerEvents: "none",
+    }}
+  />
+</div>
 
           {/* 2) DÉCLIC + ERREURS */}
           <Reveal as="div">
