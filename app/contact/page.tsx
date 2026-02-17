@@ -1,4 +1,5 @@
 import Reveal from "../components/Reveal";
+import type { CSSProperties } from "react";
 
 export const metadata = {
   title: "Contact | Robin LE PUILL",
@@ -10,8 +11,8 @@ const WHATSAPP = "https://wa.me/33751013960";
 const EMAIL = "mailto:lepuillrobin@gmail.com";
 
 export default function Page() {
-  // ✅ Responsive sans CSS: s’empile tout seul quand l’écran est trop étroit
-  const heroGrid = {
+  // ✅ Responsive sans media queries
+  const heroGrid: CSSProperties = {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
     gap: 28,
@@ -19,7 +20,7 @@ export default function Page() {
   };
 
   // ✅ Cadre image façon home
-  const photoWrap = {
+  const photoWrap: CSSProperties = {
     position: "relative",
     width: "100%",
     maxWidth: 440,
@@ -31,7 +32,7 @@ export default function Page() {
     boxShadow: "0 10px 40px rgba(0,0,0,.35)",
   };
 
-  const photoImg = {
+  const photoImg: CSSProperties = {
     width: "100%",
     height: 520,
     objectFit: "cover",
@@ -41,8 +42,8 @@ export default function Page() {
     filter: "saturate(1.02) contrast(1.02)",
   };
 
-  // ✅ Vignette / fondu (au-dessus de l’image)
-  const vignette = {
+  // ✅ Overlays (fondu) au-dessus de l’image
+  const vignette: CSSProperties = {
     position: "absolute",
     inset: 0,
     pointerEvents: "none",
@@ -52,7 +53,7 @@ export default function Page() {
       "linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 40%, rgba(0,0,0,.45) 100%)",
   };
 
-  const fadeBottom = {
+  const fadeBottom: CSSProperties = {
     position: "absolute",
     left: 0,
     right: 0,
