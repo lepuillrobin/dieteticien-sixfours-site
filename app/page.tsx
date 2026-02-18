@@ -123,7 +123,7 @@ export default function HomePage() {
             <div className="jq-hero__right">
               <Reveal as="div">
                 <div className="jq-hero__photoWrap">
-                  <img className="jq-hero__portrait" src="/robin-profil.jpg" alt="Robin" />
+                  <img className="jq-hero__portrait" src="/robin-suivi.jpg" alt="Robin" />
                 </div>
               </Reveal>
             </div>
