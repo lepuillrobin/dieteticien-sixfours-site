@@ -87,7 +87,10 @@ export default function Page() {
                       fontSize: 14,
                     }}
                   >
-                    <div>✅ Plan personnalisé (diète/entraînements)      + ajustements réguliers</div>
+                    <div>
+                      ✅ Plan personnalisé (diète/entraînements) + ajustements
+                      réguliers
+                    </div>
                     <div>✅ Tracker d’habitudes</div>
                     <div>✅ Visio toutes les 2 semaines</div>
                     <div>✅ WhatsApp 7j/7</div>
@@ -116,7 +119,9 @@ export default function Page() {
                 <div className="jq-card__corner" />
                 <div className="jq-card__stripes" />
                 <div className="jq-card__icon">🥗</div>
-                <h3 className="jq-card__title">Plan alimentaire/entraînements personnalisés</h3>
+                <h3 className="jq-card__title">
+                  Plan alimentaire/entraînements personnalisés
+                </h3>
                 <p className="jq-card__text">
                   Un plan qui colle à ta vraie vie (contraintes, goûts,
                   horaires) + ajustements.
@@ -140,7 +145,8 @@ export default function Page() {
                 <div className="jq-card__icon">🎥</div>
                 <h3 className="jq-card__title">Visio toutes les 2 semaines</h3>
                 <p className="jq-card__text">
-                  Bilan + décisions concrètes : on ajuste ce qui compte vraiment.
+                  Bilan + décisions concrètes : on ajuste ce qui compte
+                  vraiment.
                 </p>
               </div>
 
@@ -214,7 +220,13 @@ export default function Page() {
                 <div className="jq-card__corner" />
                 <div className="jq-card__stripes" />
                 <h3 className="jq-card__title">✅ C’est pour toi si…</h3>
-                <ul style={{ margin: "12px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
+                <ul
+                  style={{
+                    margin: "12px 0 0",
+                    paddingLeft: 18,
+                    color: "var(--muted)",
+                  }}
+                >
                   <li>Tu veux perdre du gras sans repartir dans les régimes.</li>
                   <li>Tu veux un plan adapté à ta vraie vie.</li>
                   <li>Tu veux un cadre simple + un suivi régulier.</li>
@@ -226,7 +238,13 @@ export default function Page() {
                 <div className="jq-card__corner" />
                 <div className="jq-card__stripes" />
                 <h3 className="jq-card__title">❌ Pas pour toi si…</h3>
-                <ul style={{ margin: "12px 0 0", paddingLeft: 18, color: "var(--muted)" }}>
+                <ul
+                  style={{
+                    margin: "12px 0 0",
+                    paddingLeft: 18,
+                    color: "var(--muted)",
+                  }}
+                >
                   <li>Tu veux faire un "régime" qui va finir en effet yoyo.</li>
                   <li>Tu veux du “-5 kg en 10 jours”.</li>
                   <li>Tu ne veux pas suivre un minimum de structure.</li>
@@ -243,9 +261,7 @@ export default function Page() {
         <div className="jq-container">
           <Reveal as="div">
             <h2 className="jq-h2">Comment on démarre</h2>
-            <p className="jq-p">
-              Simple. Et surtout : actionnable.
-            </p>
+            <p className="jq-p">Simple. Et surtout : actionnable.</p>
           </Reveal>
 
           <Reveal as="div">
@@ -331,22 +347,26 @@ export default function Page() {
                   Est-ce que je dois peser tous mes aliments ?
                 </summary>
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
-  Au début, oui. On utilise la balance comme un outil pour créer des repères simples et on adapte selon ton niveau
-  et ton contexte.
-  <br />
-  L’objectif : que ça tienne dans le temps et que tu n'ai plus besoin de la balance ensuite.
-</p>
+                  Au début, oui. On utilise la balance comme un outil pour créer
+                  des repères simples et on adapte selon ton niveau et ton
+                  contexte.
+                  <br />
+                  L’objectif : que ça tienne dans le temps et que tu n'ai plus
+                  besoin de la balance ensuite.
+                </p>
               </details>
 
               <details className="jq-card" style={{ padding: 18 }}>
                 <summary style={{ cursor: "pointer", fontWeight: 800 }}>
                   Et si j’ai des repas sociaux / sorties ?
                 </summary>
-               <p className="jq-card__text" style={{ marginTop: 10 }}>
-  Justement : le plan est construit pour ça. On prévoit, on ajuste, et on évite le mode “tout ou rien”.
-  <br />
-  C'est pourquoi la balance est un super outil pour créer des repères afin de mieux gérer les sorties.
-</p>
+                <p className="jq-card__text" style={{ marginTop: 10 }}>
+                  Justement : le plan est construit pour ça. On prévoit, on
+                  ajuste, et on évite le mode “tout ou rien”.
+                  <br />
+                  C'est pourquoi la balance est un super outil pour créer des
+                  repères afin de mieux gérer les sorties.
+                </p>
               </details>
 
               <details className="jq-card" style={{ padding: 18 }}>
@@ -354,40 +374,60 @@ export default function Page() {
                   Pourquoi 3 à 6 mois ?
                 </summary>
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
-  Parce que le vrai résultat, c’est l’habitude. En dessous, tu peux “faire attention”, mais pas forcément
-  <br />
-  consolider de bonnes habitudes et une nouvelle hygiène de vie.
-</p>
+                  Parce que le vrai résultat, c’est l’habitude. En dessous, tu
+                  peux “faire attention”, mais pas forcément
+                  <br />
+                  consolider de bonnes habitudes et une nouvelle hygiène de vie.
+                </p>
               </details>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* CTA FINAL */}
-      <section className="jq-hero" style={{ minHeight: 420 }}>
+      {/* CTA FINAL (avec photo à droite comme la Home) */}
+      <section className="jq-hero" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
-        <div className="jq-container jq-hero__content">
-          <Reveal as="div">
-            <h2 className="jq-title" style={{ fontSize: 52 }}>
-              PRÊT À <br />
-              <span className="jq-title--accent">DÉMARRER ?</span>
-            </h2>
-            <p className="jq-subtitle">
-              Tu m’envoies ton objectif + tes contraintes, et on fait simple.
-            </p>
+        <div className="jq-container">
+          <div className="jq-hero__grid">
+            {/* TEXTE À GAUCHE */}
+            <div className="jq-hero__left">
+              <Reveal as="div">
+                <h2 className="jq-title" style={{ fontSize: 52 }}>
+                  PRÊT À <br />
+                  <span className="jq-title--accent">DÉMARRER ?</span>
+                </h2>
 
-            <div className="jq-actions">
-              <a
-                className="jq-btn jq-btn--primary"
-                href={WHATSAPP}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Me contacter sur WhatsApp →
-              </a>
+                <p className="jq-subtitle">
+                  Tu m’envoies ton objectif + tes contraintes, et on fait simple.
+                </p>
+
+                <div className="jq-actions">
+                  <a
+                    className="jq-btn jq-btn--primary"
+                    href={WHATSAPP}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Me contacter sur WhatsApp →
+                  </a>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* PHOTO À DROITE (même rendu que la home/contact) */}
+            <div className="jq-hero__right">
+              <Reveal as="div">
+                <div className="jq-hero__photoWrap">
+                  <img
+                    className="jq-hero__portrait"
+                    src="/robin-physique-actuel.jpg"
+                    alt="Robin - physique actuel"
+                  />
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
     </>
