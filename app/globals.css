@@ -509,16 +509,24 @@ a:hover{ opacity: .92; }
 
   .jq-reveal{ opacity: 1 !important; }
 }
-/* Fix collage avant/après dans le carousel résultats */
-.jq-results .jq-beforeafter{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  align-items: stretch;
+/* ===== RESULTS CAROUSEL: 3 visibles + petit peek de la 4e ===== */
+.jq-carousel{
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 12px;
 }
 
-.jq-results .jq-beforeafter .jq-photo{
-  width: 100%;
-  max-width: none;
-  display: block;
+.jq-carousel .jq-slide{
+  flex: 0 0 calc((100% - 2*18px) / 3.2); /* 3 visibles + un bout de la 4e */
+  scroll-snap-align: start;
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .jq-carousel .jq-slide{
+    flex-basis: 85%;
+  }
 }
