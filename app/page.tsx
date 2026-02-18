@@ -93,35 +93,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* GRAND VISUEL + CTA */}
-      <section
-        className="jq-hero"
-        style={{
-          minHeight: 520,
-          background:
-            'linear-gradient(180deg, rgba(0,0,0,.70), rgba(0,0,0,.85)), url("/coaching.jpg")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+            {/* GRAND VISUEL + CTA (texte gauche + photo droite) */}
+      <section className="jq-hero jq-hero--home" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
-        <div className="jq-container jq-hero__content">
-          <Reveal as="div">
-            <h2 className="jq-title" style={{ fontSize: 52 }}>
-              RÉSERVE TON <br />
-              <span className="jq-title--accent">ACCOMPAGNEMENT</span>
-            </h2>
 
-            <p className="jq-subtitle">
-              Un suivi clair, humain et personnalisé pour des résultats visibles et durables.
-            </p>
+        <div className="jq-container">
+          <div className="jq-hero__grid">
+            {/* TEXTE À GAUCHE */}
+            <div className="jq-hero__left">
+              <Reveal as="div">
+                <h2 className="jq-title" style={{ fontSize: 52 }}>
+                  RÉSERVE TON <br />
+                  <span className="jq-title--accent">ACCOMPAGNEMENT</span>
+                </h2>
 
-            <div className="jq-actions">
-              <a className="jq-btn jq-btn--primary" href="/contact">
-                Me contacter →
-              </a>
+                <p className="jq-subtitle" style={{ maxWidth: 760 }}>
+                  Un suivi clair, humain et personnalisé pour des résultats visibles et durables.
+                </p>
+
+                <div className="jq-actions">
+                  <a className="jq-btn jq-btn--primary" href="/contact">
+                    Me contacter →
+                  </a>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* PHOTO À DROITE (même rendu que la Home) */}
+            <div className="jq-hero__right">
+              <Reveal as="div">
+                <div className="jq-hero__photoWrap">
+                  <img className="jq-hero__portrait" src="/robin-profil.jpg" alt="Robin" />
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 
