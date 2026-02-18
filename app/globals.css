@@ -509,3 +509,16 @@ a:hover{ opacity: .92; }
 
   .jq-reveal{ opacity: 1 !important; }
 }
+/* Fix collage avant/après dans le carousel résultats */
+.jq-results .jq-beforeafter{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.jq-results .jq-beforeafter .jq-photo{
+  width: 100%;
+  max-width: none;
+  display: block;
+}
