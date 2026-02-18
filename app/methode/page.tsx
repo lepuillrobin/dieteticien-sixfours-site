@@ -10,49 +10,87 @@ const WHATSAPP = "https://wa.me/33751013960";
 export default function Page() {
   return (
     <>
-      {/* HERO / INTRO (même structure que la Home : texte à gauche + photo à droite) */}
-      <section className="jq-hero jq-hero--home" style={{ minHeight: 520 }}>
-        <div className="jq-hero__overlay" />
+      {/* HERO / INTRO (texte gauche + photo droite, rendu garanti) */}
+<section className="jq-hero" style={{ minHeight: 520 }}>
+  <div className="jq-hero__overlay" />
 
-        <div className="jq-container">
-          <div className="jq-hero__grid">
-            {/* TEXTE À GAUCHE */}
-            <div className="jq-hero__left">
-              <Reveal as="div">
-                <div className="jq-kicker">MÉTHODE</div>
+  <div className="jq-container">
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "minmax(0, 1fr) minmax(0, 420px)",
+        gap: 28,
+        alignItems: "center",
+      }}
+    >
+      {/* TEXTE */}
+      <div style={{ minWidth: 0 }}>
+        <Reveal as="div">
+          <div className="jq-kicker">MÉTHODE</div>
 
-                <h1 className="jq-title" style={{ fontSize: 56 }}>
-                  UNE STRATÉGIE <br />
-                  <span className="jq-title--accent">QUI TIENT</span>
-                </h1>
+          <h1 className="jq-title" style={{ fontSize: 56 }}>
+            UNE STRATÉGIE <br />
+            <span className="jq-title--accent">QUI TIENT</span>
+          </h1>
 
-                <p className="jq-subtitle" style={{ maxWidth: 780 }}>
-                  L’objectif n’est pas “être parfait”. L’objectif, c’est d’avoir un cadre clair et des repères simples — pour
-                  avancer même quand la semaine est bancale.
-                </p>
+          <p className="jq-subtitle" style={{ maxWidth: 780 }}>
+            L’objectif n’est pas “être parfait”. L’objectif, c’est d’avoir un cadre clair et des repères simples — pour
+            avancer même quand la semaine est bancale.
+          </p>
 
-                <div className="jq-actions">
-                  <a className="jq-btn jq-btn--primary" href="/accompagnement">
-                    Voir l’accompagnement →
-                  </a>
-                  <a className="jq-btn jq-btn--ghost" href={WHATSAPP} target="_blank" rel="noreferrer">
-                    M’écrire sur WhatsApp →
-                  </a>
-                </div>
-              </Reveal>
-            </div>
-
-            {/* PHOTO À DROITE (même rendu que la Home) */}
-            <div className="jq-hero__right">
-              <Reveal as="div">
-                <div className="jq-hero__photoWrap">
-                  <img className="jq-hero__portrait" src="/robin-profil.jpg" alt="Robin - profil" />
-                </div>
-              </Reveal>
-            </div>
+          <div className="jq-actions">
+            <a className="jq-btn jq-btn--primary" href="/accompagnement">
+              Voir l’accompagnement →
+            </a>
+            <a className="jq-btn jq-btn--ghost" href={WHATSAPP} target="_blank" rel="noreferrer">
+              M’écrire sur WhatsApp →
+            </a>
           </div>
-        </div>
-      </section>
+        </Reveal>
+      </div>
+
+      {/* PHOTO */}
+      <div style={{ justifySelf: "end", width: "100%" }}>
+        <Reveal as="div">
+          <div
+            style={{
+              width: "100%",
+              maxWidth: 420,
+              aspectRatio: "3 / 4",
+              borderRadius: 22,
+              overflow: "hidden",
+              position: "relative",
+              border: "1px solid rgba(255,255,255,.10)",
+              background: "rgba(0,0,0,.25)",
+            }}
+          >
+            <img
+              src="/robin-profil.jpg"
+              alt="Robin - profil"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "50% 35%",
+                display: "block",
+              }}
+            />
+
+            {/* petit fondu bas comme sur les visuels */}
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background: "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.55) 100%)",
+                pointerEvents: "none",
+              }}
+            />
+          </div>
+        </Reveal>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* PILIERS */}
       <section className="jq-section">
