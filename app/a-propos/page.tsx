@@ -562,30 +562,59 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA FINAL */}
+            {/* CTA FINAL (même rendu que Home/Contact : texte à gauche + photo à droite) */}
       <section className="jq-hero" style={{ minHeight: 420 }}>
         <div className="jq-hero__overlay" />
-        <div className="jq-container jq-hero__content">
-          <Reveal as="div">
-            <h2 className="jq-title" style={{ fontSize: 52 }}>
-              TU VEUX UN <br />
-              <span className="jq-title--accent">PLAN QUI TIENT ?</span>
-            </h2>
 
-            <p className="jq-subtitle" style={{ maxWidth: 760 }}>
-              Tu m’écris ton objectif + tes contraintes, et on part sur quelque
-              chose de simple et actionnable.
-            </p>
+        <div className="jq-container">
+          <div className="jq-hero__grid">
+            {/* TEXTE À GAUCHE */}
+            <div className="jq-hero__left">
+              <Reveal as="div">
+                <h2 className="jq-title" style={{ fontSize: 52 }}>
+                  TU VEUX UN <br />
+                  <span className="jq-title--accent">PLAN QUI TIENT ?</span>
+                </h2>
 
-            <div className="jq-actions">
-              <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
-                M’écrire sur WhatsApp →
-              </a>
-              <a className="jq-btn jq-btn--ghost" href={INSTAGRAM} target="_blank" rel="noreferrer">
-                Voir Instagram →
-              </a>
+                <p className="jq-subtitle" style={{ maxWidth: 760 }}>
+                  Tu m’écris ton objectif + tes contraintes, et on part sur quelque
+                  chose de simple et actionnable.
+                </p>
+
+                <div className="jq-actions">
+                  <a
+                    className="jq-btn jq-btn--primary"
+                    href={WHATSAPP}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    M’écrire sur WhatsApp →
+                  </a>
+                  <a
+                    className="jq-btn jq-btn--ghost"
+                    href={INSTAGRAM}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Voir Instagram →
+                  </a>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* PHOTO À DROITE */}
+            <div className="jq-hero__right">
+              <Reveal as="div">
+                <div className="jq-hero__photoWrap">
+                  <img
+                    className="jq-hero__portrait"
+                    src="/robin-plan.png"
+                    alt="Robin - plan qui tient"
+                  />
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
     </>
