@@ -491,7 +491,7 @@ export default function Page() {
                   />
 
                   <img
-                    src="/robin-physique-actuel.jpg"
+                    src="/robin-20kg-apres.jpg"
                     alt="Robin - physique actuel"
                     style={{
                       position: "relative",
