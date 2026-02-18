@@ -2,8 +2,7 @@ import Reveal from "../components/Reveal";
 
 export const metadata = {
   title: "Méthode | Robin LE PUILL — Diététicien",
-  description:
-    "La méthode : structure simple, repères clairs, ajustements réguliers. Pas de tout-ou-rien.",
+  description: "La méthode : structure simple, repères clairs, ajustements réguliers. Pas de tout-ou-rien.",
 };
 
 const WHATSAPP = "https://wa.me/33751013960";
@@ -11,31 +10,47 @@ const WHATSAPP = "https://wa.me/33751013960";
 export default function Page() {
   return (
     <>
-      {/* HERO / INTRO */}
-      <section className="jq-hero" style={{ minHeight: 520 }}>
+      {/* HERO / INTRO (même structure que la Home : texte à gauche + photo à droite) */}
+      <section className="jq-hero jq-hero--home" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
-        <div className="jq-container jq-hero__content">
-          <Reveal as="div">
-            <div className="jq-kicker">MÉTHODE</div>
-            <h1 className="jq-title" style={{ fontSize: 56 }}>
-              UNE STRATÉGIE <br />
-              <span className="jq-title--accent">QUI TIENT</span>
-            </h1>
 
-            <p className="jq-subtitle" style={{ maxWidth: 780 }}>
-              L’objectif n’est pas “être parfait”. L’objectif, c’est d’avoir un cadre clair et des repères simples
-              — pour avancer même quand la semaine est bancale.
-            </p>
+        <div className="jq-container">
+          <div className="jq-hero__grid">
+            {/* TEXTE À GAUCHE */}
+            <div className="jq-hero__left">
+              <Reveal as="div">
+                <div className="jq-kicker">MÉTHODE</div>
 
-            <div className="jq-actions">
-              <a className="jq-btn jq-btn--primary" href="/accompagnement">
-                Voir l’accompagnement →
-              </a>
-              <a className="jq-btn jq-btn--ghost" href={WHATSAPP} target="_blank" rel="noreferrer">
-                M’écrire sur WhatsApp →
-              </a>
+                <h1 className="jq-title" style={{ fontSize: 56 }}>
+                  UNE STRATÉGIE <br />
+                  <span className="jq-title--accent">QUI TIENT</span>
+                </h1>
+
+                <p className="jq-subtitle" style={{ maxWidth: 780 }}>
+                  L’objectif n’est pas “être parfait”. L’objectif, c’est d’avoir un cadre clair et des repères simples — pour
+                  avancer même quand la semaine est bancale.
+                </p>
+
+                <div className="jq-actions">
+                  <a className="jq-btn jq-btn--primary" href="/accompagnement">
+                    Voir l’accompagnement →
+                  </a>
+                  <a className="jq-btn jq-btn--ghost" href={WHATSAPP} target="_blank" rel="noreferrer">
+                    M’écrire sur WhatsApp →
+                  </a>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* PHOTO À DROITE (même rendu que la Home) */}
+            <div className="jq-hero__right">
+              <Reveal as="div">
+                <div className="jq-hero__photoWrap">
+                  <img className="jq-hero__portrait" src="/robin-profil.jpg" alt="Robin - profil" />
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -44,15 +59,10 @@ export default function Page() {
         <div className="jq-container">
           <Reveal as="div">
             <h2 className="jq-h2">Les 4 piliers</h2>
-            <p className="jq-p">
-              La méthode est volontairement simple : moins de blabla, plus de décisions concrètes.
-            </p>
+            <p className="jq-p">La méthode est volontairement simple : moins de blabla, plus de décisions concrètes.</p>
           </Reveal>
 
-          <Reveal
-            as="div"
-            className="jq-stagger"
-          >
+          <Reveal as="div" className="jq-stagger">
             <div
               style={{
                 display: "grid",
@@ -95,9 +105,7 @@ export default function Page() {
                 <div className="jq-card__stripes" />
                 <div className="jq-card__icon">✅</div>
                 <h3 className="jq-card__title">Du durable</h3>
-                <p className="jq-card__text">
-                  On vise le long terme : habitudes tenables, pas extrêmes.
-                </p>
+                <p className="jq-card__text">On vise le long terme : habitudes tenables, pas extrêmes.</p>
               </div>
             </div>
           </Reveal>
@@ -163,9 +171,7 @@ export default function Page() {
         <div className="jq-container">
           <Reveal as="div">
             <h2 className="jq-h2">Ce que tu dois retenir</h2>
-            <p className="jq-p">
-              Si tu veux une phrase : on fait moins “parfait”, mais plus tenable — donc plus efficace.
-            </p>
+            <p className="jq-p">Si tu veux une phrase : on fait moins “parfait”, mais plus tenable — donc plus efficace.</p>
           </Reveal>
 
           <Reveal as="div">
