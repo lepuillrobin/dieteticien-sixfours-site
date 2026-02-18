@@ -115,26 +115,44 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA FINAL */}
-      <section className="jq-hero" style={{ minHeight: 420 }}>
+            {/* CTA FINAL (même structure que la Home : texte à gauche + photo à droite) */}
+      <section className="jq-hero jq-hero--home" style={{ minHeight: 420 }}>
         <div className="jq-hero__overlay" />
-        <div className="jq-container jq-hero__content">
-          <Reveal as="div">
-            <h2 className="jq-title" style={{ fontSize: 52 }}>
-              ENVOIE TON <br />
-              <span className="jq-title--accent">OBJECTIF</span>
-            </h2>
 
-            <p className="jq-subtitle" style={{ maxWidth: 720 }}>
-              Objectif + contraintes + emploi du temps. Je te réponds avec une stratégie simple.
-            </p>
+        <div className="jq-container">
+          <div className="jq-hero__grid">
+            {/* TEXTE À GAUCHE */}
+            <div className="jq-hero__left">
+              <Reveal as="div">
+                <h2 className="jq-title" style={{ fontSize: 52 }}>
+                  ENVOIE TON <br />
+                  <span className="jq-title--accent">OBJECTIF</span>
+                </h2>
 
-            <div className="jq-actions">
-              <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
-                WhatsApp →
-              </a>
+                <p className="jq-subtitle" style={{ maxWidth: 720 }}>
+                  Objectif + contraintes + emploi du temps. Je te réponds avec une stratégie simple.
+                </p>
+
+                <div className="jq-actions">
+                  <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
+                    WhatsApp →
+                  </a>
+                  <a className="jq-btn jq-btn--ghost" href={EMAIL}>
+                    Email →
+                  </a>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* PHOTO À DROITE (même rendu que la Home) */}
+            <div className="jq-hero__right">
+              <Reveal as="div">
+                <div className="jq-hero__photoWrap">
+                  <img className="jq-hero__portrait" src="/robin-contact.png" alt="Robin - contact" />
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
     </>
