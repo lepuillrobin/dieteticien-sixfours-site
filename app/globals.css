@@ -572,8 +572,8 @@ a:hover{ opacity: .92; }
   width: min(280px, 100%);
 }
 /* CONTACT : uniquement le HERO du haut -> éviter le rognage */
-.jq-contact-hero .jq-hero__photoWrap{
-  aspect-ratio: 1 / 1; /* la photo /robin-contact.jpg est quasi carrée */
+.jq-hero__photoWrap--contactHero{
+  aspect-ratio: 1179 / 1115;
 }
 
 /* si tu veux garder exactement le même rendu, on laisse object-fit: cover.
