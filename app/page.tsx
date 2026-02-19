@@ -131,7 +131,7 @@ export default function HomePage() {
         </div>
       </section>
 
-                {/* RÉSULTATS */}
+                     {/* RÉSULTATS */}
       <section className="jq-results">
         <div className="jq-container">
           <Reveal as="div">
@@ -142,71 +142,88 @@ export default function HomePage() {
             </h2>
           </Reveal>
 
-          {/* ✅ Carousel scrollable + snap (même slides, juste le conteneur change) */}
-          <Reveal as="div">
-            <div
-              className="jq-carousel"
-              style={{
-                display: "flex",
-                gap: 18,
-                overflowX: "auto",
-                scrollSnapType: "x mandatory",
-                WebkitOverflowScrolling: "touch",
-                paddingBottom: 8,
-              }}
-            >
-             {/* ✅ 4 transformations */}
-<Reveal as="div">
-  <div className="jq-carousel">
-    {/* Transformation 1 */}
-    <div className="jq-slide">
-      <div className="jq-beforeafter">
-        <img className="jq-photo" src="/robin-20kg-avant.jpg" alt="Robin - avant (+20kg)" />
-        <img className="jq-photo" src="/robin-20kg-apres.jpg" alt="Robin - après (+20kg)" />
-      </div>
-      <div className="jq-quote">
-        “+20kg secs en 3 ans”
-        <span className="jq-quote__name">— Robin</span>
-      </div>
-    </div>
+          {/* ✅ transformations (scroll horizontal) */}
+          <Reveal as="div" className="jq-carousel jq-carousel--peek">
+            {/* Transformation 1 */}
+            <div className="jq-slide">
+              <div className="jq-beforeafter">
+                <img
+                  className="jq-photo"
+                  src="/robin-20kg-avant.jpg"
+                  alt="Robin - avant (+20kg)"
+                />
+                <img
+                  className="jq-photo"
+                  src="/robin-20kg-apres.jpg"
+                  alt="Robin - après (+20kg)"
+                />
+              </div>
+              <div className="jq-quote">
+                “+20kg secs en 3 ans”
+                <span className="jq-quote__name">— Robin</span>
+              </div>
+            </div>
 
-    {/* ✅ Transformation 2 (Madison) */}
-    <div className="jq-slide">
-      <div className="jq-beforeafter">
-        <img className="jq-photo" src="/madison-avant.jpg" alt="Madison - avant (-60kg)" />
-        <img className="jq-photo" src="/madison-apres.jpg" alt="Madison - après (-60kg)" />
-      </div>
-      <div className="jq-quote">
-        “-60kg en 1 an”
-        <span className="jq-quote__name">— Madison</span>
-      </div>
-    </div>
+            {/* Transformation 2 (Madison) */}
+            <div className="jq-slide">
+              <div className="jq-beforeafter">
+                <img
+                  className="jq-photo"
+                  src="/madison-avant.jpg"
+                  alt="Madison - avant (-60kg)"
+                />
+                <img
+                  className="jq-photo"
+                  src="/madison-apres.jpg"
+                  alt="Madison - après (-60kg)"
+                />
+              </div>
+              <div className="jq-quote">
+                “-60kg en 1 an”
+                <span className="jq-quote__name">— Madison</span>
+              </div>
+            </div>
 
-    {/* Transformation 3 */}
-    <div className="jq-slide">
-      <div className="jq-beforeafter">
-        <img className="jq-photo" src="/pierre-10kg-avant.jng.png" alt="Pierre - avant (+10kg)" />
-        <img className="jq-photo" src="/pierre-10kg-apres.jng.png" alt="Pierre - après (+10kg)" />
-      </div>
-      <div className="jq-quote">
-        “+10kg secs en 1 an”
-        <span className="jq-quote__name">— Pierre</span>
-      </div>
-    </div>
+            {/* Transformation 3 (Pierre) */}
+            <div className="jq-slide">
+              <div className="jq-beforeafter">
+                <img
+                  className="jq-photo"
+                  src="/pierre-10kg-avant.jng.png"
+                  alt="Pierre - avant (+10kg)"
+                />
+                <img
+                  className="jq-photo"
+                  src="/pierre-10kg-apres.jng.png"
+                  alt="Pierre - après (+10kg)"
+                />
+              </div>
+              <div className="jq-quote">
+                “+10kg secs en 1 an”
+                <span className="jq-quote__name">— Pierre</span>
+              </div>
+            </div>
 
-    {/* Transformation 4 */}
-    <div className="jq-slide">
-      <div className="jq-beforeafter">
-        <img className="jq-photo" src="/robin-10kg-avant.jpg" alt="Robin - avant (-10kg)" />
-        <img className="jq-photo" src="/robin-10kg-apres.jpg" alt="Robin - après (-10kg)" />
-      </div>
-      <div className="jq-quote">
-        “-10kg en 3 mois”
-        <span className="jq-quote__name">— Robin</span>
-      </div>
-    </div>
-  </div>
-</Reveal>
+            {/* Transformation 4 */}
+            <div className="jq-slide">
+              <div className="jq-beforeafter">
+                <img
+                  className="jq-photo"
+                  src="/robin-10kg-avant.jpg"
+                  alt="Robin - avant (-10kg)"
+                />
+                <img
+                  className="jq-photo"
+                  src="/robin-10kg-apres.jpg"
+                  alt="Robin - après (-10kg)"
+                />
+              </div>
+              <div className="jq-quote">
+                “-10kg en 3 mois”
+                <span className="jq-quote__name">— Robin</span>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
     </>
