@@ -608,7 +608,7 @@ export default function Page() {
                 <div className="jq-hero__photoWrap">
                   <img
                     className="jq-hero__portrait"
-                    src="/robin-plan.png"
+                    src="/robin-plan.jpg"
                     alt="Robin - plan qui tient"
                   />
                 </div>
