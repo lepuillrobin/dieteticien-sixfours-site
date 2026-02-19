@@ -116,7 +116,7 @@ export default function Page() {
       </section>
 
             {/* CTA FINAL (même structure que la Home : texte à gauche + photo à droite) */}
-      <section className="jq-hero jq-hero--home" style={{ minHeight: 420 }}>
+      <section className="jq-hero jq-hero--home jq-contactHero jq-contactHero--cta" style={{ minHeight: 420 }}>
         <div className="jq-hero__overlay" />
 
         <div className="jq-container">
@@ -150,9 +150,9 @@ export default function Page() {
                 <div className="jq-hero__photoWrap">
                   <img
   className="jq-hero__portrait"
-  src="/robin-contact.jpg"
+  src="/robin-plan.jpg"
   alt="Robin - contact"
-  style={{ objectPosition: "100%" }}   // ajuste si besoin
+  style={{ objectPosition: "55% 35%" }}  // ajuste si besoin
 />
                 </div>
               </Reveal>
