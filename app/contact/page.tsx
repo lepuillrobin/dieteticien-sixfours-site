@@ -152,7 +152,7 @@ export default function Page() {
   className="jq-hero__portrait"
   src="/robin-contact.jpg"
   alt="Robin - contact"
-  style={{ objectPosition: "70% 50%" }}   // ajuste si besoin
+  style={{ objectPosition: "100%" }}   // ajuste si besoin
 />
                 </div>
               </Reveal>
