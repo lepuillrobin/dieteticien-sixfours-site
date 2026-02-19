@@ -148,7 +148,12 @@ export default function Page() {
             <div className="jq-hero__right">
               <Reveal as="div">
                 <div className="jq-hero__photoWrap">
-                  <img className="jq-hero__portrait" src="/robin-plan.jpg" alt="Robin - contact" />
+                  <img
+  className="jq-hero__portrait"
+  src="/robin-contact.jpg"
+  alt="Robin - contact"
+  style={{ objectPosition: "70% 50%" }}   // ajuste si besoin
+/>
                 </div>
               </Reveal>
             </div>
