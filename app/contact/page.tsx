@@ -47,7 +47,7 @@ export default function Page() {
             <div className="jq-hero__right">
               <Reveal as="div">
                 <div className="jq-hero__photoWrap">
-                  <img className="jq-hero__portrait" src="/robin-contact.png" alt="Robin - contact" />
+                  <img className="jq-hero__portrait" src="/robin-contact.jpg" alt="Robin - contact" />
                 </div>
               </Reveal>
             </div>
@@ -148,7 +148,7 @@ export default function Page() {
             <div className="jq-hero__right">
               <Reveal as="div">
                 <div className="jq-hero__photoWrap">
-                  <img className="jq-hero__portrait" src="/robin-plan.png" alt="Robin - contact" />
+                  <img className="jq-hero__portrait" src="/robin-plan.jpg" alt="Robin - contact" />
                 </div>
               </Reveal>
             </div>
