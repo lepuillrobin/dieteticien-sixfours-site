@@ -44,11 +44,18 @@ export default function Page() {
             </div>
 
             {/* VISUEL À DROITE (même rendu que la Home) */}
-            <div className="jq-hero__photoWrap jq-hero__photoWrap--contactHero">
-  <img className="jq-hero__portrait" src="/robin-contact.jpg" alt="Robin - contact" />
+           {/* VISUEL À DROITE (même rendu que la Home) */}
+<div className="jq-hero__right">
+  <Reveal as="div">
+    <div className="jq-hero__photoWrap jq-hero__photoWrap--contactHero">
+      <img
+        className="jq-hero__portrait"
+        src="/robin-contact.jpg"
+        alt="Robin - contact"
+      />
+    </div>
+  </Reveal>
 </div>
-              </Reveal>
-            </div>
           </div>
         </div>
       </section>
