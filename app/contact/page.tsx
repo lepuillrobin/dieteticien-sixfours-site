@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <>
       {/* HERO (même structure que la Home) */}
-      <section className="jq-hero jq-hero--home" style={{ minHeight: 520 }}>
+      <section className="jq-hero jq-hero--home jq-contactHero" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
         <div className="jq-container">
           <div className="jq-hero__grid">
