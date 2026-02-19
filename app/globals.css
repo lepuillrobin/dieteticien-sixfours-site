@@ -545,3 +545,29 @@ a:hover{ opacity: .92; }
 .jq-carousel.jq-carousel--peek::-webkit-scrollbar {
   height: 10px;
 }
+/* =========================
+   CONTACT ONLY (hero images smaller)
+   ========================= */
+
+/* Sur la page contact uniquement, on réduit le bloc image */
+.jq-contactHero .jq-hero__photoWrap{
+  width: min(300px, 100%); /* ~ moitié vs 520 */
+}
+
+/* Optionnel : un peu moins haut (si tu veux encore plus équilibré) */
+.jq-contactHero{
+  min-height: 460px;
+}
+
+/* Et on donne plus de place au texte sur desktop */
+@media (min-width: 981px){
+  .jq-contactHero .jq-hero__grid{
+    grid-template-columns: 1.30fr .70fr;
+    gap: 26px;
+  }
+}
+
+/* CTA final : encore un peu plus petit (si tu veux) */
+.jq-contactHero--cta .jq-hero__photoWrap{
+  width: min(280px, 100%);
+}
