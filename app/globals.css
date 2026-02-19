@@ -518,32 +518,30 @@ a:hover{ opacity: .92; }
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 10px;
-
-  /* petit padding à droite pour mieux voir le "peek" */
   padding-right: 18px;
 }
 
-/* chaque slide : ~3.2 visibles (donc 4e partiellement) */
+/* chaque slide : ~3.2 visibles (donc 4e partiellement visible) */
 .jq-carousel.jq-carousel--peek .jq-slide {
-  flex: 0 0 calc((100% - 28px) / 3.2); /* 2 gaps * 14px = 28px */
+  flex: 0 0 calc((100% - 28px) / 3.2);
   scroll-snap-align: start;
 }
 
-/* responsive : sur tablette on voit ~2 + peek */
+/* tablette : ~2 cartes + un peek */
 @media (max-width: 980px) {
   .jq-carousel.jq-carousel--peek .jq-slide {
     flex-basis: calc((100% - 14px) / 2.15);
   }
 }
 
-/* mobile : 1 + peek */
+/* mobile : 1 carte + un peek */
 @media (max-width: 640px) {
   .jq-carousel.jq-carousel--peek .jq-slide {
     flex-basis: 86%;
   }
 }
 
-/* optionnel : scrollbar plus discrète */
+/* scrollbar discrète */
 .jq-carousel.jq-carousel--peek::-webkit-scrollbar {
   height: 10px;
 }
