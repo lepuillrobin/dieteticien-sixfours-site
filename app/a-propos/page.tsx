@@ -71,7 +71,6 @@ function FadedCardBackground({
 export default function Page() {
   return (
     <div className="jq-pageApropos">
-    <>
       {/* HERO (comme Home/Contact : texte à gauche + photo à droite) */}
       <section className="jq-hero jq-aproposHeroTop" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
@@ -90,10 +89,11 @@ export default function Page() {
 
                 <p className="jq-subtitle" style={{ maxWidth: 820 }}>
                   Je m’appelle <strong>Robin LE PUILL</strong>, diététicien.
-                  J’accompagne surtout les <strong>hommes de 28 à 40 ans</strong>{" "}
-                  (souvent occupés) qui veulent <strong>perdre du poids</strong>{" "}
-                  ou faire une <strong>recomposition corporelle</strong> — sans
-                  retomber dans le schéma “parfait 2 semaines puis abandon”.
+                  J’accompagne surtout les{" "}
+                  <strong>hommes de 28 à 40 ans</strong> (souvent occupés) qui
+                  veulent <strong>perdre du poids</strong> ou faire une{" "}
+                  <strong>recomposition corporelle</strong> — sans retomber dans
+                  le schéma “parfait 2 semaines puis abandon”.
                 </p>
 
                 <div className="jq-actions">
@@ -112,7 +112,7 @@ export default function Page() {
               </Reveal>
             </div>
 
-            {/* PHOTO À DROITE (même rendu que la Home) */}
+            {/* PHOTO À DROITE */}
             <div className="jq-hero__right">
               <Reveal as="div">
                 <div className="jq-hero__photoWrap">
@@ -215,7 +215,6 @@ export default function Page() {
           </Reveal>
 
           <Reveal as="div">
-            {/* 1) AVANT : grand bloc pleine largeur */}
             <div
               className="jq-card"
               style={{ padding: 18, position: "relative", overflow: "hidden" }}
@@ -224,7 +223,6 @@ export default function Page() {
                 className="jq-card__corner"
                 style={{ zIndex: 2, pointerEvents: "none" }}
               />
-              {/* IMPORTANT : stripes au-dessus de la photo, MAIS sous le texte */}
               <div
                 className="jq-card__stripes"
                 style={{ zIndex: 2, pointerEvents: "none" }}
@@ -240,7 +238,7 @@ export default function Page() {
                   alignItems: "start",
                 }}
               >
-                {/* TEXTE : au-dessus de tout */}
+                {/* TEXTE */}
                 <div style={{ position: "relative", zIndex: 3, minWidth: 0 }}>
                   <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
 
@@ -258,7 +256,6 @@ export default function Page() {
                     j’avais fait du sport toute ma vie.
                   </p>
 
-                  {/* Déclic + Erreurs à l’intérieur du même bloc */}
                   <div
                     style={{
                       display: "grid",
@@ -320,7 +317,7 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* PHOTO : sous le cercle orange */}
+                {/* PHOTO */}
                 <div
                   style={{
                     justifySelf: "end",
@@ -394,7 +391,7 @@ export default function Page() {
             </div>
           </Reveal>
 
-          {/* SPORT : pourquoi j’en parle (et pourquoi ça compte) */}
+          {/* SPORT */}
           <Reveal as="div">
             <div
               className="jq-card"
@@ -468,7 +465,7 @@ export default function Page() {
                 </div>
 
                 <div
-                 className="jq-aproposSportMedia"
+                  className="jq-aproposSportMedia"
                   style={{
                     justifySelf: "end",
                     width: "100%",
@@ -525,7 +522,10 @@ export default function Page() {
           </Reveal>
 
           <Reveal as="div">
-            <div className="jq-aproposStartGrid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}>
+            <div
+              className="jq-aproposStartGrid"
+              style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}
+            >
               {[
                 { n: "1", t: "Message WhatsApp", d: "Tu m’écris avec ton objectif + tes contraintes + ton rythme de vie." },
                 { n: "2", t: "Premier échange (bilan)", d: "On clarifie le vrai problème : habitudes, blocages, emploi du temps, priorités." },
@@ -565,13 +565,12 @@ export default function Page() {
         </div>
       </section>
 
-            {/* CTA FINAL (même rendu que Home/Contact : texte à gauche + photo à droite) */}
+      {/* CTA FINAL */}
       <section className="jq-hero jq-aproposCta" style={{ minHeight: 420 }}>
         <div className="jq-hero__overlay" />
 
         <div className="jq-container">
           <div className="jq-hero__grid">
-            {/* TEXTE À GAUCHE */}
             <div className="jq-hero__left">
               <Reveal as="div">
                 <h2 className="jq-title" style={{ fontSize: 52 }}>
@@ -605,21 +604,20 @@ export default function Page() {
               </Reveal>
             </div>
 
-            {/* PHOTO À DROITE */}
             <div className="jq-hero__right">
               <Reveal as="div">
                 <div className="jq-hero__photoWrap jq-hero__photoWrap--aproposCta">
-  <img
-    className="jq-hero__portrait"
-    src="/robin-plan.jpg"
-    alt="Robin - plan qui tient"
-  />
-</div>
+                  <img
+                    className="jq-hero__portrait"
+                    src="/robin-plan.jpg"
+                    alt="Robin - plan qui tient"
+                  />
+                </div>
               </Reveal>
             </div>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
