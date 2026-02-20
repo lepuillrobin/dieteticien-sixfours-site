@@ -124,7 +124,7 @@ export default function Page() {
                 </h3>
                 <p className="jq-card__text">
                   Un plan qui colle à ta vraie vie (contraintes, goûts,
-                  horaires) + ajustements.
+                  horaires, temps) + ajustements.
                 </p>
               </div>
 
