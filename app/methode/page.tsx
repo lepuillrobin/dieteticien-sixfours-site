@@ -11,11 +11,12 @@ export default function Page() {
   return (
     <>
       {/* HERO / INTRO (texte gauche + photo droite, rendu garanti) */}
-<section className="jq-hero" style={{ minHeight: 520 }}>
+<section className="jq-hero jq-methodeHeroTop" style={{ minHeight: 520 }}>
   <div className="jq-hero__overlay" />
 
   <div className="jq-container">
     <div
+      className="jq-methodeHeroGrid"
       style={{
         display: "grid",
         gridTemplateColumns: "minmax(0, 1fr) minmax(0, 420px)",
@@ -50,9 +51,10 @@ export default function Page() {
       </div>
 
       {/* PHOTO */}
-      <div style={{ justifySelf: "end", width: "100%" }}>
+      <div className="jq-methodeHeroPhoto" style={{ justifySelf: "end", width: "100%" }}>
         <Reveal as="div">
           <div
+            className="jq-methodeHeroPhotoWrap"
             style={{
               width: "100%",
               maxWidth: 420,
@@ -92,70 +94,70 @@ export default function Page() {
   </div>
 </section>
 
-      {/* PILIERS */}
-      <section className="jq-section">
-        <div className="jq-container">
-          <Reveal as="div">
-            <h2 className="jq-h2">Les 4 piliers</h2>
-            <p className="jq-p">La méthode est volontairement simple : moins de blabla, plus de décisions concrètes.</p>
-          </Reveal>
+     {/* PILIERS */}
+<section className="jq-section">
+  <div className="jq-container">
+    <Reveal as="div">
+      <h2 className="jq-h2">Les 4 piliers</h2>
+      <p className="jq-p">La méthode est volontairement simple : moins de blabla, plus de décisions concrètes.</p>
+    </Reveal>
 
-          <Reveal as="div" className="jq-stagger">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-                gap: 18,
-              }}
-            >
-              <div className="jq-card">
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <div className="jq-card__icon">🧭</div>
-                <h3 className="jq-card__title">Un cadre clair</h3>
-                <p className="jq-card__text">
-                  Des règles simples (et utiles) plutôt que 36 contraintes impossibles à tenir.
-                </p>
-              </div>
-
-              <div className="jq-card">
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <div className="jq-card__icon">📍</div>
-                <h3 className="jq-card__title">Des repères</h3>
-                <p className="jq-card__text">
-                  Portions, protéines, faim/satiété : on construit des repères stables pour arrêter le hasard.
-                </p>
-              </div>
-
-              <div className="jq-card">
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <div className="jq-card__icon">🔁</div>
-                <h3 className="jq-card__title">Des ajustements</h3>
-                <p className="jq-card__text">
-                  On teste, on mesure, on corrige. Pas de “plan parfait” figé pendant 3 mois.
-                </p>
-              </div>
-
-              <div className="jq-card">
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <div className="jq-card__icon">✅</div>
-                <h3 className="jq-card__title">Du durable</h3>
-                <p className="jq-card__text">On vise le long terme : habitudes tenables, pas extrêmes.</p>
-              </div>
-            </div>
-          </Reveal>
-
-          <div className="jq-center" style={{ marginTop: 22 }}>
-            <a className="jq-btn jq-btn--primary" href="/contact">
-              Réserve un échange →
-            </a>
-          </div>
+    <Reveal as="div" className="jq-stagger">
+      <div
+        className="jq-methodePiliersGrid"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+          gap: 18,
+        }}
+      >
+        <div className="jq-card">
+          <div className="jq-card__corner" />
+          <div className="jq-card__stripes" />
+          <div className="jq-card__icon">🧭</div>
+          <h3 className="jq-card__title">Un cadre clair</h3>
+          <p className="jq-card__text">
+            Des règles simples (et utiles) plutôt que 36 contraintes impossibles à tenir.
+          </p>
         </div>
-      </section>
 
+        <div className="jq-card">
+          <div className="jq-card__corner" />
+          <div className="jq-card__stripes" />
+          <div className="jq-card__icon">📍</div>
+          <h3 className="jq-card__title">Des repères</h3>
+          <p className="jq-card__text">
+            Portions, protéines, faim/satiété : on construit des repères stables pour arrêter le hasard.
+          </p>
+        </div>
+
+        <div className="jq-card">
+          <div className="jq-card__corner" />
+          <div className="jq-card__stripes" />
+          <div className="jq-card__icon">🔁</div>
+          <h3 className="jq-card__title">Des ajustements</h3>
+          <p className="jq-card__text">
+            On teste, on mesure, on corrige. Pas de “plan parfait” figé pendant 3 mois.
+          </p>
+        </div>
+
+        <div className="jq-card">
+          <div className="jq-card__corner" />
+          <div className="jq-card__stripes" />
+          <div className="jq-card__icon">✅</div>
+          <h3 className="jq-card__title">Du durable</h3>
+          <p className="jq-card__text">On vise le long terme : habitudes tenables, pas extrêmes.</p>
+        </div>
+      </div>
+    </Reveal>
+
+    <div className="jq-center" style={{ marginTop: 22 }}>
+      <a className="jq-btn jq-btn--primary" href="/contact">
+        Réserve un échange →
+      </a>
+    </div>
+  </div>
+</section>
       {/* PROCESS */}
       <section className="jq-section" style={{ background: "#070708" }}>
         <div className="jq-container">
