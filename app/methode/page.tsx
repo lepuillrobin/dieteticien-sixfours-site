@@ -231,7 +231,7 @@ export default function Page() {
               <div className="jq-card" style={{ padding: 18 }}>
                 <div className="jq-card__title">Le résultat = habitudes</div>
                 <p className="jq-card__text" style={{ marginTop: 8 }}>
-                  Pas une “diète miracle”. Une routine réaliste qui tient sur des mois.
+                  Pas une “diète miracle”. Une routine réaliste qui tient sur des mois et des années.
                 </p>
               </div>
             </div>
