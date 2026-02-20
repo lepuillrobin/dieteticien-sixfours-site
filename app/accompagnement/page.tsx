@@ -386,52 +386,50 @@ export default function Page() {
       </section>
 
       {/* CTA FINAL (avec photo à droite comme la Home) */}
-      <section className="jq-hero jq-hero--accompagnementCta" style={{ minHeight: 520 }}>
-        <div className="jq-hero__overlay" />
-        <div className="jq-container">
-          <div className="jq-hero__grid">
-            {/* TEXTE À GAUCHE */}
-            <div className="jq-hero__left">
-              <Reveal as="div">
-                <h2 className="jq-title" style={{ fontSize: 52 }}>
-                  PRÊT À <br />
-                  <span className="jq-title--accent">DÉMARRER ?</span>
-                </h2>
+<section className="jq-hero" style={{ minHeight: 520 }}>
+  <div className="jq-hero__overlay" />
+  <div className="jq-container">
+    <div className="jq-hero__grid">
+      {/* TEXTE À GAUCHE */}
+      <div className="jq-hero__left">
+        <Reveal as="div">
+          <h2 className="jq-title" style={{ fontSize: 52 }}>
+            PRÊT À <br />
+            <span className="jq-title--accent">DÉMARRER ?</span>
+          </h2>
 
-                <p className="jq-subtitle">
-                  Tu m’envoies ton objectif + tes contraintes, et on fait simple.
-                </p>
+          <p className="jq-subtitle">
+            Tu m’envoies ton objectif + tes contraintes, et on fait simple.
+          </p>
 
-                <div className="jq-actions">
-                  <a
-                    className="jq-btn jq-btn--primary"
-                    href={WHATSAPP}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Me contacter sur WhatsApp →
-                  </a>
-                </div>
-              </Reveal>
-            </div>
-
-            {/* PHOTO À DROITE (même rendu que la home/contact) */}
-            <div className="jq-hero__right">
-  <Reveal as="div">
-    <div className="jq-hero__photoWrap jq-hero__photoWrap--accompagnementCta">
-      <img
-        className="jq-hero__portrait"
-        src="/robin-physique-actuel.jpg"
-        alt="Robin - physique actuel"
-      />
-    </div>
-  </Reveal>
-</div>
-              </Reveal>
-            </div>
+          <div className="jq-actions">
+            <a
+              className="jq-btn jq-btn--primary"
+              href={WHATSAPP}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Me contacter sur WhatsApp →
+            </a>
           </div>
-        </div>
-      </section>
+        </Reveal>
+      </div>
+
+      {/* PHOTO À DROITE */}
+      <div className="jq-hero__right">
+        <Reveal as="div">
+          <div className="jq-hero__photoWrap jq-hero__photoWrap--accompagnementCta">
+            <img
+              className="jq-hero__portrait"
+              src="/robin-physique-actuel.jpg"
+              alt="Robin - physique actuel"
+            />
+          </div>
+        </Reveal>
+      </div>
+    </div>
+  </div>
+</section>
     </>
   );
 }
