@@ -365,7 +365,7 @@ export default function Page() {
                   ajuste, et on évite le mode “tout ou rien”.
                   <br />
                   C'est pourquoi la balance est un super outil pour créer des
-                  repères afin de mieux gérer les sorties.
+                  repères afin de mieux gérer les sorties et les imprévus.
                 </p>
               </details>
 
