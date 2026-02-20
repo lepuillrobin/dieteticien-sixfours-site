@@ -229,121 +229,132 @@ export default function Page() {
               />
 
               <div
-                className="jq-aproposStoryGrid"
-                style={{
-                  marginTop: 10,
-                  display: "grid",
-                  gridTemplateColumns: "minmax(0, 1fr) 290px",
-                  gap: 12,
-                  alignItems: "start",
-                }}
-              >
-                {/* TEXTE */}
-                <div style={{ position: "relative", zIndex: 3, minWidth: 0 }}>
-                  <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
+  className="jq-aproposStoryGrid"
+  style={{
+    marginTop: 10,
+    display: "grid",
+    gridTemplateColumns: "minmax(0, 1fr) 290px",
+    gap: 12,
+    alignItems: "start",
+  }}
+>
+  {/* TEXTE */}
+  <div style={{ position: "relative", zIndex: 3, minWidth: 0 }}>
+    <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
 
-                  <p className="jq-card__text" style={{ marginTop: 10 }}>
-                    Lycée : j’étais fumeur (cigarettes + shit), je buvais
-                    quasiment pas d’eau, et mon alimentation c’était souvent le
-                    combo “macdo 1x/semaine + kebab 1x/semaine + le reste qui n'était pas beaucoup mieux”.
-                    <br />
-                    <br />
-                    Le détail qui résume bien : à la place de l’eau, j’étais
-                    plutôt <strong>Oasis / Ice Tea</strong>. Et niveau sommeil :
-                    horaires éclatés, parfois nuit blanche à jouer. Résultat :{" "}
-                    <strong>je me sentais mal</strong>, j’étais complexé, et
-                    j’avais <strong>un cardio catastrophique</strong>… alors que
-                    j’avais fait du sport toute ma vie.
-                  </p>
+    <p className="jq-card__text" style={{ marginTop: 10 }}>
+      Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau,
+      et mon alimentation c’était souvent le combo “macdo 1x/semaine + kebab 1x/semaine + le reste qui n'était pas beaucoup mieux”.
+      <br />
+      <br />
+      Le détail qui résume bien : à la place de l’eau, j’étais plutôt <strong>Oasis / Ice Tea</strong>. Et niveau sommeil :
+      horaires éclatés, parfois nuit blanche à jouer. Résultat : <strong>je me sentais mal</strong>, j’étais complexé,
+      et j’avais <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport toute ma vie.
+    </p>
 
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "1fr 1fr",
-                      gap: 12,
-                      marginTop: 14,
-                    }}
-                  >
-                    <div
-                      className="jq-card"
-                      style={{
-                        padding: 14,
-                        background: "rgba(0,0,0,.20)",
-                        border: "1px solid rgba(255,255,255,.08)",
-                      }}
-                    >
-                      <h4
-                        className="jq-card__title"
-                        style={{ fontSize: 16, marginBottom: 6 }}
-                      >
-                        Déclic
-                      </h4>
-                      <p className="jq-card__text" style={{ margin: 0 }}>
-                        Le confinement a été mon point de bascule : j’en avais
-                        marre de me sentir nul dans mon corps. J’ai voulu me
-                        “reprendre en main” — et j’ai fait comme tout le monde :
-                        à fond… trop vite, trop fort, trop extrême.
-                      </p>
-                    </div>
+    {/* ✅ Photo “avant” déplacée ici (pour être AU-DESSUS des blocs sur mobile via CSS) */}
+    <div className="jq-aproposAvantPhoto">
+      <div
+        style={{
+          width: 290,
+          aspectRatio: "3 / 4",
+          borderRadius: 16,
+          overflow: "hidden",
+          border: "1px solid rgba(255,255,255,.10)",
+          background: "rgba(0,0,0,.25)",
+        }}
+      >
+        <img
+          src="/robin-avant-alcool.png"
+          alt="Robin - avant : mauvaises habitudes"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            display: "block",
+            objectPosition: "50% 25%",
+          }}
+        />
+      </div>
+    </div>
 
-                    <div
-                      className="jq-card"
-                      style={{
-                        padding: 14,
-                        background: "rgba(0,0,0,.20)",
-                        border: "1px solid rgba(255,255,255,.08)",
-                      }}
-                    >
-                      <h4
-                        className="jq-card__title"
-                        style={{ fontSize: 16, marginBottom: 6 }}
-                      >
-                        Mes erreurs (classiques)
-                      </h4>
-                      <ul
-                        style={{
-                          margin: 0,
-                          paddingLeft: 18,
-                          color: "var(--muted)",
-                        }}
-                      >
-                        <li>Régimes extrêmes, “tout propre” du jour au lendemain.</li>
-                        <li>Suppression totale d’un macro (gras, puis glucides…).</li>
-                        <li>Obsession des protéines comme si ça réglait tout.</li>
-                        <li>Entraînements trop fréquents, pas assez de récupération.</li>
-                        <li>“Si je lâche 1 jour, j’ai tout foutu en l’air.”</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+    {/* ✅ Déclic au-dessus de Mes erreurs sur mobile */}
+    <div
+      className="jq-aproposDeclicGrid"
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gap: 12,
+        marginTop: 14,
+      }}
+    >
+      <div
+        className="jq-card"
+        style={{
+          padding: 14,
+          background: "rgba(0,0,0,.20)",
+          border: "1px solid rgba(255,255,255,.08)",
+        }}
+      >
+        <h4 className="jq-card__title" style={{ fontSize: 16, marginBottom: 6 }}>
+          Déclic
+        </h4>
+        <p className="jq-card__text" style={{ margin: 0 }}>
+          Le confinement a été mon point de bascule : j’en avais marre de me sentir nul dans mon corps.
+          J’ai voulu me “reprendre en main” — et j’ai fait comme tout le monde : à fond… trop vite, trop fort, trop extrême.
+        </p>
+      </div>
 
-                {/* PHOTO */}
-                <div
-                  style={{
-                    justifySelf: "end",
-                    width: 290,
-                    aspectRatio: "3 / 4",
-                    borderRadius: 16,
-                    overflow: "hidden",
-                    border: "1px solid rgba(255,255,255,.10)",
-                    background: "rgba(0,0,0,.25)",
-                    position: "relative",
-                    zIndex: 1,
-                  }}
-                >
-                  <img
-                    src="/robin-avant-alcool.png"
-                    alt="Robin - avant : mauvaises habitudes"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                      objectPosition: "50% 25%",
-                    }}
-                  />
-                </div>
-              </div>
+      <div
+        className="jq-card"
+        style={{
+          padding: 14,
+          background: "rgba(0,0,0,.20)",
+          border: "1px solid rgba(255,255,255,.08)",
+        }}
+      >
+        <h4 className="jq-card__title" style={{ fontSize: 16, marginBottom: 6 }}>
+          Mes erreurs (classiques)
+        </h4>
+        <ul style={{ margin: 0, paddingLeft: 18, color: "var(--muted)" }}>
+          <li>Régimes extrêmes, “tout propre” du jour au lendemain.</li>
+          <li>Suppression totale d’un macro (gras, puis glucides…).</li>
+          <li>Obsession des protéines comme si ça réglait tout.</li>
+          <li>Entraînements trop fréquents, pas assez de récupération.</li>
+          <li>“Si je lâche 1 jour, j’ai tout foutu en l’air.”</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  {/* (Desktop) Photo reste à droite grâce à cette colonne (on la cache en mobile via CSS) */}
+  <div
+    className="jq-aproposAvantPhotoDesktop"
+    style={{
+      justifySelf: "end",
+      width: 290,
+      aspectRatio: "3 / 4",
+      borderRadius: 16,
+      overflow: "hidden",
+      border: "1px solid rgba(255,255,255,.10)",
+      background: "rgba(0,0,0,.25)",
+      position: "relative",
+      zIndex: 1,
+    }}
+  >
+    <img
+      src="/robin-avant-alcool.png"
+      alt="Robin - avant : mauvaises habitudes"
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        display: "block",
+        objectPosition: "50% 25%",
+      }}
+    />
+  </div>
+</div>
             </div>
           </Reveal>
         </div>
