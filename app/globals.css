@@ -584,3 +584,9 @@ a:hover{ opacity: .92; }
   background: transparent;
 }
 */
+/* =========================
+   A PROPOS ONLY (CTA ratio)
+   ========================= */
+.jq-hero__photoWrap--aproposCta{
+  aspect-ratio: 393 / 421; /* (= 1179 / 1263) */
+}
