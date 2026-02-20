@@ -595,21 +595,21 @@ a:hover{ opacity: .92; }
    ========================= */
 
 /* =========================
-   ACCOMPAGNEMENT — CTA ONLY
+   ACCOMPAGNEMENT — CTA FINAL ONLY
    ========================= */
-
-.jq-hero--accompagnementCta .jq-hero__photoWrap--accompagnementCta{
-  aspect-ratio: 179 / 255; /* 895 / 1275 */
-  width: min(360px, 100%);
+.jq-hero__photoWrap--accompagnementCta{
+  aspect-ratio: 895 / 1275; /* ratio exact de robin-physique-actuel.jpg */
 }
 
-/* enlève le mask UNIQUEMENT ici + empêche toute découpe */
-.jq-hero--accompagnementCta .jq-hero__photoWrap--accompagnementCta .jq-hero__portrait{
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
-  -webkit-mask-composite: initial !important;
-  mask-composite: initial !important;
+/* Optionnel : si tu veux être sûr que ça ne coupe pas le haut/bas */
+.jq-hero__photoWrap--accompagnementCta .jq-hero__portrait{
+  object-position: 50% 50%;
+}
 
-  object-fit: contain;
-  object-position: center;
+/* Mobile: garde le comportement actuel (si besoin tu peux ajuster) */
+@media (max-width: 820px){
+  .jq-hero__photoWrap--accompagnementCta{
+    width: min(420px, 92%);
+    margin: 24px auto 0;
+  }
 }
