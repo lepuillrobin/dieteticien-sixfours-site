@@ -679,3 +679,20 @@ a:hover{ opacity: .92; }
     width: 220px !important;
   }
 }
+@media (max-width: 900px){
+  /* STORY : photo avant au-dessus des blocs */
+  .jq-pageApropos .jq-aproposAvantPhoto{
+    margin: 12px 0 6px;
+  }
+
+  /* mobile : on affiche la photo déplacée dans le texte */
+  .jq-pageApropos .jq-aproposAvantPhoto{ display: block; }
+
+  /* mobile : on cache la version “desktop à droite” */
+  .jq-pageApropos .jq-aproposAvantPhotoDesktop{ display: none; }
+
+  /* Déclic / erreurs en colonne */
+  .jq-pageApropos .jq-aproposDeclicGrid{
+    grid-template-columns: 1fr !important;
+  }
+}
