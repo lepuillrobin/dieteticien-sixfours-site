@@ -245,8 +245,7 @@ export default function Page() {
                   <p className="jq-card__text" style={{ marginTop: 10 }}>
                     Lycée : j’étais fumeur (cigarettes + shit), je buvais
                     quasiment pas d’eau, et mon alimentation c’était souvent le
-                    combo “macdo 1x/semaine + kebab 1x/semaine + le reste au
-                    feeling”.
+                    combo “macdo 1x/semaine + kebab 1x/semaine + le reste qui n'était pas beaucoup mieux”.
                     <br />
                     <br />
                     Le détail qui résume bien : à la place de l’eau, j’étais
