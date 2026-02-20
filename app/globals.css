@@ -762,3 +762,95 @@ a:hover{ opacity: .92; }
     max-width: 220px !important;
   }
 }
+/* =========================
+   PAGE À PROPOS — MOBILE ONLY
+   ========================= */
+
+@media (max-width: 820px){
+
+  /* SECTION 1 : Hero -> texte au-dessus + photo dessous + petite + à gauche */
+  .jq-pageApropos .jq-aproposHeroTop .jq-hero__grid{
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    align-items: start !important;
+  }
+
+  .jq-pageApropos .jq-aproposHeroTop .jq-hero__left{ order: 1; }
+  .jq-pageApropos .jq-aproposHeroTop .jq-hero__right{
+    order: 2;
+    justify-content: flex-start !important;
+  }
+
+  .jq-pageApropos .jq-aproposHeroTop .jq-hero__photoWrap{
+    width: 260px;
+    margin: 10px 0 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* SECTION 7 : CTA final -> même logique + image réduite */
+  .jq-pageApropos .jq-aproposCta .jq-hero__grid{
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    align-items: start !important;
+  }
+
+  .jq-pageApropos .jq-aproposCta .jq-hero__left{ order: 1; }
+  .jq-pageApropos .jq-aproposCta .jq-hero__right{
+    order: 2;
+    justify-content: flex-start !important;
+  }
+
+  .jq-pageApropos .jq-aproposCta .jq-hero__photoWrap--aproposCta{
+    width: 260px;
+    margin: 10px 0 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Grids qui sont en inline styles -> on override au breakpoint "layout" */
+@media (max-width: 900px){
+
+  /* SECTION 3 : Pourquoi je fais ça -> 1 colonne (image sous le texte) */
+  .jq-pageApropos .jq-aproposStoryGrid{
+    grid-template-columns: 1fr !important;
+  }
+
+  /* image petite + alignée à gauche dans la story */
+  .jq-pageApropos .jq-aproposStoryGrid > div:last-child{
+    justify-self: start !important;
+    width: 260px !important;
+    max-width: 260px !important;
+    margin-top: 10px;
+  }
+
+  /* SECTION 5 : Sport -> 1 colonne => texte + ✅ pleine largeur */
+  .jq-pageApropos .jq-aproposSportGrid{
+    grid-template-columns: 1fr !important;
+  }
+
+  /* image plus basse (et plus “safe” vis-à-vis du coin orange) */
+  .jq-pageApropos .jq-aproposSportMedia{
+    justify-self: start !important;
+    max-width: 260px !important;
+    margin-top: 14px !important;
+  }
+
+  /* SECTION 6 : Comment on démarre -> 1 colonne */
+  .jq-pageApropos .jq-aproposStartGrid{
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+
+@media (max-width: 420px){
+  .jq-pageApropos .jq-aproposHeroTop .jq-hero__photoWrap,
+  .jq-pageApropos .jq-aproposCta .jq-hero__photoWrap--aproposCta{
+    width: 220px;
+  }
+
+  .jq-pageApropos .jq-aproposStoryGrid > div:last-child,
+  .jq-pageApropos .jq-aproposSportMedia{
+    max-width: 220px !important;
+    width: 220px !important;
+  }
+}
