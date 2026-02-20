@@ -778,33 +778,59 @@ a:hover{ opacity: .92; }
   }
 }
 /* =========================
-   ACCOMPAGNEMENT — FIX MOBILE (2 derniers points)
+   PAGE ACCOMPAGNEMENT — MOBILE ONLY
    ========================= */
 
-@media (max-width: 820px){
+@media (max-width: 900px){
+
+  /* (A) HERO TOP : éviter le dépassement du H1 */
   .jq-pageAccompagnement .jq-accompHeroTop .jq-title{
-    font-size: 40px !important;
+    font-size: 42px;
     line-height: 1.04;
-    overflow-wrap: normal;
-    word-break: normal;
+    max-width: 100%;
   }
-}
 
-@media (max-width: 420px){
-  .jq-pageAccompagnement .jq-accompHeroTop .jq-title{
-    font-size: 36px !important;
+  .jq-pageAccompagnement .jq-accompHeroTop .jq-title,
+  .jq-pageAccompagnement .jq-accompHeroTop .jq-title__line1{
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
-}
 
-  /* 2) POUR QUI : 2 cartes l’une sous l’autre */
-  .jq-pageAccompagnement .jq-accompPourQuiGrid{
+  .jq-pageAccompagnement .jq-accompHeroTop .jq-hero__grid{
+    padding: 56px 0;
+  }
+
+  /* (B) "POUR QUI ?" : 1 colonne (override inline styles) */
+  .jq-pageAccompagnement section.jq-section div[style*="grid-template-columns: 1fr 1fr"]{
     grid-template-columns: 1fr !important;
     gap: 14px !important;
   }
+
+  /* (C) "COMMENT ON DÉMARRE" : 1 colonne (override inline styles) */
+  .jq-pageAccompagnement section.jq-section div[style*="repeat(4, 1fr)"]{
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* (D) CTA FINAL : image sous le texte, petite et à gauche */
+  .jq-pageAccompagnement .jq-hero__right{
+    justify-content: flex-start;
+  }
+
+  .jq-pageAccompagnement .jq-hero__photoWrap--accompagnementCta{
+    width: 260px;
+    margin: 10px 0 0 !important;
+    margin-left: 0 !important;
+  }
 }
 
 @media (max-width: 420px){
+  .jq-pageAccompagnement .jq-hero__photoWrap--accompagnementCta{
+    width: 220px;
+  }
+
   .jq-pageAccompagnement .jq-accompHeroTop .jq-title{
-    font-size: 36px !important;
+    font-size: 36px;
   }
 }
