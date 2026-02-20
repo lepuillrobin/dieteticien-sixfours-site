@@ -782,13 +782,19 @@ a:hover{ opacity: .92; }
    ========================= */
 
 @media (max-width: 820px){
-  /* 1) HERO top : éviter le "T" qui part à la ligne */
   .jq-pageAccompagnement .jq-accompHeroTop .jq-title{
-    font-size: 40px !important;     /* ajuste 38-42 si besoin */
+    font-size: 40px !important;
     line-height: 1.04;
     overflow-wrap: normal;
     word-break: normal;
   }
+}
+
+@media (max-width: 420px){
+  .jq-pageAccompagnement .jq-accompHeroTop .jq-title{
+    font-size: 36px !important;
+  }
+}
 
   /* 2) POUR QUI : 2 cartes l’une sous l’autre */
   .jq-pageAccompagnement .jq-accompPourQuiGrid{
