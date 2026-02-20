@@ -13,50 +13,53 @@ export default function Page() {
   return (
     <div className="jq-pageAccompagnement">
       {/* HERO */}
-      <section
-        className="jq-hero jq-accompHeroTop"
-        style={{
-          background:
-            'radial-gradient(80% 70% at 20% 20%, rgba(255,122,0,.10), transparent 55%), linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.85)), url("/coaching.jpg")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="jq-hero__overlay" />
-        <div className="jq-container">
-          <div className="jq-hero__grid">
-            <div className="jq-hero__left">
-              <Reveal as="div">
-                <div className="jq-kicker">ACCOMPAGNEMENT</div>
+<section
+  className="jq-hero jq-accompHeroTop"
+  style={{
+    background:
+      'radial-gradient(80% 70% at 20% 20%, rgba(255,122,0,.10), transparent 55%), linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.85)), url("/coaching.jpg")',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  <div className="jq-hero__overlay" />
+  <div className="jq-container">
+    <div className="jq-hero__grid">
+      <div className="jq-hero__left">
+        <Reveal as="div">
+          <div className="jq-kicker">ACCOMPAGNEMENT</div>
 
-                <h1 className="jq-title">
-                  <span className="jq-title__line1">ACCOMPAGNEMENT</span>
-                  <br />
-                  <span className="jq-title--accent">3 À 6 MOIS</span>
-                </h1>
+          <h1 className="jq-title">
+            {/* ✅ force "ACCOMPAGNEMENT" à rester sur 1 ligne (mobile) sans toucher le rendu desktop */}
+            <span className="jq-title__line1" style={{ whiteSpace: "nowrap" }}>
+              ACCOMPAGNEMENT
+            </span>
+            <br />
+            <span className="jq-title--accent">3 À 6 MOIS</span>
+          </h1>
 
-                <p className="jq-subtitle">
-                  Un suivi pour <strong>perdre du gras</strong> et{" "}
-                  <strong>mieux se sentir</strong>, avec une approche durable
-                  (pas “parfait 2 semaines puis abandon”).
-                </p>
+          <p className="jq-subtitle">
+            Un suivi pour <strong>perdre du gras</strong> et{" "}
+            <strong>mieux se sentir</strong>, avec une approche durable (pas
+            “parfait 2 semaines puis abandon”).
+          </p>
 
-                <div className="jq-actions">
-                  <a
-                    className="jq-btn jq-btn--primary"
-                    href={WHATSAPP}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Me contacter sur WhatsApp →
-                  </a>
+          <div className="jq-actions">
+            <a
+              className="jq-btn jq-btn--primary"
+              href={WHATSAPP}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Me contacter sur WhatsApp →
+            </a>
 
-                  <a className="jq-btn jq-btn--ghost" href="/contact">
-                    Passer par le formulaire →
-                  </a>
-                </div>
-              </Reveal>
-            </div>
+            <a className="jq-btn jq-btn--ghost" href="/contact">
+              Passer par le formulaire →
+            </a>
+          </div>
+        </Reveal>
+      </div>
 
             {/* Petit bloc info à droite (sans toucher au CSS global) */}
             <div className="jq-hero__right">
