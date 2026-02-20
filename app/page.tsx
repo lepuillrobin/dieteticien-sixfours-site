@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="jq-hero jq-hero--home">
+      <section className="jq-hero jq-hero--home jq-homeHero">
         <div className="jq-hero__overlay" />
         <div className="jq-container">
           <div className="jq-hero__grid">
