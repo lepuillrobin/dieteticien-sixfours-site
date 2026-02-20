@@ -594,7 +594,22 @@ a:hover{ opacity: .92; }
    HERO ratios (page-specific)
    ========================= */
 
-/* ACCOMPAGNEMENT — CTA final : même image => même ratio */
-.jq-hero__photoWrap--accompagnementCta{
-  aspect-ratio: 179 / 255; /* = 895 / 1275 */
+/* =========================
+   ACCOMPAGNEMENT — CTA ONLY
+   ========================= */
+
+.jq-hero--accompagnementCta .jq-hero__photoWrap--accompagnementCta{
+  aspect-ratio: 179 / 255; /* 895 / 1275 */
+  width: min(360px, 100%);
+}
+
+/* enlève le mask UNIQUEMENT ici + empêche toute découpe */
+.jq-hero--accompagnementCta .jq-hero__photoWrap--accompagnementCta .jq-hero__portrait{
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  -webkit-mask-composite: initial !important;
+  mask-composite: initial !important;
+
+  object-fit: contain;
+  object-position: center;
 }
