@@ -418,13 +418,13 @@ export default function Page() {
             {/* PHOTO À DROITE (même rendu que la home/contact) */}
             <div className="jq-hero__right">
               <Reveal as="div">
-                <div className="jq-hero__photoWrap">
-                  <img
-                    className="jq-hero__portrait"
-                    src="/robin-physique-actuel.jpg"
-                    alt="Robin - physique actuel"
-                  />
-                </div>
+                <div className="jq-hero__photoWrap jq-hero__photoWrap--accompagnementCta">
+  <img
+    className="jq-hero__portrait"
+    src="/robin-physique-actuel.jpg"
+    alt="Robin - physique actuel"
+  />
+</div>
               </Reveal>
             </div>
           </div>
