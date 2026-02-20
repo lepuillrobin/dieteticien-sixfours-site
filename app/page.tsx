@@ -94,7 +94,7 @@ export default function HomePage() {
       </section>
 
             {/* GRAND VISUEL + CTA (texte gauche + photo droite) */}
-      <section className="jq-hero jq-hero--home" style={{ minHeight: 520 }}>
+     <section className="jq-hero jq-hero--home jq-homeReserve" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
 
         <div className="jq-container">
