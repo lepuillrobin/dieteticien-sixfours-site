@@ -386,7 +386,7 @@ export default function Page() {
       </section>
 
       {/* CTA FINAL (avec photo à droite comme la Home) */}
-      <section className="jq-hero" style={{ minHeight: 520 }}>
+      <section className="jq-hero jq-hero--accompagnementCta" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
         <div className="jq-container">
           <div className="jq-hero__grid">
@@ -417,13 +417,15 @@ export default function Page() {
 
             {/* PHOTO À DROITE (même rendu que la home/contact) */}
             <div className="jq-hero__right">
-              <Reveal as="div">
-                <div className="jq-hero__photoWrap jq-hero__photoWrap--accompagnementCta">
-  <img
-    className="jq-hero__portrait"
-    src="/robin-physique-actuel.jpg"
-    alt="Robin - physique actuel"
-  />
+  <Reveal as="div">
+    <div className="jq-hero__photoWrap jq-hero__photoWrap--accompagnementCta">
+      <img
+        className="jq-hero__portrait"
+        src="/robin-physique-actuel.jpg"
+        alt="Robin - physique actuel"
+      />
+    </div>
+  </Reveal>
 </div>
               </Reveal>
             </div>
