@@ -590,3 +590,11 @@ a:hover{ opacity: .92; }
 .jq-hero__photoWrap--aproposCta{
   aspect-ratio: 393 / 421; /* (= 1179 / 1263) */
 }
+/* =========================
+   HERO ratios (page-specific)
+   ========================= */
+
+/* ACCOMPAGNEMENT — CTA final : même image => même ratio */
+.jq-hero__photoWrap--accompagnementCta{
+  aspect-ratio: 179 / 255; /* = 895 / 1275 */
+}
