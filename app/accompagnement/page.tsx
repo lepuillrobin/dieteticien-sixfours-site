@@ -197,14 +197,13 @@ export default function Page() {
         </div>
       </section>
 
-     {/* POUR QUI / PAS POUR QUI */}
+  {/* POUR QUI / PAS POUR QUI */}
 <section className="jq-section">
   <div className="jq-container">
     <Reveal as="div">
       <h2 className="jq-h2">Pour qui ?</h2>
       <p className="jq-p">
-        On gagne du temps : si tu veux un truc extrême “rapide”, ce n’est pas
-        le bon endroit.
+        On gagne du temps : si tu veux un truc extrême “rapide”, ce n’est pas le bon endroit.
       </p>
     </Reveal>
 
@@ -213,7 +212,6 @@ export default function Page() {
         className="jq-accompPourQuiGrid"
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
           gap: 18,
         }}
       >
