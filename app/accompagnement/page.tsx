@@ -197,64 +197,65 @@ export default function Page() {
         </div>
       </section>
 
-      {/* POUR QUI / PAS POUR QUI */}
-      <section className="jq-section">
-        <div className="jq-container">
-          <Reveal as="div">
-            <h2 className="jq-h2">Pour qui ?</h2>
-            <p className="jq-p">
-              On gagne du temps : si tu veux un truc extrême “rapide”, ce n’est
-              pas le bon endroit.
-            </p>
-          </Reveal>
+     {/* POUR QUI / PAS POUR QUI */}
+<section className="jq-section">
+  <div className="jq-container">
+    <Reveal as="div">
+      <h2 className="jq-h2">Pour qui ?</h2>
+      <p className="jq-p">
+        On gagne du temps : si tu veux un truc extrême “rapide”, ce n’est pas
+        le bon endroit.
+      </p>
+    </Reveal>
 
-          <Reveal as="div">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 18,
-              }}
-            >
-              <div className="jq-card">
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">✅ C’est pour toi si…</h3>
-                <ul
-                  style={{
-                    margin: "12px 0 0",
-                    paddingLeft: 18,
-                    color: "var(--muted)",
-                  }}
-                >
-                  <li>Tu veux perdre du gras sans repartir dans les régimes.</li>
-                  <li>Tu veux un plan adapté à ta vraie vie.</li>
-                  <li>Tu veux un cadre simple + un suivi régulier.</li>
-                  <li>Tu veux construire des habitudes tenables.</li>
-                </ul>
-              </div>
-
-              <div className="jq-card">
-                <div className="jq-card__corner" />
-                <div className="jq-card__stripes" />
-                <h3 className="jq-card__title">❌ Pas pour toi si…</h3>
-                <ul
-                  style={{
-                    margin: "12px 0 0",
-                    paddingLeft: 18,
-                    color: "var(--muted)",
-                  }}
-                >
-                  <li>Tu veux faire un "régime" qui va finir en effet yoyo.</li>
-                  <li>Tu veux du “-5 kg en 10 jours”.</li>
-                  <li>Tu ne veux pas suivre un minimum de structure.</li>
-                  <li>Tu veux juste une liste d’aliments sans accompagnement.</li>
-                </ul>
-              </div>
-            </div>
-          </Reveal>
+    <Reveal as="div">
+      <div
+        className="jq-accompPourQuiGrid"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 18,
+        }}
+      >
+        <div className="jq-card">
+          <div className="jq-card__corner" />
+          <div className="jq-card__stripes" />
+          <h3 className="jq-card__title">✅ C’est pour toi si…</h3>
+          <ul
+            style={{
+              margin: "12px 0 0",
+              paddingLeft: 18,
+              color: "var(--muted)",
+            }}
+          >
+            <li>Tu veux perdre du gras sans repartir dans les régimes.</li>
+            <li>Tu veux un plan adapté à ta vraie vie.</li>
+            <li>Tu veux un cadre simple + un suivi régulier.</li>
+            <li>Tu veux construire des habitudes tenables.</li>
+          </ul>
         </div>
-      </section>
+
+        <div className="jq-card">
+          <div className="jq-card__corner" />
+          <div className="jq-card__stripes" />
+          <h3 className="jq-card__title">❌ Pas pour toi si…</h3>
+          <ul
+            style={{
+              margin: "12px 0 0",
+              paddingLeft: 18,
+              color: "var(--muted)",
+            }}
+          >
+            <li>Tu veux faire un "régime" qui va finir en effet yoyo.</li>
+            <li>Tu veux du “-5 kg en 10 jours”.</li>
+            <li>Tu ne veux pas suivre un minimum de structure.</li>
+            <li>Tu veux juste une liste d’aliments sans accompagnement.</li>
+          </ul>
+        </div>
+      </div>
+    </Reveal>
+  </div>
+</section>
 
       {/* PROCESS */}
       <section className="jq-section" style={{ background: "var(--panel2)" }}>
