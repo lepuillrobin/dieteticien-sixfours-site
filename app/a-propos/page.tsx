@@ -370,6 +370,48 @@ export default function Page() {
 
           {/* EXPÉRIENCE & PREUVES */}
           <Reveal as="div">
+  <div
+    className="jq-card"
+    style={{
+      padding: 18,
+      marginTop: 18,
+      position: "relative",
+      overflow: "hidden",
+    }}
+  >
+    <div className="jq-card__corner" />
+    <div className="jq-card__stripes" />
+
+    <div
+      style={{
+        width: "100%",
+        maxWidth: 520,
+        aspectRatio: "3 / 4",
+        borderRadius: 16,
+        overflow: "hidden",
+        border: "1px solid rgba(255,255,255,.10)",
+        background: "rgba(0,0,0,.25)",
+        margin: "0 auto",
+      }}
+    >
+      <img
+        src="/robin-20kg-apres.jpg"
+        alt="Robin - physique actuel"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "contain",
+          objectPosition: "50% 85%",
+          display: "block",
+          transform: "scale(1.08)",
+          filter: "drop-shadow(0 18px 40px rgba(0,0,0,.55))",
+          opacity: 0.95,
+        }}
+      />
+    </div>
+  </div>
+</Reveal>
+          <Reveal as="div">
             <div className="jq-card" style={{ padding: 18, marginTop: 18 }}>
               <div className="jq-card__corner" />
               <div className="jq-card__stripes" />
