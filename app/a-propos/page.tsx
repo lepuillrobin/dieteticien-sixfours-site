@@ -70,9 +70,10 @@ function FadedCardBackground({
 
 export default function Page() {
   return (
+    <div className="jq-pageApropos">
     <>
       {/* HERO (comme Home/Contact : texte à gauche + photo à droite) */}
-      <section className="jq-hero" style={{ minHeight: 520 }}>
+      <section className="jq-hero jq-aproposHeroTop" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
 
         <div className="jq-container">
@@ -230,6 +231,7 @@ export default function Page() {
               />
 
               <div
+                className="jq-aproposStoryGrid"
                 style={{
                   marginTop: 10,
                   display: "grid",
@@ -407,6 +409,7 @@ export default function Page() {
               <div className="jq-card__stripes" style={{ zIndex: 3, pointerEvents: "none" }} />
 
               <div
+                className="jq-aproposSportGrid"
                 style={{
                   display: "grid",
                   gridTemplateColumns: "1.35fr .65fr",
@@ -465,6 +468,7 @@ export default function Page() {
                 </div>
 
                 <div
+                 className="jq-aproposSportMedia"
                   style={{
                     justifySelf: "end",
                     width: "100%",
@@ -521,7 +525,7 @@ export default function Page() {
           </Reveal>
 
           <Reveal as="div">
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}>
+            <div className="jq-aproposStartGrid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}>
               {[
                 { n: "1", t: "Message WhatsApp", d: "Tu m’écris avec ton objectif + tes contraintes + ton rythme de vie." },
                 { n: "2", t: "Premier échange (bilan)", d: "On clarifie le vrai problème : habitudes, blocages, emploi du temps, priorités." },
@@ -562,7 +566,7 @@ export default function Page() {
       </section>
 
             {/* CTA FINAL (même rendu que Home/Contact : texte à gauche + photo à droite) */}
-      <section className="jq-hero" style={{ minHeight: 420 }}>
+      <section className="jq-hero jq-aproposCta" style={{ minHeight: 420 }}>
         <div className="jq-hero__overlay" />
 
         <div className="jq-container">
