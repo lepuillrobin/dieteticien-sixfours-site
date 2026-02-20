@@ -605,13 +605,13 @@ export default function Page() {
             {/* PHOTO À DROITE */}
             <div className="jq-hero__right">
               <Reveal as="div">
-                <div className="jq-hero__photoWrap">
-                  <img
-                    className="jq-hero__portrait"
-                    src="/robin-plan.jpg"
-                    alt="Robin - plan qui tient"
-                  />
-                </div>
+                <div className="jq-hero__photoWrap jq-hero__photoWrap--aproposCta">
+  <img
+    className="jq-hero__portrait"
+    src="/robin-plan.jpg"
+    alt="Robin - plan qui tient"
+  />
+</div>
               </Reveal>
             </div>
           </div>
