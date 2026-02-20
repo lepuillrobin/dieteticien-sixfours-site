@@ -669,3 +669,35 @@ a:hover{ opacity: .92; }
   }
   .jq-homeReserve .jq-title{ font-size: 32px !important; }
 }
+/* =========================
+   HOME — HERO principal (mobile only)
+   Objectif : texte au-dessus + image en dessous (plus petite, alignée gauche)
+   ========================= */
+
+@media (max-width: 820px){
+  /* 1 colonne (tu l’as déjà à 980px, ici on ajuste l’ordre + spacing) */
+  .jq-homeHero .jq-hero__grid{
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    align-items: start;
+  }
+
+  /* texte d'abord */
+  .jq-homeHero .jq-hero__left{ order: 1; }
+  .jq-homeHero .jq-hero__right{
+    order: 2;
+    justify-content: flex-start; /* image collée à gauche */
+  }
+
+  /* photo plus petite + on annule le centrage auto du CSS global mobile */
+  .jq-homeHero .jq-hero__photoWrap{
+    width: 260px;          /* ajuste: 240/260/280 selon ton goût */
+    margin: 10px 0 0;      /* au lieu de 24px auto 0 */
+  }
+}
+
+@media (max-width: 420px){
+  .jq-homeHero .jq-hero__photoWrap{
+    width: 220px;
+  }
+}
