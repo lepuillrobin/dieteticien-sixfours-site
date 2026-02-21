@@ -757,3 +757,57 @@ a:hover{ opacity: .92; }
     max-width: 220px !important;
   }
 }
+/* =========================
+   PAGE CONTACT — MOBILE ONLY
+   - Hero + CTA : image plus petite comme Home/Méthode
+   - Infos pratiques : 1 colonne
+   ========================= */
+
+.jq-contactInfosGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+@media (max-width: 820px){
+
+  /* HERO + CTA : texte au-dessus + image dessous, petite et à gauche */
+  .jq-pageContact .jq-contactHero .jq-hero__grid{
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    align-items: start !important;
+  }
+
+  .jq-pageContact .jq-contactHero .jq-hero__left{ order: 1; }
+  .jq-pageContact .jq-contactHero .jq-hero__right{
+    order: 2;
+    justify-content: flex-start !important;
+  }
+
+  /* Taille image (Hero) */
+  .jq-pageContact .jq-contactHero .jq-hero__photoWrap--contactHero{
+    width: 260px !important;
+    margin: 10px 0 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* Taille image (CTA) */
+  .jq-pageContact .jq-contactHero--cta .jq-hero__photoWrap--contactCta{
+    width: 260px !important;
+    margin: 10px 0 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* INFOS : 1 colonne */
+  .jq-pageContact .jq-contactInfosGrid{
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 420px){
+  .jq-pageContact .jq-contactHero .jq-hero__photoWrap--contactHero,
+  .jq-pageContact .jq-contactHero--cta .jq-hero__photoWrap--contactCta{
+    width: 220px !important;
+  }
+}
