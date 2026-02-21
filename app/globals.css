@@ -715,3 +715,6 @@ a:hover{ opacity: .92; }
     max-width: 220px !important;
   }
 }
+/* A PROPOS — sécurité desktop : pas de doublon photo "avant" */
+.jq-pageApropos .jq-aproposAvantPhoto{ display: none; }
+.jq-pageApropos .jq-aproposAvantPhotoDesktop{ display: block; }
