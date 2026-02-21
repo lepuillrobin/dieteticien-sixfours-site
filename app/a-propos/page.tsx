@@ -380,155 +380,201 @@ export default function Page() {
       </section>
 
       {/* PREUVES */}
-      <section className="jq-section">
-        <div className="jq-container">
-          <Reveal as="div">
-            <h2 className="jq-h2">Crédibilité</h2>
-            <p className="jq-p">Des faits. Pas des “promesses”.</p>
-          </Reveal>
+<section className="jq-section">
+  <div className="jq-container">
+    <Reveal as="div">
+      <h2 className="jq-h2">Crédibilité</h2>
+      <p className="jq-p">Des faits. Pas des “promesses”.</p>
+    </Reveal>
 
-          {/* EXPÉRIENCE & PREUVES */}
-          <Reveal as="div">
-            <div className="jq-card" style={{ padding: 18, marginTop: 18 }}>
-              <div className="jq-card__corner" />
-              <div className="jq-card__stripes" />
-              <h3 className="jq-card__title">Expérience & preuves</h3>
+    {/* EXPÉRIENCE & PREUVES */}
+    <Reveal as="div">
+      <div className="jq-card" style={{ padding: 18, marginTop: 18 }}>
+        <div className="jq-card__corner" />
+        <div className="jq-card__stripes" />
+        <h3 className="jq-card__title">Expérience & preuves</h3>
 
-              <ul
-                style={{
-                  margin: "10px 0 0",
-                  paddingLeft: 18,
-                  color: "var(--muted)",
-                }}
-              >
-                <li>Coaching “terrain” depuis mes 16 ans, officiellement depuis 2023.</li>
-                <li>
-                  Environ{" "}
-                  <strong style={{ color: "var(--text)" }}>30+ transformations</strong>{" "}
-                  (hommes principalement).
-                </li>
-                <li>
-                  Transformation perso :{" "}
-                  <strong style={{ color: "var(--text)" }}>+20 kg secs en 3 ans</strong>{" "}
-                  et{" "}
-                  <strong style={{ color: "var(--text)" }}>-10 kg en 3 mois</strong>.
-                </li>
-                <li>
-                  <strong style={{ color: "var(--text)" }}>8e Français aviron indoor</strong>{" "}
-                  (2026) — senior poids léger (-75 kg).
-                </li>
-              </ul>
-            </div>
-          </Reveal>
+        <ul
+          style={{
+            margin: "10px 0 0",
+            paddingLeft: 18,
+            color: "var(--muted)",
+          }}
+        >
+          <li>Coaching “terrain” depuis mes 16 ans, officiellement depuis 2023.</li>
+          <li>
+            Environ{" "}
+            <strong style={{ color: "var(--text)" }}>30+ transformations</strong>{" "}
+            (hommes principalement).
+          </li>
+          <li>
+            Transformation perso :{" "}
+            <strong style={{ color: "var(--text)" }}>+20 kg secs en 3 ans</strong>{" "}
+            et{" "}
+            <strong style={{ color: "var(--text)" }}>-10 kg en 3 mois</strong>.
+          </li>
+          <li>
+            <strong style={{ color: "var(--text)" }}>8e Français aviron indoor</strong>{" "}
+            (2026) — senior poids léger (-75 kg).
+          </li>
+        </ul>
+      </div>
+    </Reveal>
 
-          {/* ✅ PHOTO ENTRE Expérience et Sport */}
-          <Reveal as="div">
-            <div
-              className="jq-card"
-              style={{
-                padding: 18,
-                marginTop: 18,
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <div className="jq-card__corner" />
-              <div className="jq-card__stripes" />
+    {/* ✅ PHOTO MOBILE-ONLY entre Expérience et Sport */}
+    <Reveal as="div">
+      <div className="jq-aproposCredPhotoMobile jq-card" style={{ padding: 18, marginTop: 18, position: "relative", overflow: "hidden" }}>
+        <div className="jq-card__corner" />
+        <div className="jq-card__stripes" />
 
-              <div
-                className="jq-aproposMiniPhoto"
-                style={{
-                  width: "100%",
-                  maxWidth: 520,
-                  aspectRatio: "3 / 4",
-                  borderRadius: 16,
-                  overflow: "hidden",
-                  border: "1px solid rgba(255,255,255,.10)",
-                  background: "rgba(0,0,0,.25)",
-                  margin: "0 auto",
-                }}
-              >
-                <img
-                  src="/robin-20kg-apres.jpg"
-                  alt="Robin - physique actuel"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    objectPosition: "50% 20%",
-                  }}
-                />
-              </div>
-            </div>
-          </Reveal>
-
-          {/* SPORT (SANS photo désormais, puisque déplacée au-dessus) */}
-          <Reveal as="div">
-            <div
-              className="jq-card"
-              style={{
-                padding: 18,
-                marginTop: 18,
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <div className="jq-card__corner" style={{ zIndex: 3, pointerEvents: "none" }} />
-              <div className="jq-card__stripes" style={{ zIndex: 3, pointerEvents: "none" }} />
-
-              <div style={{ position: "relative", zIndex: 4 }}>
-                <h3 className="jq-card__title">
-                  Sport : pourquoi j’en parle (et pourquoi ça compte)
-                </h3>
-
-                <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Parce que je sais ce que c’est de construire un corps et des
-                  performances dans le monde réel : emploi du temps chargé,
-                  fatigue, imprévus. Le but ici n’est pas de faire de toi un
-                  athlète pro — mais d’être <strong>en forme</strong>,{" "}
-                  <strong>solide</strong>, et <strong>constant</strong>.
-                </p>
-
-                <div
-                  style={{
-                    marginTop: 14,
-                    display: "grid",
-                    gap: 8,
-                    color: "rgba(255,255,255,.82)",
-                    fontSize: 14,
-                  }}
-                >
-                  <div>
-                    ✅ <strong>8e Français aviron indoor</strong> (2026) — senior poids léger (-75 kg)
-                  </div>
-                  <div>
-                    ✅ Streetlifting : <strong>175 kg squat</strong> •{" "}
-                    <strong>100 kg dips</strong> •{" "}
-                    <strong>65 kg tractions</strong> •{" "}
-                    <strong>+10 kg muscle up</strong>
-                  </div>
-                  <div>
-                    ✅ Streetworkout : <strong>straddle planche</strong> •{" "}
-                    <strong>front lever</strong> • <strong>handstand</strong>
-                  </div>
-                  <div>
-                    ✅ Endurance : <strong>100 km vélo</strong> •{" "}
-                    <strong>semi-marathon</strong> (~5’44/km)
-                  </div>
-                  <div>✅ Passif multi-sports : foot (+10 ans), natation, MMA, tennis…</div>
-                </div>
-
-                <p className="jq-card__text" style={{ marginTop: 12 }}>
-                  Tout ça pour dire : je connais le terrain. Et je sais surtout
-                  que ce qui fait la différence, ce n’est pas une semaine
-                  parfaite — c’est un cadre que tu répètes.
-                </p>
-              </div>
-            </div>
-          </Reveal>
+        <div
+          className="jq-aproposMiniPhoto"
+          style={{
+            width: "100%",
+            maxWidth: 520,
+            aspectRatio: "3 / 4",
+            borderRadius: 16,
+            overflow: "hidden",
+            border: "1px solid rgba(255,255,255,.10)",
+            background: "rgba(0,0,0,.25)",
+            margin: "0 auto",
+          }}
+        >
+          <img
+            src="/robin-20kg-apres.jpg"
+            alt="Robin - physique actuel"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "50% 20%",
+              display: "block",
+            }}
+          />
         </div>
-      </section>
+      </div>
+    </Reveal>
+
+    {/* SPORT */}
+    <Reveal as="div">
+      <div
+        className="jq-card"
+        style={{
+          padding: 18,
+          marginTop: 18,
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="jq-card__corner" style={{ zIndex: 3, pointerEvents: "none" }} />
+        <div className="jq-card__stripes" style={{ zIndex: 3, pointerEvents: "none" }} />
+
+        <div
+          className="jq-aproposSportGrid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1.35fr .65fr",
+            gap: 16,
+            alignItems: "start",
+          }}
+        >
+          <div style={{ position: "relative", zIndex: 4 }}>
+            <h3 className="jq-card__title">
+              Sport : pourquoi j’en parle (et pourquoi ça compte)
+            </h3>
+
+            <p className="jq-card__text" style={{ marginTop: 10 }}>
+              Parce que je sais ce que c’est de construire un corps et des
+              performances dans le monde réel : emploi du temps chargé,
+              fatigue, imprévus. Le but ici n’est pas de faire de toi un
+              athlète pro — mais d’être <strong>en forme</strong>,{" "}
+              <strong>solide</strong>, et <strong>constant</strong>.
+            </p>
+
+            <div
+              style={{
+                marginTop: 14,
+                display: "grid",
+                gap: 8,
+                color: "rgba(255,255,255,.82)",
+                fontSize: 14,
+              }}
+            >
+              <div>
+                ✅ <strong>8e Français aviron indoor</strong> (2026) — senior poids léger (-75 kg)
+              </div>
+              <div>
+                ✅ Streetlifting : <strong>175 kg squat</strong> •{" "}
+                <strong>100 kg dips</strong> •{" "}
+                <strong>65 kg tractions</strong> •{" "}
+                <strong>+10 kg muscle up</strong>
+              </div>
+              <div>
+                ✅ Streetworkout : <strong>straddle planche</strong> •{" "}
+                <strong>front lever</strong> • <strong>handstand</strong>
+              </div>
+              <div>
+                ✅ Endurance : <strong>100 km vélo</strong> •{" "}
+                <strong>semi-marathon</strong> (~5’44/km)
+              </div>
+              <div>✅ Passif multi-sports : foot (+10 ans), natation, MMA, tennis…</div>
+            </div>
+
+            <p className="jq-card__text" style={{ marginTop: 12 }}>
+              Tout ça pour dire : je connais le terrain. Et je sais surtout
+              que ce qui fait la différence, ce n’est pas une semaine
+              parfaite — c’est un cadre que tu répètes.
+            </p>
+          </div>
+
+          {/* ✅ PHOTO DESKTOP (reste à droite sur ordi, cachée sur mobile) */}
+          <div
+            className="jq-aproposSportMedia jq-aproposSportMediaDesktop"
+            style={{
+              justifySelf: "end",
+              width: "100%",
+              maxWidth: 320,
+              aspectRatio: "3 / 4",
+              borderRadius: 16,
+              overflow: "hidden",
+              border: "1px solid rgba(255,255,255,.10)",
+              background: "rgba(0,0,0,.25)",
+              position: "relative",
+              zIndex: 1,
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background:
+                  "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.40) 100%)",
+                pointerEvents: "none",
+                zIndex: 1,
+              }}
+            />
+            <img
+              src="/robin-20kg-apres.jpg"
+              alt="Robin - physique actuel"
+              style={{
+                position: "relative",
+                zIndex: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+                objectPosition: "50% 85%",
+                display: "block",
+                transform: "scale(1.08)",
+                filter: "drop-shadow(0 18px 40px rgba(0,0,0,.55))",
+                opacity: 0.95,
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </Reveal>
+  </div>
+</section>
 
       {/* COMMENT DÉMARRER */}
       <section className="jq-section" style={{ background: "var(--panel2)" }}>
