@@ -696,3 +696,22 @@ a:hover{ opacity: .92; }
     grid-template-columns: 1fr !important;
   }
 }
+@media (max-width: 900px){
+  /* Photo mini : même taille que CTA (260px puis 220px) */
+  .jq-pageApropos .jq-aproposMiniPhoto{
+    width: 260px !important;
+    max-width: 260px !important;
+    margin: 10px 0 0 !important; /* alignée à gauche comme home/CTA */
+  }
+
+  /* si tu veux centrer plutôt que gauche, remplace par:
+     margin: 10px auto 0 !important;
+  */
+}
+
+@media (max-width: 420px){
+  .jq-pageApropos .jq-aproposMiniPhoto{
+    width: 220px !important;
+    max-width: 220px !important;
+  }
+}
