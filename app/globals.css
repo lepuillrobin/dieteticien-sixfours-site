@@ -718,20 +718,42 @@ a:hover{ opacity: .92; }
 /* A PROPOS — base desktop (IMPORTANT : à mettre AVANT les @media mobile) */
 .jq-pageApropos .jq-aproposAvantPhoto{ display: none; }
 .jq-pageApropos .jq-aproposAvantPhotoDesktop{ display: block; }
+
+/* Crédibilité : desktop -> on cache la photo "entre" */
+.jq-pageApropos .jq-aproposCredPhotoMobile{ display: none; }
+
+/* Sur desktop, la photo à droite du bloc Sport existe */
+.jq-pageApropos .jq-aproposSportMediaDesktop{ display: block; }
+
+/* =========================
+   MOBILE
+   ========================= */
 @media (max-width: 900px){
+  /* Story */
   .jq-pageApropos .jq-aproposAvantPhoto{ display: block !important; }
   .jq-pageApropos .jq-aproposAvantPhotoDesktop{ display: none !important; }
   .jq-pageApropos .jq-aproposDeclicGrid{ grid-template-columns: 1fr !important; }
-}
-@media (max-width: 900px){
-  /* Crédibilité : on affiche la photo "entre" en mobile */
-  .jq-pageApropos .jq-aproposCredPhotoMobile{ display: block; }
+
+  /* Crédibilité : on affiche la photo "entre" */
+  .jq-pageApropos .jq-aproposCredPhotoMobile{ display: block !important; }
 
   /* Et on cache la photo à droite dans le bloc Sport */
-  .jq-pageApropos .jq-aproposSportMediaDesktop{ display: none; }
+  .jq-pageApropos .jq-aproposSportMediaDesktop{ display: none !important; }
 
   /* Sport devient 1 colonne */
   .jq-pageApropos .jq-aproposSportGrid{ grid-template-columns: 1fr !important; }
+
+  /* Photo "entre" : taille petite + alignée comme tes autres CTA */
+  .jq-pageApropos .jq-aproposCredPhotoMobile .jq-aproposMiniPhoto{
+    width: 260px !important;
+    max-width: 260px !important;
+    margin: 10px 0 0 !important;
+  }
 }
-/* Desktop : la photo "entre" n'existe pas */
-.jq-pageApropos .jq-aproposCredPhotoMobile{ display: none; }
+
+@media (max-width: 420px){
+  .jq-pageApropos .jq-aproposCredPhotoMobile .jq-aproposMiniPhoto{
+    width: 220px !important;
+    max-width: 220px !important;
+  }
+}
