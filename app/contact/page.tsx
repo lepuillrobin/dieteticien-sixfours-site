@@ -11,7 +11,7 @@ const EMAIL = "mailto:lepuillrobin@gmail.com";
 
 export default function Page() {
   return (
-    <>
+    <div className="jq-pageContact">
       {/* HERO (même structure que la Home) */}
       <section className="jq-hero jq-hero--home jq-contactHero" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
@@ -43,19 +43,14 @@ export default function Page() {
               </Reveal>
             </div>
 
-            {/* VISUEL À DROITE (même rendu que la Home) */}
-           {/* VISUEL À DROITE (même rendu que la Home) */}
-<div className="jq-hero__right">
-  <Reveal as="div">
-    <div className="jq-hero__photoWrap jq-hero__photoWrap--contactHero">
-      <img
-        className="jq-hero__portrait"
-        src="/robin-contact.jpg"
-        alt="Robin - contact"
-      />
-    </div>
-  </Reveal>
-</div>
+            {/* VISUEL À DROITE */}
+            <div className="jq-hero__right">
+              <Reveal as="div">
+                <div className="jq-hero__photoWrap jq-hero__photoWrap--contactHero">
+                  <img className="jq-hero__portrait" src="/robin-contact.jpg" alt="Robin - contact" />
+                </div>
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
@@ -69,13 +64,7 @@ export default function Page() {
           </Reveal>
 
           <Reveal as="div">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 18,
-              }}
-            >
+            <div className="jq-contactInfosGrid">
               <div className="jq-card">
                 <div className="jq-card__corner" />
                 <div className="jq-card__stripes" />
@@ -107,8 +96,8 @@ export default function Page() {
 
                 <div style={{ marginTop: 10, display: "grid", gap: 10, color: "var(--muted)" }}>
                   <div>
-                    <strong style={{ color: "var(--text)" }}>Zone :</strong> Six-Fours-les-Plages & alentours
-                    (La Seyne-sur-Mer, Sanary-sur-Mer, Ollioules, Toulon, Bandol, Saint-Mandrier-sur-Mer…)
+                    <strong style={{ color: "var(--text)" }}>Zone :</strong> Six-Fours-les-Plages & alentours (La
+                    Seyne-sur-Mer, Sanary-sur-Mer, Ollioules, Toulon, Bandol, Saint-Mandrier-sur-Mer…)
                   </div>
                   <div>
                     <strong style={{ color: "var(--text)" }}>Format :</strong> visio + déplacements à domicile possibles
@@ -120,7 +109,7 @@ export default function Page() {
         </div>
       </section>
 
-            {/* CTA FINAL (même structure que la Home : texte à gauche + photo à droite) */}
+      {/* CTA FINAL */}
       <section className="jq-hero jq-hero--home jq-contactHero jq-contactHero--cta" style={{ minHeight: 420 }}>
         <div className="jq-hero__overlay" />
 
@@ -149,22 +138,22 @@ export default function Page() {
               </Reveal>
             </div>
 
-            {/* PHOTO À DROITE (même rendu que la Home) */}
+            {/* PHOTO À DROITE */}
             <div className="jq-hero__right">
               <Reveal as="div">
-                <div className="jq-hero__photoWrap">
+                <div className="jq-hero__photoWrap jq-hero__photoWrap--contactCta">
                   <img
-  className="jq-hero__portrait"
-  src="/robin-plan.jpg"
-  alt="Robin - contact"
-  style={{ objectPosition: "55% 35%" }}  // ajuste si besoin
-/>
+                    className="jq-hero__portrait"
+                    src="/robin-plan.jpg"
+                    alt="Robin - contact"
+                    style={{ objectPosition: "55% 35%" }}
+                  />
                 </div>
               </Reveal>
             </div>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
