@@ -723,3 +723,15 @@ a:hover{ opacity: .92; }
   .jq-pageApropos .jq-aproposAvantPhotoDesktop{ display: none !important; }
   .jq-pageApropos .jq-aproposDeclicGrid{ grid-template-columns: 1fr !important; }
 }
+@media (max-width: 900px){
+  /* Crédibilité : on affiche la photo "entre" en mobile */
+  .jq-pageApropos .jq-aproposCredPhotoMobile{ display: block; }
+
+  /* Et on cache la photo à droite dans le bloc Sport */
+  .jq-pageApropos .jq-aproposSportMediaDesktop{ display: none; }
+
+  /* Sport devient 1 colonne */
+  .jq-pageApropos .jq-aproposSportGrid{ grid-template-columns: 1fr !important; }
+}
+/* Desktop : la photo "entre" n'existe pas */
+.jq-pageApropos .jq-aproposCredPhotoMobile{ display: none; }
