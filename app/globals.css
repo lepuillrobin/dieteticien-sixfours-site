@@ -715,6 +715,11 @@ a:hover{ opacity: .92; }
     max-width: 220px !important;
   }
 }
-/* A PROPOS — sécurité desktop : pas de doublon photo "avant" */
+/* A PROPOS — base desktop (IMPORTANT : à mettre AVANT les @media mobile) */
 .jq-pageApropos .jq-aproposAvantPhoto{ display: none; }
 .jq-pageApropos .jq-aproposAvantPhotoDesktop{ display: block; }
+@media (max-width: 900px){
+  .jq-pageApropos .jq-aproposAvantPhoto{ display: block !important; }
+  .jq-pageApropos .jq-aproposAvantPhotoDesktop{ display: none !important; }
+  .jq-pageApropos .jq-aproposDeclicGrid{ grid-template-columns: 1fr !important; }
+}
