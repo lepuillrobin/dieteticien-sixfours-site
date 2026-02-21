@@ -235,6 +235,7 @@ export default function Page() {
                   alignItems: "start",
                 }}
               >
+                {/* TEXTE */}
                 <div style={{ position: "relative", zIndex: 3, minWidth: 0 }}>
                   <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
 
@@ -252,19 +253,9 @@ export default function Page() {
                     j’avais fait du sport toute ma vie.
                   </p>
 
-                  {/* ✅ Photo mobile (taille mini via CSS .jq-aproposMiniPhoto) */}
-                  <div className="jq-aproposAvantPhoto">
-                    <div
-                      className="jq-aproposMiniPhoto"
-                      style={{
-                        width: 290,
-                        aspectRatio: "3 / 4",
-                        borderRadius: 16,
-                        overflow: "hidden",
-                        border: "1px solid rgba(255,255,255,.10)",
-                        background: "rgba(0,0,0,.25)",
-                      }}
-                    >
+                  {/* ✅ Photo “avant” : affichée UNIQUEMENT en mobile via CSS */}
+                  <div className="jq-aproposAvantPhotoMobile">
+                    <div className="jq-aproposMiniPhotoWrap">
                       <img
                         src="/robin-avant-alcool.png"
                         alt="Robin - avant : mauvaises habitudes"
@@ -279,7 +270,7 @@ export default function Page() {
                     </div>
                   </div>
 
-                  {/* ✅ Déclic au-dessus de Mes erreurs sur mobile via CSS */}
+                  {/* Déclic + erreurs */}
                   <div
                     className="jq-aproposDeclicGrid"
                     style={{
@@ -342,30 +333,30 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* ✅ Photo desktop (cachée en mobile via CSS) */}
-                <div
-                  className="jq-aproposAvantPhotoDesktop"
-                  style={{
-                    justifySelf: "end",
-                    width: 290,
-                    aspectRatio: "3 / 4",
-                    borderRadius: 16,
-                    overflow: "hidden",
-                    border: "1px solid rgba(255,255,255,.10)",
-                    background: "rgba(0,0,0,.25)",
-                  }}
-                >
-                  <img
-                    src="/robin-avant-alcool.png"
-                    alt="Robin - avant : mauvaises habitudes"
+                {/* ✅ Photo desktop uniquement (cachée en mobile via CSS) */}
+                <div className="jq-aproposAvantPhotoDesktop">
+                  <div
                     style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                      objectPosition: "50% 25%",
+                      width: 290,
+                      aspectRatio: "3 / 4",
+                      borderRadius: 16,
+                      overflow: "hidden",
+                      border: "1px solid rgba(255,255,255,.10)",
+                      background: "rgba(0,0,0,.25)",
                     }}
-                  />
+                  >
+                    <img
+                      src="/robin-avant-alcool.png"
+                      alt="Robin - avant : mauvaises habitudes"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                        objectPosition: "50% 25%",
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -415,7 +406,7 @@ export default function Page() {
             </div>
           </Reveal>
 
-          {/* ✅ Photo entre Expérience et Sport (taille mini sur mobile via .jq-aproposMiniPhoto) */}
+          {/* Photo entre Expérience et Sport */}
           <Reveal as="div">
             <div
               className="jq-card"
@@ -429,19 +420,7 @@ export default function Page() {
               <div className="jq-card__corner" />
               <div className="jq-card__stripes" />
 
-              <div
-                className="jq-aproposMiniPhoto"
-                style={{
-                  width: "100%",
-                  maxWidth: 520,
-                  aspectRatio: "3 / 4",
-                  borderRadius: 16,
-                  overflow: "hidden",
-                  border: "1px solid rgba(255,255,255,.10)",
-                  background: "rgba(0,0,0,.25)",
-                  margin: "0 auto",
-                }}
-              >
+              <div className="jq-aproposMiniPhotoWrap">
                 <img
                   src="/robin-20kg-apres.jpg"
                   alt="Robin - physique actuel"
