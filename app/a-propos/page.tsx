@@ -71,13 +71,12 @@ function FadedCardBackground({
 export default function Page() {
   return (
     <div className="jq-pageApropos">
-      {/* HERO (comme Home/Contact : texte à gauche + photo à droite) */}
+      {/* HERO */}
       <section className="jq-hero jq-aproposHeroTop" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
 
         <div className="jq-container">
           <div className="jq-hero__grid">
-            {/* TEXTE À GAUCHE */}
             <div className="jq-hero__left">
               <Reveal as="div">
                 <div className="jq-kicker">À PROPOS</div>
@@ -89,11 +88,10 @@ export default function Page() {
 
                 <p className="jq-subtitle" style={{ maxWidth: 820 }}>
                   Je m’appelle <strong>Robin LE PUILL</strong>, diététicien.
-                  J’accompagne surtout les{" "}
-                  <strong>hommes de 28 à 40 ans</strong> (souvent occupés) qui
-                  veulent <strong>perdre du poids</strong> ou faire une{" "}
-                  <strong>recomposition corporelle</strong> — sans retomber dans
-                  le schéma “parfait 2 semaines puis abandon”.
+                  J’accompagne surtout les <strong>hommes de 28 à 40 ans</strong>{" "}
+                  (souvent occupés) qui veulent <strong>perdre du poids</strong>{" "}
+                  ou faire une <strong>recomposition corporelle</strong> — sans
+                  retomber dans le schéma “parfait 2 semaines puis abandon”.
                 </p>
 
                 <div className="jq-actions">
@@ -112,7 +110,6 @@ export default function Page() {
               </Reveal>
             </div>
 
-            {/* PHOTO À DROITE */}
             <div className="jq-hero__right">
               <Reveal as="div">
                 <div className="jq-hero__photoWrap">
@@ -128,7 +125,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* POUR QUI / OBJECTIF */}
+      {/* CE QUE JE FAIS */}
       <section className="jq-section">
         <div className="jq-container">
           <Reveal as="div">
@@ -229,139 +226,154 @@ export default function Page() {
               />
 
               <div
-  className="jq-aproposStoryGrid"
-  style={{
-    marginTop: 10,
-    display: "grid",
-    gridTemplateColumns: "minmax(0, 1fr) 290px",
-    gap: 12,
-    alignItems: "start",
-  }}
->
-  {/* TEXTE */}
-  <div style={{ position: "relative", zIndex: 3, minWidth: 0 }}>
-    <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
+                className="jq-aproposStoryGrid"
+                style={{
+                  marginTop: 10,
+                  display: "grid",
+                  gridTemplateColumns: "minmax(0, 1fr) 290px",
+                  gap: 12,
+                  alignItems: "start",
+                }}
+              >
+                <div style={{ position: "relative", zIndex: 3, minWidth: 0 }}>
+                  <h3 className="jq-card__title">Le “avant” (le vrai)</h3>
 
-    <p className="jq-card__text" style={{ marginTop: 10 }}>
-      Lycée : j’étais fumeur (cigarettes + shit), je buvais quasiment pas d’eau,
-      et mon alimentation c’était souvent le combo “macdo 1x/semaine + kebab 1x/semaine + le reste qui n'était pas beaucoup mieux”.
-      <br />
-      <br />
-      Le détail qui résume bien : à la place de l’eau, j’étais plutôt <strong>Oasis / Ice Tea</strong>. Et niveau sommeil :
-      horaires éclatés, parfois nuit blanche à jouer. Résultat : <strong>je me sentais mal</strong>, j’étais complexé,
-      et j’avais <strong>un cardio catastrophique</strong>… alors que j’avais fait du sport toute ma vie.
-    </p>
+                  <p className="jq-card__text" style={{ marginTop: 10 }}>
+                    Lycée : j’étais fumeur (cigarettes + shit), je buvais
+                    quasiment pas d’eau, et mon alimentation c’était souvent le
+                    combo “macdo 1x/semaine + kebab 1x/semaine + le reste qui n'était pas beaucoup mieux”.
+                    <br />
+                    <br />
+                    Le détail qui résume bien : à la place de l’eau, j’étais
+                    plutôt <strong>Oasis / Ice Tea</strong>. Et niveau sommeil :
+                    horaires éclatés, parfois nuit blanche à jouer. Résultat :{" "}
+                    <strong>je me sentais mal</strong>, j’étais complexé, et
+                    j’avais <strong>un cardio catastrophique</strong>… alors que
+                    j’avais fait du sport toute ma vie.
+                  </p>
 
-    {/* ✅ Photo “avant” déplacée ici (pour être AU-DESSUS des blocs sur mobile via CSS) */}
-    <div className="jq-aproposAvantPhoto">
-  <div
-    className="jq-aproposMiniPhoto"
-    style={{
-      width: 290,
-      aspectRatio: "3 / 4",
-      borderRadius: 16,
-      overflow: "hidden",
-      border: "1px solid rgba(255,255,255,.10)",
-      background: "rgba(0,0,0,.25)",
-    }}
-  >
-    <img
-      src="/robin-avant-alcool.png"
-      alt="Robin - avant : mauvaises habitudes"
-      style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        display: "block",
-        objectPosition: "50% 25%",
-      }}
-    />
-  </div>
-</div>
+                  {/* ✅ Photo mobile (taille mini via CSS .jq-aproposMiniPhoto) */}
+                  <div className="jq-aproposAvantPhoto">
+                    <div
+                      className="jq-aproposMiniPhoto"
+                      style={{
+                        width: 290,
+                        aspectRatio: "3 / 4",
+                        borderRadius: 16,
+                        overflow: "hidden",
+                        border: "1px solid rgba(255,255,255,.10)",
+                        background: "rgba(0,0,0,.25)",
+                      }}
+                    >
+                      <img
+                        src="/robin-avant-alcool.png"
+                        alt="Robin - avant : mauvaises habitudes"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          display: "block",
+                          objectPosition: "50% 25%",
+                        }}
+                      />
+                    </div>
+                  </div>
 
-    {/* ✅ Déclic au-dessus de Mes erreurs sur mobile */}
-    <div
-      className="jq-aproposDeclicGrid"
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: 12,
-        marginTop: 14,
-      }}
-    >
-      <div
-        className="jq-card"
-        style={{
-          padding: 14,
-          background: "rgba(0,0,0,.20)",
-          border: "1px solid rgba(255,255,255,.08)",
-        }}
-      >
-        <h4 className="jq-card__title" style={{ fontSize: 16, marginBottom: 6 }}>
-          Déclic
-        </h4>
-        <p className="jq-card__text" style={{ margin: 0 }}>
-          Le confinement a été mon point de bascule : j’en avais marre de me sentir nul dans mon corps.
-          J’ai voulu me “reprendre en main” — et j’ai fait comme tout le monde : à fond… trop vite, trop fort, trop extrême.
-        </p>
-      </div>
+                  {/* ✅ Déclic au-dessus de Mes erreurs sur mobile via CSS */}
+                  <div
+                    className="jq-aproposDeclicGrid"
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "1fr 1fr",
+                      gap: 12,
+                      marginTop: 14,
+                    }}
+                  >
+                    <div
+                      className="jq-card"
+                      style={{
+                        padding: 14,
+                        background: "rgba(0,0,0,.20)",
+                        border: "1px solid rgba(255,255,255,.08)",
+                      }}
+                    >
+                      <h4
+                        className="jq-card__title"
+                        style={{ fontSize: 16, marginBottom: 6 }}
+                      >
+                        Déclic
+                      </h4>
+                      <p className="jq-card__text" style={{ margin: 0 }}>
+                        Le confinement a été mon point de bascule : j’en avais
+                        marre de me sentir nul dans mon corps. J’ai voulu me
+                        “reprendre en main” — et j’ai fait comme tout le monde :
+                        à fond… trop vite, trop fort, trop extrême.
+                      </p>
+                    </div>
 
-      <div
-        className="jq-card"
-        style={{
-          padding: 14,
-          background: "rgba(0,0,0,.20)",
-          border: "1px solid rgba(255,255,255,.08)",
-        }}
-      >
-        <h4 className="jq-card__title" style={{ fontSize: 16, marginBottom: 6 }}>
-          Mes erreurs (classiques)
-        </h4>
-        <ul style={{ margin: 0, paddingLeft: 18, color: "var(--muted)" }}>
-          <li>Régimes extrêmes, “tout propre” du jour au lendemain.</li>
-          <li>Suppression totale d’un macro (gras, puis glucides…).</li>
-          <li>Obsession des protéines comme si ça réglait tout.</li>
-          <li>Entraînements trop fréquents, pas assez de récupération.</li>
-          <li>“Si je lâche 1 jour, j’ai tout foutu en l’air.”</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+                    <div
+                      className="jq-card"
+                      style={{
+                        padding: 14,
+                        background: "rgba(0,0,0,.20)",
+                        border: "1px solid rgba(255,255,255,.08)",
+                      }}
+                    >
+                      <h4
+                        className="jq-card__title"
+                        style={{ fontSize: 16, marginBottom: 6 }}
+                      >
+                        Mes erreurs (classiques)
+                      </h4>
+                      <ul
+                        style={{
+                          margin: 0,
+                          paddingLeft: 18,
+                          color: "var(--muted)",
+                        }}
+                      >
+                        <li>Régimes extrêmes, “tout propre” du jour au lendemain.</li>
+                        <li>Suppression totale d’un macro (gras, puis glucides…).</li>
+                        <li>Obsession des protéines comme si ça réglait tout.</li>
+                        <li>Entraînements trop fréquents, pas assez de récupération.</li>
+                        <li>“Si je lâche 1 jour, j’ai tout foutu en l’air.”</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
 
-  {/* (Desktop) Photo reste à droite grâce à cette colonne (on la cache en mobile via CSS) */}
-  <div
-    className="jq-aproposAvantPhotoDesktop"
-    style={{
-      justifySelf: "end",
-      width: 290,
-      aspectRatio: "3 / 4",
-      borderRadius: 16,
-      overflow: "hidden",
-      border: "1px solid rgba(255,255,255,.10)",
-      background: "rgba(0,0,0,.25)",
-      position: "relative",
-      zIndex: 1,
-    }}
-  >
-    <img
-      src="/robin-avant-alcool.png"
-      alt="Robin - avant : mauvaises habitudes"
-      style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        display: "block",
-        objectPosition: "50% 25%",
-      }}
-    />
-  </div>
-</div>
+                {/* ✅ Photo desktop (cachée en mobile via CSS) */}
+                <div
+                  className="jq-aproposAvantPhotoDesktop"
+                  style={{
+                    justifySelf: "end",
+                    width: 290,
+                    aspectRatio: "3 / 4",
+                    borderRadius: 16,
+                    overflow: "hidden",
+                    border: "1px solid rgba(255,255,255,.10)",
+                    background: "rgba(0,0,0,.25)",
+                  }}
+                >
+                  <img
+                    src="/robin-avant-alcool.png"
+                    alt="Robin - avant : mauvaises habitudes"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                      objectPosition: "50% 25%",
+                    }}
+                  />
+                </div>
+              </div>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* PREUVES */}
+      {/* CRÉDIBILITÉ */}
       <section className="jq-section">
         <div className="jq-container">
           <Reveal as="div">
@@ -369,150 +381,151 @@ export default function Page() {
             <p className="jq-p">Des faits. Pas des “promesses”.</p>
           </Reveal>
 
-         {/* EXPÉRIENCE & PREUVES */}
-<Reveal as="div">
-  <div className="jq-card" style={{ padding: 18, marginTop: 18 }}>
-    <div className="jq-card__corner" />
-    <div className="jq-card__stripes" />
-    <h3 className="jq-card__title">Expérience & preuves</h3>
+          {/* Expérience */}
+          <Reveal as="div">
+            <div className="jq-card" style={{ padding: 18, marginTop: 18 }}>
+              <div className="jq-card__corner" />
+              <div className="jq-card__stripes" />
+              <h3 className="jq-card__title">Expérience & preuves</h3>
 
-    <ul
-      style={{
-        margin: "10px 0 0",
-        paddingLeft: 18,
-        color: "var(--muted)",
-      }}
-    >
-      <li>Coaching “terrain” depuis mes 16 ans, officiellement depuis 2023.</li>
-      <li>
-        Environ{" "}
-        <strong style={{ color: "var(--text)" }}>30+ transformations</strong>{" "}
-        (hommes principalement).
-      </li>
-      <li>
-        Transformation perso :{" "}
-        <strong style={{ color: "var(--text)" }}>+20 kg secs en 3 ans</strong>{" "}
-        et{" "}
-        <strong style={{ color: "var(--text)" }}>-10 kg en 3 mois</strong>.
-      </li>
-      <li>
-        <strong style={{ color: "var(--text)" }}>8e Français aviron indoor</strong>{" "}
-        (2026) — senior poids léger (-75 kg).
-      </li>
-    </ul>
-  </div>
-</Reveal>
+              <ul
+                style={{
+                  margin: "10px 0 0",
+                  paddingLeft: 18,
+                  color: "var(--muted)",
+                }}
+              >
+                <li>Coaching “terrain” depuis mes 16 ans, officiellement depuis 2023.</li>
+                <li>
+                  Environ{" "}
+                  <strong style={{ color: "var(--text)" }}>30+ transformations</strong>{" "}
+                  (hommes principalement).
+                </li>
+                <li>
+                  Transformation perso :{" "}
+                  <strong style={{ color: "var(--text)" }}>+20 kg secs en 3 ans</strong>{" "}
+                  et{" "}
+                  <strong style={{ color: "var(--text)" }}>-10 kg en 3 mois</strong>.
+                </li>
+                <li>
+                  <strong style={{ color: "var(--text)" }}>8e Français aviron indoor</strong>{" "}
+                  (2026) — senior poids léger (-75 kg).
+                </li>
+              </ul>
+            </div>
+          </Reveal>
 
-{/* ✅ PHOTO (entre expérience et sport) — petite sur mobile via .jq-aproposMiniPhoto */}
-<Reveal as="div">
-  <div
-    className="jq-card"
-    style={{
-      padding: 18,
-      marginTop: 18,
-      position: "relative",
-      overflow: "hidden",
-    }}
-  >
-    <div className="jq-card__corner" />
-    <div className="jq-card__stripes" />
+          {/* ✅ Photo entre Expérience et Sport (taille mini sur mobile via .jq-aproposMiniPhoto) */}
+          <Reveal as="div">
+            <div
+              className="jq-card"
+              style={{
+                padding: 18,
+                marginTop: 18,
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
+              <div className="jq-card__corner" />
+              <div className="jq-card__stripes" />
 
-    <div
-      className="jq-aproposMiniPhoto"
-      style={{
-        width: "100%",
-        maxWidth: 520,
-        aspectRatio: "3 / 4",
-        borderRadius: 16,
-        overflow: "hidden",
-        border: "1px solid rgba(255,255,255,.10)",
-        background: "rgba(0,0,0,.25)",
-        margin: "0 auto",
-      }}
-    >
-      <img
-        src="/robin-20kg-apres.jpg"
-        alt="Robin - physique actuel"
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "contain",
-          objectPosition: "50% 85%",
-          display: "block",
-          transform: "scale(1.08)",
-          filter: "drop-shadow(0 18px 40px rgba(0,0,0,.55))",
-          opacity: 0.95,
-        }}
-      />
-    </div>
-  </div>
-</Reveal>
+              <div
+                className="jq-aproposMiniPhoto"
+                style={{
+                  width: "100%",
+                  maxWidth: 520,
+                  aspectRatio: "3 / 4",
+                  borderRadius: 16,
+                  overflow: "hidden",
+                  border: "1px solid rgba(255,255,255,.10)",
+                  background: "rgba(0,0,0,.25)",
+                  margin: "0 auto",
+                }}
+              >
+                <img
+                  src="/robin-20kg-apres.jpg"
+                  alt="Robin - physique actuel"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                    objectPosition: "50% 85%",
+                    display: "block",
+                    transform: "scale(1.08)",
+                    filter: "drop-shadow(0 18px 40px rgba(0,0,0,.55))",
+                    opacity: 0.95,
+                  }}
+                />
+              </div>
+            </div>
+          </Reveal>
 
-{/* SPORT */}
-<Reveal as="div">
-  <div
-    className="jq-card"
-    style={{
-      padding: 18,
-      marginTop: 18,
-      position: "relative",
-      overflow: "hidden",
-    }}
-  >
-    <div className="jq-card__corner" style={{ zIndex: 3, pointerEvents: "none" }} />
-    <div className="jq-card__stripes" style={{ zIndex: 3, pointerEvents: "none" }} />
+          {/* Sport */}
+          <Reveal as="div">
+            <div
+              className="jq-card"
+              style={{
+                padding: 18,
+                marginTop: 18,
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
+              <div className="jq-card__corner" style={{ zIndex: 3, pointerEvents: "none" }} />
+              <div className="jq-card__stripes" style={{ zIndex: 3, pointerEvents: "none" }} />
 
-    {/* ✅ On garde uniquement le texte (plus de photo à droite) */}
-    <div style={{ position: "relative", zIndex: 4 }}>
-      <h3 className="jq-card__title">
-        Sport : pourquoi j’en parle (et pourquoi ça compte)
-      </h3>
+              <div style={{ position: "relative", zIndex: 4 }}>
+                <h3 className="jq-card__title">
+                  Sport : pourquoi j’en parle (et pourquoi ça compte)
+                </h3>
 
-      <p className="jq-card__text" style={{ marginTop: 10 }}>
-        Parce que je sais ce que c’est de construire un corps et des
-        performances dans le monde réel : emploi du temps chargé,
-        fatigue, imprévus. Le but ici n’est pas de faire de toi un
-        athlète pro — mais d’être <strong>en forme</strong>,{" "}
-        <strong>solide</strong>, et <strong>constant</strong>.
-      </p>
+                <p className="jq-card__text" style={{ marginTop: 10 }}>
+                  Parce que je sais ce que c’est de construire un corps et des
+                  performances dans le monde réel : emploi du temps chargé,
+                  fatigue, imprévus. Le but ici n’est pas de faire de toi un
+                  athlète pro — mais d’être <strong>en forme</strong>,{" "}
+                  <strong>solide</strong>, et <strong>constant</strong>.
+                </p>
 
-      <div
-        style={{
-          marginTop: 14,
-          display: "grid",
-          gap: 8,
-          color: "rgba(255,255,255,.82)",
-          fontSize: 14,
-        }}
-      >
-        <div>
-          ✅ <strong>8e Français aviron indoor</strong> (2026) — senior poids léger (-75 kg)
+                <div
+                  style={{
+                    marginTop: 14,
+                    display: "grid",
+                    gap: 8,
+                    color: "rgba(255,255,255,.82)",
+                    fontSize: 14,
+                  }}
+                >
+                  <div>
+                    ✅ <strong>8e Français aviron indoor</strong> (2026) — senior poids léger (-75 kg)
+                  </div>
+                  <div>
+                    ✅ Streetlifting : <strong>175 kg squat</strong> •{" "}
+                    <strong>100 kg dips</strong> •{" "}
+                    <strong>65 kg tractions</strong> •{" "}
+                    <strong>+10 kg muscle up</strong>
+                  </div>
+                  <div>
+                    ✅ Streetworkout : <strong>straddle planche</strong> •{" "}
+                    <strong>front lever</strong> • <strong>handstand</strong>
+                  </div>
+                  <div>
+                    ✅ Endurance : <strong>100 km vélo</strong> •{" "}
+                    <strong>semi-marathon</strong> (~5’44/km)
+                  </div>
+                  <div>✅ Passif multi-sports : foot (+10 ans), natation, MMA, tennis…</div>
+                </div>
+
+                <p className="jq-card__text" style={{ marginTop: 12 }}>
+                  Tout ça pour dire : je connais le terrain. Et je sais surtout
+                  que ce qui fait la différence, ce n’est pas une semaine
+                  parfaite — c’est un cadre que tu répètes.
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
-        <div>
-          ✅ Streetlifting : <strong>175 kg squat</strong> •{" "}
-          <strong>100 kg dips</strong> •{" "}
-          <strong>65 kg tractions</strong> •{" "}
-          <strong>+10 kg muscle up</strong>
-        </div>
-        <div>
-          ✅ Streetworkout : <strong>straddle planche</strong> •{" "}
-          <strong>front lever</strong> • <strong>handstand</strong>
-        </div>
-        <div>
-          ✅ Endurance : <strong>100 km vélo</strong> •{" "}
-          <strong>semi-marathon</strong> (~5’44/km)
-        </div>
-        <div>✅ Passif multi-sports : foot (+10 ans), natation, MMA, tennis…</div>
-      </div>
-
-      <p className="jq-card__text" style={{ marginTop: 12 }}>
-        Tout ça pour dire : je connais le terrain. Et je sais surtout
-        que ce qui fait la différence, ce n’est pas une semaine
-        parfaite — c’est un cadre que tu répètes.
-      </p>
-    </div>
-  </div>
-</Reveal>
+      </section>
 
       {/* COMMENT DÉMARRER */}
       <section className="jq-section" style={{ background: "var(--panel2)" }}>
@@ -525,13 +538,33 @@ export default function Page() {
           <Reveal as="div">
             <div
               className="jq-aproposStartGrid"
-              style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(4, 1fr)",
+                gap: 14,
+              }}
             >
               {[
-                { n: "1", t: "Message WhatsApp", d: "Tu m’écris avec ton objectif + tes contraintes + ton rythme de vie." },
-                { n: "2", t: "Premier échange (bilan)", d: "On clarifie le vrai problème : habitudes, blocages, emploi du temps, priorités." },
-                { n: "3", t: "Plan + tracker", d: "Je construis ton plan + ton tracker d’habitudes (sommeil, pas, etc.)." },
-                { n: "4", t: "Ajustements réguliers", d: "On ajuste toutes les 2 à 4 semaines : décisions simples, progression visible." },
+                {
+                  n: "1",
+                  t: "Message WhatsApp",
+                  d: "Tu m’écris avec ton objectif + tes contraintes + ton rythme de vie.",
+                },
+                {
+                  n: "2",
+                  t: "Premier échange (bilan)",
+                  d: "On clarifie le vrai problème : habitudes, blocages, emploi du temps, priorités.",
+                },
+                {
+                  n: "3",
+                  t: "Plan + tracker",
+                  d: "Je construis ton plan + ton tracker d’habitudes (sommeil, pas, etc.).",
+                },
+                {
+                  n: "4",
+                  t: "Ajustements réguliers",
+                  d: "On ajuste toutes les 2 à 4 semaines : décisions simples, progression visible.",
+                },
               ].map((s) => (
                 <div key={s.n} className="jq-card" style={{ padding: 18 }}>
                   <div
@@ -559,7 +592,12 @@ export default function Page() {
           </Reveal>
 
           <div className="jq-center" style={{ marginTop: 22 }}>
-            <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
+            <a
+              className="jq-btn jq-btn--primary"
+              href={WHATSAPP}
+              target="_blank"
+              rel="noreferrer"
+            >
               Envoyer mon objectif →
             </a>
           </div>
@@ -567,7 +605,7 @@ export default function Page() {
       </section>
 
       {/* CTA FINAL */}
-      <section className="jq-hero jq-aproposCta" style={{ minHeight: 420 }}>
+      <section className="jq-hero jq-aproposCtaFinal" style={{ minHeight: 420 }}>
         <div className="jq-hero__overlay" />
 
         <div className="jq-container">
