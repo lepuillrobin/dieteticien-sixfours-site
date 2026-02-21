@@ -254,29 +254,30 @@ export default function Page() {
 
     {/* ✅ Photo “avant” déplacée ici (pour être AU-DESSUS des blocs sur mobile via CSS) */}
     <div className="jq-aproposAvantPhoto">
-      <div
-        style={{
-          width: 290,
-          aspectRatio: "3 / 4",
-          borderRadius: 16,
-          overflow: "hidden",
-          border: "1px solid rgba(255,255,255,.10)",
-          background: "rgba(0,0,0,.25)",
-        }}
-      >
-        <img
-          src="/robin-avant-alcool.png"
-          alt="Robin - avant : mauvaises habitudes"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            display: "block",
-            objectPosition: "50% 25%",
-          }}
-        />
-      </div>
-    </div>
+  <div
+    className="jq-aproposMiniPhoto"
+    style={{
+      width: 290,
+      aspectRatio: "3 / 4",
+      borderRadius: 16,
+      overflow: "hidden",
+      border: "1px solid rgba(255,255,255,.10)",
+      background: "rgba(0,0,0,.25)",
+    }}
+  >
+    <img
+      src="/robin-avant-alcool.png"
+      alt="Robin - avant : mauvaises habitudes"
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        display: "block",
+        objectPosition: "50% 25%",
+      }}
+    />
+  </div>
+</div>
 
     {/* ✅ Déclic au-dessus de Mes erreurs sur mobile */}
     <div
