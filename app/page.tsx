@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import Reveal from "./components/Reveal";
+
+export const metadata: Metadata = {
+  title: "Diététicien à Six-Fours-les-Plages",
+  description:
+    "Diététicien à Six-Fours-les-Plages : accompagnement nutritionnel pour perte de gras et recomposition, avec une approche durable. Visio + suivi WhatsApp.",
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (
@@ -31,14 +40,19 @@ export default function HomePage() {
               </Reveal>
             </div>
 
-                       {/* VISUEL À DROITE (ta photo) */}
+            {/* VISUEL À DROITE (ta photo) */}
             <div className="jq-hero__right">
               <Reveal as="div">
                 <div className="jq-hero__photoWrap">
-                  <img
+                  <Image
                     className="jq-hero__portrait"
                     src="/robin-hero.png"
-                    alt="Robin"
+                    alt="Robin Le Puill, diététicien à Six-Fours-les-Plages"
+                    width={900}
+                    height={900}
+                    priority
+                    sizes="(max-width: 768px) 92vw, 520px"
+                    style={{ height: "auto" }}
                   />
                 </div>
               </Reveal>
@@ -93,8 +107,8 @@ export default function HomePage() {
         </div>
       </section>
 
-            {/* GRAND VISUEL + CTA (texte gauche + photo droite) */}
-     <section className="jq-hero jq-hero--home jq-homeReserve" style={{ minHeight: 520 }}>
+      {/* GRAND VISUEL + CTA (texte gauche + photo droite) */}
+      <section className="jq-hero jq-hero--home jq-homeReserve" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
 
         <div className="jq-container">
@@ -123,7 +137,15 @@ export default function HomePage() {
             <div className="jq-hero__right">
               <Reveal as="div">
                 <div className="jq-hero__photoWrap">
-                  <img className="jq-hero__portrait" src="/robin-suivi.jpg" alt="Robin" />
+                  <Image
+                    className="jq-hero__portrait"
+                    src="/robin-suivi.jpg"
+                    alt="Suivi diététique personnalisé avec Robin Le Puill, diététicien à Six-Fours-les-Plages"
+                    width={900}
+                    height={900}
+                    sizes="(max-width: 768px) 92vw, 520px"
+                    style={{ height: "auto" }}
+                  />
                 </div>
               </Reveal>
             </div>
@@ -131,7 +153,7 @@ export default function HomePage() {
         </div>
       </section>
 
-                     {/* RÉSULTATS */}
+      {/* RÉSULTATS */}
       <section className="jq-results">
         <div className="jq-container">
           <Reveal as="div">
@@ -147,16 +169,8 @@ export default function HomePage() {
             {/* Transformation 1 */}
             <div className="jq-slide">
               <div className="jq-beforeafter">
-                <img
-                  className="jq-photo"
-                  src="/robin-20kg-avant.jpg"
-                  alt="Robin - avant (+20kg)"
-                />
-                <img
-                  className="jq-photo"
-                  src="/robin-20kg-apres.jpg"
-                  alt="Robin - après (+20kg)"
-                />
+                <img className="jq-photo" src="/robin-20kg-avant.jpg" alt="Robin - avant (+20kg)" />
+                <img className="jq-photo" src="/robin-20kg-apres.jpg" alt="Robin - après (+20kg)" />
               </div>
               <div className="jq-quote">
                 “+20kg secs en 3 ans”
@@ -167,16 +181,8 @@ export default function HomePage() {
             {/* Transformation 2 (Madison) */}
             <div className="jq-slide">
               <div className="jq-beforeafter">
-                <img
-                  className="jq-photo"
-                  src="/madison-avant.jpg"
-                  alt="Madison - avant (-60kg)"
-                />
-                <img
-                  className="jq-photo"
-                  src="/madison-apres.jpg"
-                  alt="Madison - après (-60kg)"
-                />
+                <img className="jq-photo" src="/madison-avant.jpg" alt="Madison - avant (-60kg)" />
+                <img className="jq-photo" src="/madison-apres.jpg" alt="Madison - après (-60kg)" />
               </div>
               <div className="jq-quote">
                 “-60kg en 1 an”
@@ -187,16 +193,8 @@ export default function HomePage() {
             {/* Transformation 3 (Pierre) */}
             <div className="jq-slide">
               <div className="jq-beforeafter">
-                <img
-                  className="jq-photo"
-                  src="/pierre-10kg-avant.jng.png"
-                  alt="Pierre - avant (+10kg)"
-                />
-                <img
-                  className="jq-photo"
-                  src="/pierre-10kg-apres.jng.png"
-                  alt="Pierre - après (+10kg)"
-                />
+                <img className="jq-photo" src="/pierre-10kg-avant.jng.png" alt="Pierre - avant (+10kg)" />
+                <img className="jq-photo" src="/pierre-10kg-apres.jng.png" alt="Pierre - après (+10kg)" />
               </div>
               <div className="jq-quote">
                 “+10kg secs en 1 an”
@@ -207,16 +205,8 @@ export default function HomePage() {
             {/* Transformation 4 */}
             <div className="jq-slide">
               <div className="jq-beforeafter">
-                <img
-                  className="jq-photo"
-                  src="/robin-10kg-avant.jpg"
-                  alt="Robin - avant (-10kg)"
-                />
-                <img
-                  className="jq-photo"
-                  src="/robin-10kg-apres.jpg"
-                  alt="Robin - après (-10kg)"
-                />
+                <img className="jq-photo" src="/robin-10kg-avant.jpg" alt="Robin - avant (-10kg)" />
+                <img className="jq-photo" src="/robin-10kg-apres.jpg" alt="Robin - après (-10kg)" />
               </div>
               <div className="jq-quote">
                 “-10kg en 3 mois”
