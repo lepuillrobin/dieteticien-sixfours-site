@@ -43,21 +43,14 @@ export const metadata: Metadata = {
     title: defaultTitle,
     description: defaultDescription,
     locale: "fr_FR",
-    images: [
-      {
-        url: "/og.jpg", // à créer dans /public (1200x630)
-        width: 1200,
-        height: 630,
-        alt: defaultTitle,
-      },
-    ],
+    images: [], // ✅ pas d'og.jpg
   },
 
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
     description: defaultDescription,
-    images: ["/og.jpg"],
+    images: [], // ✅ pas d'og.jpg
   },
 };
 
@@ -95,13 +88,7 @@ function JsonLd() {
       telephone: "+33751013960",
       email: "lepuillrobin@gmail.com",
       sameAs: ["https://www.instagram.com/robindiet/"],
-      areaServed: [
-        "Six-Fours-les-Plages",
-        "Sanary-sur-Mer",
-        "La Seyne-sur-Mer",
-        "Toulon",
-        "Ollioules",
-      ],
+      areaServed: ["Six-Fours-les-Plages", "Sanary-sur-Mer", "La Seyne-sur-Mer", "Toulon", "Ollioules"],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Six-Fours-les-Plages",
@@ -153,8 +140,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <footer className="jq-footer">
           <div className="jq-container jq-footer__inner">
-            © {new Date().getFullYear()} Robin LE PUILL — Diététicien • Six-Fours-les-Plages & alentours • Visio + à
-            domicile
+            © {new Date().getFullYear()} Robin LE PUILL — Diététicien • Six-Fours-les-Plages & alentours • Visio + à domicile
             <span className="jq-footer__sep">•</span>
             <a className="jq-footer__link" href="https://www.instagram.com/robindiet/" target="_blank" rel="noreferrer">
               Instagram
