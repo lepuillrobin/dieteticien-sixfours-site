@@ -1,15 +1,67 @@
+import type { Metadata } from "next";
 import Reveal from "../components/Reveal";
 
-export const metadata = {
-  title: "Méthode | Robin LE PUILL — Diététicien",
-  description: "La méthode : structure simple, repères clairs, ajustements réguliers. Pas de tout-ou-rien.",
+const siteUrl = "https://dieteticien-sixfours.fr";
+
+export const metadata: Metadata = {
+  title: "Méthode – diététicien à Six-Fours-les-Plages",
+  description:
+    "Méthode de suivi nutritionnel : cadre clair, repères simples, ajustements réguliers. Objectif : perte de gras durable, sans tout-ou-rien. Six-Fours-les-Plages.",
+  alternates: { canonical: "/methode" },
+  robots: { index: true, follow: true },
 };
 
 const WHATSAPP = "https://wa.me/33751013960";
 
+function JsonLd() {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${siteUrl}/methode#webpage`,
+      url: `${siteUrl}/methode`,
+      name: "Méthode – diététicien à Six-Fours-les-Plages",
+      inLanguage: "fr-FR",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#person` },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${siteUrl}/methode#service`,
+      name: "Méthode de suivi nutritionnel",
+      serviceType: "Suivi diététique",
+      provider: {
+        "@type": "Person",
+        name: "Robin Le Puill",
+        jobTitle: "Diététicien",
+        url: siteUrl,
+      },
+      areaServed: [
+        "Six-Fours-les-Plages",
+        "Sanary-sur-Mer",
+        "La Seyne-sur-Mer",
+        "Toulon",
+        "Ollioules",
+      ],
+      description:
+        "Une méthode simple : cadre clair, repères stables et ajustements réguliers pour des résultats durables.",
+    },
+  ];
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
 export default function Page() {
   return (
     <div className="jq-pageMethode">
+      <JsonLd />
+
       {/* HERO / INTRO (texte gauche + photo droite, rendu garanti) */}
       <section className="jq-hero jq-methodeHeroTop" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
@@ -35,8 +87,8 @@ export default function Page() {
                 </h1>
 
                 <p className="jq-subtitle" style={{ maxWidth: 780 }}>
-                  L’objectif n’est pas “être parfait”. L’objectif, c’est d’avoir un cadre clair et des repères simples — pour
-                  avancer même quand la semaine est bancale.
+                  L’objectif n’est pas “être parfait”. L’objectif, c’est d’avoir un cadre clair et des repères simples —
+                  pour avancer même quand la semaine est bancale.
                 </p>
 
                 <div className="jq-actions">
@@ -68,7 +120,7 @@ export default function Page() {
                 >
                   <img
                     src="/robin-profil.jpg"
-                    alt="Robin - profil"
+                    alt="Robin Le Puill, diététicien à Six-Fours-les-Plages — photo de profil"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -116,9 +168,7 @@ export default function Page() {
                 <div className="jq-card__stripes" />
                 <div className="jq-card__icon">🧭</div>
                 <h3 className="jq-card__title">Un cadre clair</h3>
-                <p className="jq-card__text">
-                  Des règles simples (et utiles) plutôt que 36 contraintes impossibles à tenir.
-                </p>
+                <p className="jq-card__text">Des règles simples (et utiles) plutôt que 36 contraintes impossibles à tenir.</p>
               </div>
 
               <div className="jq-card">
@@ -136,9 +186,7 @@ export default function Page() {
                 <div className="jq-card__stripes" />
                 <div className="jq-card__icon">🔁</div>
                 <h3 className="jq-card__title">Des ajustements</h3>
-                <p className="jq-card__text">
-                  On teste, on mesure, on corrige. Pas de “plan parfait” figé pendant 3 mois.
-                </p>
+                <p className="jq-card__text">On teste, on mesure, on corrige. Pas de “plan parfait” figé pendant 3 mois.</p>
               </div>
 
               <div className="jq-card">
