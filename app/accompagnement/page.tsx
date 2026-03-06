@@ -1,65 +1,140 @@
 import type { Metadata } from "next";
 import Reveal from "../components/Reveal";
 
+const siteUrl = "https://dieteticien-sixfours.fr";
+
 export const metadata: Metadata = {
-  title: "Accompagnement nutritionnel 3–6 mois | Robin LE PUILL",
+  title: "Accompagnement nutritionnel 3 à 6 mois – Six-Fours-les-Plages",
   description:
-    "Accompagnement diététique à Six-Fours-les-Plages : plan personnalisé, tracker d’habitudes, visio toutes les 2 semaines, WhatsApp 7j/7.",
+    "Accompagnement diététique à Six-Fours-les-Plages : plan personnalisé, tracker d’habitudes, visio toutes les 2 semaines et WhatsApp 7j/7. Objectif : perte de gras durable.",
+  alternates: { canonical: "/accompagnement" },
+  robots: { index: true, follow: true },
 };
 
 const WHATSAPP = "https://wa.me/33751013960";
 
+function JsonLd() {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${siteUrl}/accompagnement#service`,
+      name: "Accompagnement nutritionnel (3 à 6 mois)",
+      serviceType: "Accompagnement diététique",
+      provider: {
+        "@type": "Person",
+        name: "Robin Le Puill",
+        jobTitle: "Diététicien",
+        url: siteUrl,
+      },
+      areaServed: [
+        "Six-Fours-les-Plages",
+        "Sanary-sur-Mer",
+        "La Seyne-sur-Mer",
+        "Toulon",
+        "Ollioules",
+      ],
+      offers: {
+        "@type": "Offer",
+        price: "150",
+        priceCurrency: "EUR",
+        url: `${siteUrl}/accompagnement`,
+        availability: "https://schema.org/InStock",
+      },
+      description:
+        "Accompagnement nutritionnel sur 3 à 6 mois : plan personnalisé, tracker d’habitudes, visio toutes les 2 semaines, support WhatsApp 7j/7.",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/accompagnement#faq`,
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Est-ce que je dois peser tous mes aliments ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Au début, oui. On utilise la balance comme un outil pour créer des repères simples et on adapte selon ton niveau et ton contexte. L’objectif : que ça tienne dans le temps et que tu n'aies plus besoin de la balance ensuite.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Et si j’ai des repas sociaux / sorties ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Le plan est construit pour ça. On prévoit, on ajuste, et on évite le mode “tout ou rien”. La balance aide à créer des repères pour mieux gérer les sorties et les imprévus.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Pourquoi 3 à 6 mois ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Parce que le vrai résultat, c’est l’habitude. En dessous, tu peux “faire attention”, mais pas forcément consolider de bonnes habitudes et une nouvelle hygiène de vie.",
+          },
+        },
+      ],
+    },
+  ];
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
 export default function Page() {
   return (
     <div className="jq-pageAccompagnement">
+      <JsonLd />
+
       {/* HERO */}
-<section
-  className="jq-hero jq-accompHeroTop"
-  style={{
-    background:
-      'radial-gradient(80% 70% at 20% 20%, rgba(255,122,0,.10), transparent 55%), linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.85)), url("/coaching.jpg")',
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  <div className="jq-hero__overlay" />
-  <div className="jq-container">
-    <div className="jq-hero__grid">
-      <div className="jq-hero__left">
-        <Reveal as="div">
-          <div className="jq-kicker">ACCOMPAGNEMENT</div>
+      <section
+        className="jq-hero jq-accompHeroTop"
+        style={{
+          background:
+            'radial-gradient(80% 70% at 20% 20%, rgba(255,122,0,.10), transparent 55%), linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.85)), url("/coaching.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="jq-hero__overlay" />
+        <div className="jq-container">
+          <div className="jq-hero__grid">
+            <div className="jq-hero__left">
+              <Reveal as="div">
+                <div className="jq-kicker">ACCOMPAGNEMENT</div>
 
-          <h1 className="jq-title">
-            {/* ✅ force "ACCOMPAGNEMENT" à rester sur 1 ligne (mobile) sans toucher le rendu desktop */}
-            <span className="jq-title__line1" style={{ whiteSpace: "nowrap" }}>
-              ACCOMPAGNEMENT
-            </span>
-            <br />
-            <span className="jq-title--accent">3 À 6 MOIS</span>
-          </h1>
+                <h1 className="jq-title">
+                  {/* ✅ force "ACCOMPAGNEMENT" à rester sur 1 ligne (mobile) sans toucher le rendu desktop */}
+                  <span className="jq-title__line1" style={{ whiteSpace: "nowrap" }}>
+                    ACCOMPAGNEMENT
+                  </span>
+                  <br />
+                  <span className="jq-title--accent">3 À 6 MOIS</span>
+                </h1>
 
-          <p className="jq-subtitle">
-            Un suivi pour <strong>perdre du gras</strong> et{" "}
-            <strong>mieux se sentir</strong>, avec une approche durable (pas
-            “parfait 2 semaines puis abandon”).
-          </p>
+                <p className="jq-subtitle">
+                  Un suivi pour <strong>perdre du gras</strong> et{" "}
+                  <strong>mieux se sentir</strong>, avec une approche durable (pas “parfait 2 semaines puis abandon”).
+                </p>
 
-          <div className="jq-actions">
-            <a
-              className="jq-btn jq-btn--primary"
-              href={WHATSAPP}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Me contacter sur WhatsApp →
-            </a>
+                <div className="jq-actions">
+                  <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
+                    Me contacter sur WhatsApp →
+                  </a>
 
-            <a className="jq-btn jq-btn--ghost" href="/contact">
-              Passer par le formulaire →
-            </a>
-          </div>
-        </Reveal>
-      </div>
+                  <a className="jq-btn jq-btn--ghost" href="/contact">
+                    Passer par le formulaire →
+                  </a>
+                </div>
+              </Reveal>
+            </div>
 
             {/* Petit bloc info à droite (sans toucher au CSS global) */}
             <div className="jq-hero__right">
@@ -77,8 +152,8 @@ export default function Page() {
                   <div className="jq-card__stripes" />
                   <h3 className="jq-card__title">150€ / mois</h3>
                   <p className="jq-card__text" style={{ fontSize: 15 }}>
-                    Durée recommandée : <strong>3 à 6 mois</strong> pour ancrer
-                    des habitudes (et pas juste “faire un effort”).
+                    Durée recommandée : <strong>3 à 6 mois</strong> pour ancrer des habitudes (et pas juste “faire un
+                    effort”).
                   </p>
 
                   <div
@@ -90,10 +165,7 @@ export default function Page() {
                       fontSize: 14,
                     }}
                   >
-                    <div>
-                      ✅ Plan personnalisé (diète/entraînements) + ajustements
-                      réguliers
-                    </div>
+                    <div>✅ Plan personnalisé (diète/entraînements) + ajustements réguliers</div>
                     <div>✅ Tracker d’habitudes</div>
                     <div>✅ Visio toutes les 2 semaines</div>
                     <div>✅ WhatsApp 7j/7</div>
@@ -110,10 +182,7 @@ export default function Page() {
         <div className="jq-container">
           <Reveal as="div">
             <h2 className="jq-h2">Ce qui est inclus</h2>
-            <p className="jq-p">
-              Un cadre simple, des décisions concrètes, et une progression
-              régulière.
-            </p>
+            <p className="jq-p">Un cadre simple, des décisions concrètes, et une progression régulière.</p>
           </Reveal>
 
           <Reveal as="div" className="jq-stagger">
@@ -122,12 +191,9 @@ export default function Page() {
                 <div className="jq-card__corner" />
                 <div className="jq-card__stripes" />
                 <div className="jq-card__icon">🥗</div>
-                <h3 className="jq-card__title">
-                  Plan alimentaire/entraînements personnalisés
-                </h3>
+                <h3 className="jq-card__title">Plan alimentaire/entraînements personnalisés</h3>
                 <p className="jq-card__text">
-                  Un plan qui colle à ta vraie vie (contraintes, goûts,
-                  horaires, temps) + ajustements.
+                  Un plan qui colle à ta vraie vie (contraintes, goûts, horaires, temps) + ajustements.
                 </p>
               </div>
 
@@ -137,8 +203,7 @@ export default function Page() {
                 <div className="jq-card__icon">📊</div>
                 <h3 className="jq-card__title">Tracker d’habitudes</h3>
                 <p className="jq-card__text">
-                  Pas, sommeil, poids, ressentis… pour arrêter de naviguer au
-                  hasard.
+                  Pas, sommeil, poids, ressentis… pour arrêter de naviguer au hasard.
                 </p>
               </div>
 
@@ -147,10 +212,7 @@ export default function Page() {
                 <div className="jq-card__stripes" />
                 <div className="jq-card__icon">🎥</div>
                 <h3 className="jq-card__title">Visio toutes les 2 semaines</h3>
-                <p className="jq-card__text">
-                  Bilan + décisions concrètes : on ajuste ce qui compte
-                  vraiment.
-                </p>
+                <p className="jq-card__text">Bilan + décisions concrètes : on ajuste ce qui compte vraiment.</p>
               </div>
 
               <div className="jq-card">
@@ -159,8 +221,7 @@ export default function Page() {
                 <div className="jq-card__icon">💬</div>
                 <h3 className="jq-card__title">WhatsApp 7j/7</h3>
                 <p className="jq-card__text">
-                  Support réactif + cadre clair. L’objectif : avancer même quand
-                  c’est imparfait.
+                  Support réactif + cadre clair. L’objectif : avancer même quand c’est imparfait.
                 </p>
               </div>
 
@@ -169,10 +230,7 @@ export default function Page() {
                 <div className="jq-card__stripes" />
                 <div className="jq-card__icon">📍</div>
                 <h3 className="jq-card__title">Visio + possible à domicile</h3>
-                <p className="jq-card__text">
-                  Suivi possible en visio + déplacements à domicile selon
-                  contexte.
-                </p>
+                <p className="jq-card__text">Suivi possible en visio + déplacements à domicile selon contexte.</p>
               </div>
 
               <div className="jq-card">
@@ -180,83 +238,74 @@ export default function Page() {
                 <div className="jq-card__stripes" />
                 <div className="jq-card__icon">✅</div>
                 <h3 className="jq-card__title">Approche durable</h3>
-                <p className="jq-card__text">
-                  Moins “parfait”, plus tenable, donc efficace.
-                </p>
+                <p className="jq-card__text">Moins “parfait”, plus tenable, donc efficace.</p>
               </div>
             </div>
           </Reveal>
 
           <div className="jq-center">
-            <a
-              className="jq-btn jq-btn--primary"
-              href={WHATSAPP}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
               Démarrer sur WhatsApp →
             </a>
           </div>
         </div>
       </section>
 
-  {/* POUR QUI / PAS POUR QUI */}
-<section className="jq-section">
-  <div className="jq-container">
-    <Reveal as="div">
-      <h2 className="jq-h2">Pour qui ?</h2>
-      <p className="jq-p">
-        On gagne du temps : si tu veux un truc extrême “rapide”, ce n’est pas le bon endroit.
-      </p>
-    </Reveal>
+      {/* POUR QUI / PAS POUR QUI */}
+      <section className="jq-section">
+        <div className="jq-container">
+          <Reveal as="div">
+            <h2 className="jq-h2">Pour qui ?</h2>
+            <p className="jq-p">On gagne du temps : si tu veux un truc extrême “rapide”, ce n’est pas le bon endroit.</p>
+          </Reveal>
 
-    <Reveal as="div">
-      <div
-        className="jq-accompPourQuiGrid"
-        style={{
-          display: "grid",
-          gap: 18,
-        }}
-      >
-        <div className="jq-card">
-          <div className="jq-card__corner" />
-          <div className="jq-card__stripes" />
-          <h3 className="jq-card__title">✅ C’est pour toi si…</h3>
-          <ul
-            style={{
-              margin: "12px 0 0",
-              paddingLeft: 18,
-              color: "var(--muted)",
-            }}
-          >
-            <li>Tu veux perdre du gras sans repartir dans les régimes.</li>
-            <li>Tu veux un plan adapté à ta vraie vie.</li>
-            <li>Tu veux un cadre simple + un suivi régulier.</li>
-            <li>Tu veux construire des habitudes tenables.</li>
-          </ul>
-        </div>
+          <Reveal as="div">
+            <div
+              className="jq-accompPourQuiGrid"
+              style={{
+                display: "grid",
+                gap: 18,
+              }}
+            >
+              <div className="jq-card">
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <h3 className="jq-card__title">✅ C’est pour toi si…</h3>
+                <ul
+                  style={{
+                    margin: "12px 0 0",
+                    paddingLeft: 18,
+                    color: "var(--muted)",
+                  }}
+                >
+                  <li>Tu veux perdre du gras sans repartir dans les régimes.</li>
+                  <li>Tu veux un plan adapté à ta vraie vie.</li>
+                  <li>Tu veux un cadre simple + un suivi régulier.</li>
+                  <li>Tu veux construire des habitudes tenables.</li>
+                </ul>
+              </div>
 
-        <div className="jq-card">
-          <div className="jq-card__corner" />
-          <div className="jq-card__stripes" />
-          <h3 className="jq-card__title">❌ Pas pour toi si…</h3>
-          <ul
-            style={{
-              margin: "12px 0 0",
-              paddingLeft: 18,
-              color: "var(--muted)",
-            }}
-          >
-            <li>Tu veux faire un "régime" qui va finir en effet yoyo.</li>
-            <li>Tu veux du “-5 kg en 10 jours”.</li>
-            <li>Tu ne veux pas suivre un minimum de structure.</li>
-            <li>Tu veux juste une liste d’aliments sans accompagnement.</li>
-          </ul>
+              <div className="jq-card">
+                <div className="jq-card__corner" />
+                <div className="jq-card__stripes" />
+                <h3 className="jq-card__title">❌ Pas pour toi si…</h3>
+                <ul
+                  style={{
+                    margin: "12px 0 0",
+                    paddingLeft: 18,
+                    color: "var(--muted)",
+                  }}
+                >
+                  <li>Tu veux faire un "régime" qui va finir en effet yoyo.</li>
+                  <li>Tu veux du “-5 kg en 10 jours”.</li>
+                  <li>Tu ne veux pas suivre un minimum de structure.</li>
+                  <li>Tu veux juste une liste d’aliments sans accompagnement.</li>
+                </ul>
+              </div>
+            </div>
+          </Reveal>
         </div>
-      </div>
-    </Reveal>
-  </div>
-</section>
+      </section>
 
       {/* PROCESS */}
       <section className="jq-section" style={{ background: "var(--panel2)" }}>
@@ -275,26 +324,10 @@ export default function Page() {
               }}
             >
               {[
-                {
-                  n: "1",
-                  t: "Message WhatsApp",
-                  d: "Tu m’écris avec ton objectif + tes contraintes.",
-                },
-                {
-                  n: "2",
-                  t: "Premier échange (bilan)",
-                  d: "On fait le point : habitudes, rythme, blocages.",
-                },
-                {
-                  n: "3",
-                  t: "Plan + tracker",
-                  d: "Je construis ton plan + ton tracker d’habitudes.",
-                },
-                {
-                  n: "4",
-                  t: "Ajustements réguliers",
-                  d: "On ajuste toutes les 2 semaines en visio.",
-                },
+                { n: "1", t: "Message WhatsApp", d: "Tu m’écris avec ton objectif + tes contraintes." },
+                { n: "2", t: "Premier échange (bilan)", d: "On fait le point : habitudes, rythme, blocages." },
+                { n: "3", t: "Plan + tracker", d: "Je construis ton plan + ton tracker d’habitudes." },
+                { n: "4", t: "Ajustements réguliers", d: "On ajuste toutes les 2 semaines en visio." },
               ].map((s) => (
                 <div key={s.n} className="jq-card" style={{ padding: 18 }}>
                   <div
@@ -322,12 +355,7 @@ export default function Page() {
           </Reveal>
 
           <div className="jq-center" style={{ marginTop: 22 }}>
-            <a
-              className="jq-btn jq-btn--primary"
-              href={WHATSAPP}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
               Envoyer mon objectif →
             </a>
           </div>
@@ -349,12 +377,10 @@ export default function Page() {
                   Est-ce que je dois peser tous mes aliments ?
                 </summary>
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Au début, oui. On utilise la balance comme un outil pour créer
-                  des repères simples et on adapte selon ton niveau et ton
-                  contexte.
+                  Au début, oui. On utilise la balance comme un outil pour créer des repères simples et on adapte selon
+                  ton niveau et ton contexte.
                   <br />
-                  L’objectif : que ça tienne dans le temps et que tu n'ai plus
-                  besoin de la balance ensuite.
+                  L’objectif : que ça tienne dans le temps et que tu n&apos;aies plus besoin de la balance ensuite.
                 </p>
               </details>
 
@@ -363,11 +389,10 @@ export default function Page() {
                   Et si j’ai des repas sociaux / sorties ?
                 </summary>
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Justement : le plan est construit pour ça. On prévoit, on
-                  ajuste, et on évite le mode “tout ou rien”.
+                  Justement : le plan est construit pour ça. On prévoit, on ajuste, et on évite le mode “tout ou rien”.
                   <br />
-                  C'est pourquoi la balance est un super outil pour créer des
-                  repères afin de mieux gérer les sorties et les imprévus.
+                  C&apos;est pourquoi la balance est un super outil pour créer des repères afin de mieux gérer les sorties
+                  et les imprévus.
                 </p>
               </details>
 
@@ -376,8 +401,7 @@ export default function Page() {
                   Pourquoi 3 à 6 mois ?
                 </summary>
                 <p className="jq-card__text" style={{ marginTop: 10 }}>
-                  Parce que le vrai résultat, c’est l’habitude. En dessous, tu
-                  peux “faire attention”, mais pas forcément
+                  Parce que le vrai résultat, c’est l’habitude. En dessous, tu peux “faire attention”, mais pas forcément
                   <br />
                   consolider de bonnes habitudes et une nouvelle hygiène de vie.
                 </p>
@@ -400,17 +424,10 @@ export default function Page() {
                   <span className="jq-title--accent">DÉMARRER ?</span>
                 </h2>
 
-                <p className="jq-subtitle">
-                  Tu m’envoies ton objectif + tes contraintes, et on fait simple.
-                </p>
+                <p className="jq-subtitle">Tu m’envoies ton objectif + tes contraintes, et on fait simple.</p>
 
                 <div className="jq-actions">
-                  <a
-                    className="jq-btn jq-btn--primary"
-                    href={WHATSAPP}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a className="jq-btn jq-btn--primary" href={WHATSAPP} target="_blank" rel="noreferrer">
                     Me contacter sur WhatsApp →
                   </a>
                 </div>
@@ -424,7 +441,7 @@ export default function Page() {
                   <img
                     className="jq-hero__portrait"
                     src="/robin-physique-actuel.jpg"
-                    alt="Robin - physique actuel"
+                    alt="Robin Le Puill, diététicien à Six-Fours-les-Plages — photo"
                   />
                 </div>
               </Reveal>
