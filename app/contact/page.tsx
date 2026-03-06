@@ -1,17 +1,80 @@
+import type { Metadata } from "next";
 import Reveal from "../components/Reveal";
 
-export const metadata = {
-  title: "Contact | Robin LE PUILL",
+const siteUrl = "https://dieteticien-sixfours.fr";
+
+export const metadata: Metadata = {
+  title: "Contact – diététicien à Six-Fours-les-Plages",
   description:
-    "Contacter Robin LE PUILL, diététicien à Six-Fours-les-Plages : WhatsApp, email, prise de rendez-vous et zone d’intervention.",
+    "Contacter Robin Le Puill, diététicien à Six-Fours-les-Plages : WhatsApp, email, prise de rendez-vous et zone d’intervention (Six-Fours, Sanary, La Seyne, Toulon…).",
+  alternates: { canonical: "/contact" },
+  robots: { index: true, follow: true },
 };
 
 const WHATSAPP = "https://wa.me/33751013960";
 const EMAIL = "mailto:lepuillrobin@gmail.com";
+const INSTAGRAM = "https://www.instagram.com/robindiet/";
+
+function JsonLd() {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "@id": `${siteUrl}/contact#contactpage`,
+      url: `${siteUrl}/contact`,
+      name: "Contact – diététicien à Six-Fours-les-Plages",
+      inLanguage: "fr-FR",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#person` },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": `${siteUrl}/#localbusiness`,
+      name: "Robin Le Puill - Diététicien",
+      url: siteUrl,
+      telephone: "+33751013960",
+      email: "lepuillrobin@gmail.com",
+      sameAs: [INSTAGRAM],
+      areaServed: [
+        "Six-Fours-les-Plages",
+        "La Seyne-sur-Mer",
+        "Sanary-sur-Mer",
+        "Ollioules",
+        "Toulon",
+        "Bandol",
+        "Saint-Mandrier-sur-Mer",
+      ],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Six-Fours-les-Plages",
+        addressRegion: "Var",
+        addressCountry: "FR",
+      },
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+33751013960",
+          contactType: "customer support",
+          availableLanguage: ["fr"],
+        },
+      ],
+    },
+  ];
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
 
 export default function Page() {
   return (
     <div className="jq-pageContact">
+      <JsonLd />
+
       {/* HERO (même structure que la Home) */}
       <section className="jq-hero jq-hero--home jq-contactHero" style={{ minHeight: 520 }}>
         <div className="jq-hero__overlay" />
@@ -47,7 +110,11 @@ export default function Page() {
             <div className="jq-hero__right">
               <Reveal as="div">
                 <div className="jq-hero__photoWrap jq-hero__photoWrap--contactHero">
-                  <img className="jq-hero__portrait" src="/robin-contact.jpg" alt="Robin - contact" />
+                  <img
+                    className="jq-hero__portrait"
+                    src="/robin-contact.jpg"
+                    alt="Robin Le Puill, diététicien à Six-Fours-les-Plages — contact"
+                  />
                 </div>
               </Reveal>
             </div>
@@ -145,7 +212,7 @@ export default function Page() {
                   <img
                     className="jq-hero__portrait"
                     src="/robin-plan.jpg"
-                    alt="Robin - contact"
+                    alt="Robin Le Puill — prise de contact et plan de suivi (photo)"
                     style={{ objectPosition: "55% 35%" }}
                   />
                 </div>
